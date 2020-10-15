@@ -2,7 +2,11 @@
 
 html, body{
     margin: 0px;
-    background: black;
+    background: white;
+}
+
+p{
+    line-height: 125%;
 }
 
 div {
@@ -10,35 +14,49 @@ div {
 }
 
 h1{
-    font-size: 50px;
-    font-weight: 400;
-    margin: 10px 0px 0px 0px;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
 }
 
 h2{
-    font-size: 40px;
-    font-weight: 400;
-    margin: 10px 0px 0px 0px;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
 }
 
 h3{
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: normal;
 }
 
-button {width: 100%; height: 50px; cursor: pointer; color: white;
-    background: #7373FF; border: none; padding: 10px; font-weight: bold;}
+hr{
+    border-top: 1px solid darkgray;
+    margin: 50px 0px;
+}
 
+button {width: 150px; height: 50px; cursor: pointer; color: whitesmoke;
+    background: #222222; border: none; border-radius: 10px;
+    padding: 10px; font-weight: bold;
+    transition: .5s;}
+
+
+button:hover{
+    background: #333333;
+}
+button a{
+    text-decoration: none;
+}
 section{
-    color: white;
-    margin: 75px;
+    color: #222222;
+    margin: 50px 100px;
 }
 
 #app {
-    font-family: Montserrat, sans-serif;
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
+    color: black;
 }
 
 img {
@@ -46,32 +64,114 @@ img {
 }
 
 #logo{
+    display: flex;
     text-decoration: none;
 }
 #logo:visited {
-    color: white;
+    /*color: white;*/
 }
 
 :visited {
-    color: pink;
+    color: whitesmoke;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+}
+
+#usc{
+    justify-content: flex-end;
+    background: #990000;
+    padding: 10px 50px;
+}
+
+#usc img{
+    height: 30px;
+}
+
+.usc {
+    color: #FFCC00;
+}
+
+#slab {
+    /*justify-content: center;*/
+    /*height: 75px;*/
+    padding: 25px 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/slab/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+}
+
+#slab h1{
+    margin: 0px 10px 0px 0px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#slab .lab {
+    color: white;
 }
 
 #nav {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 75px;
     background: #111111;
-    padding: 0px 50px;
+    padding: 0px 100px;
     position: sticky;
     top: 0;
     left: 0;
 }
 
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {}
+
+.dropicon{
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.icon:hover{
+    background: #111111;
+}
+
 .stretch{
     display: flex;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 a.text {
@@ -84,8 +184,8 @@ a.text:visited {
 }
 
 #nav a.link {
-    margin-left: 20px;
-    font-size: 12px;
+    margin-right: 30px;
+    font-size: 15px;
 }
 
 a.link {
@@ -108,7 +208,7 @@ a.link:before {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #2f2f2f;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -122,9 +222,57 @@ a.link.router-link-exact-active {
     color: gray;
 }
 
-@media (max-width: 630px) {
+.feature {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature img{
+    max-width: 250px;
+    height: auto;
+    margin: 25px 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Front Page */
+.feature-text{
+    width: 50%;
+}
+
+.reverse{
+    flex-wrap: wrap-reverse;
+}
+
+.margin-left{
+    margin-left: 50px;
+}
+
+.margin-right{
+    margin-right: 50px;
+}
+
+@media (max-width: 800px) {
+    /*.feature img{*/
+    /*    max-width: 100%;*/
+    /*    height: auto;*/
+    /*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    /*}*/
+
     #nav a.link{
         display: none;
+    }
+    .feature-text{
+        width: 80%;
+        text-align: center;
+    }
+    .margin-left{
+        margin-left: 0px;
+    }
+    .margin-right{
+        margin-right: 0px;
     }
 }
 
@@ -155,36 +303,6 @@ a.link.router-link-exact-active {
     text-align: center;
 }
 
-@media (max-width: 630px) {
-    .buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.buttons {
-    margin: 50px 0px;
-}
-
-.button {
-    margin: 0px 20px 20px 0px;
-    padding: 10px 20px;
-    /* background: #FF76E9; */
-    color: whitesmoke;
-    text-decoration: none;
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
-.button:hover{
-    color: gray;
-    border-color: gray;
-}
-
-
 /*Footer*/
 
 .footer-text{
@@ -206,112 +324,3 @@ a.link.router-link-exact-active {
     cursor: default;
     font-size: 12px;
 }
-
-/* Contact */
-.contact{
-    display: flex;
-    height:calc(100vh - 225px);
-    justify-content: center;
-    align-items: center;
-}
-
-/* Brainstorm */
-#brainstorm h1{
-    width: 100%;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-#brainstorm p {
-    font-family: Roboto, sans-serif;
-    font-size: 15px;
-}
-
-#tutorial{
-    width: 100%; background: rgb(0,0,0);
-    position: fixed; top: 0;
-    left: 0; height: 100%; z-index:2;
-    display: flex; flex-wrap: wrap; justify-content:center;
-    align-items: center; opacity:90%;}
-
-#tutorial-text{
-    background: rgb(0,0,0);
-    display: flex; flex-wrap: wrap; justify-content:center;
-    align-items: center;}
-
-#open-tutorial{
-    width: 100%; border-radius: 0px; height: 50px; cursor: pointer; color: white; background: #50B5FF
-; border: none; padding: 10px;
-}
-
-#close-tutorial{
-    width: 250px; border-radius: 0px; height: 50px; cursor: pointer; color: white; background: #50B5FF
-; border: none; padding: 10px;
-}
-
-#parameters{
-    position: fixed; width: 250px; background: rgb(25,25,25);
-    top: 0px; left: 0px; padding: 0px;
-}
-#parameters div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    margin: 20px 10px;
-}
-#parameters input{
-    margin: 10px;
-    flex-grow: 1;
-}
-
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 1;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #7373FF;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #7373FF;
-    cursor: pointer;
-}
-
-#chat {width: 300px; background: rgb(5,5,5);
-    position: fixed; top: 0;
-    right: 0; z-index:1;
-    display: flex; flex-wrap: wrap; justify-content:center;
-    align-items: flex-start;
-}
-
-form { flex-grow: 1; height: 15vh; padding: 0px 20px; display: flex; align-items: center; justify-content:center; background: rgb(50,50,50);}
-form input {
-    flex-grow:4; height: 50px; border: 0; padding: 0px 20px; background: rgb(10,10,10); color:white;
-}
-form input:focus{
-    outline: none;
-}
-form button {flex-grow: 1; width: auto;}
-#messages {width: 100%; margin: 0; padding: 0px; height: 85vh; list-style-type: none; text-align: left; }
-#messages li { flex-grow: 1; padding: 5px 10px; color: whitesmoke;}
-#messages li:nth-child(odd) { background: rgb(15,15,15)}
-
