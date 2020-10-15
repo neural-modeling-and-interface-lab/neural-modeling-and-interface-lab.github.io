@@ -229,7 +229,7 @@ a.link:before {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: #2f2f2f;
+    background-color: darkgray;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -260,7 +260,7 @@ a.link.router-link-exact-active {
 
 /* Front Page */
 
-#content{
+.content{
     margin: 100px 0px;
 }
 
@@ -300,6 +300,56 @@ a.link.router-link-exact-active {
     .margin-right{
         margin-right: 0px;
     }
+}
+
+/* People */
+
+#people .feature {
+    margin-bottom: 50px;
+}
+
+#people hr {
+    margin-top:0px;
+    margin-bottom:25px;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 250px;
+}
+
+.social a svg{
+    transition: .5s;
+}
+
+.social a {
+    position: relative;
+    cursor: pointer;
+    margin: 0px 10px;
+    transition: .5s;
+}
+
+.social a:hover svg {
+    fill: #666666;
+}
+
+.social a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.social a:hover:before {
+    visibility: visible;
+    width: 100%;
 }
 
 /* Hero */
