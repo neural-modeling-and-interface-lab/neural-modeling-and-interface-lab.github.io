@@ -47,9 +47,11 @@ button:hover{
 button a{
     text-decoration: none;
 }
+
 section{
+    width: 75%;
     color: #222222;
-    margin: 50px 100px;
+    /*margin: 50px 100px;*/
 }
 
 #app {
@@ -57,6 +59,16 @@ section{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
 }
 
 img {
@@ -78,16 +90,18 @@ img {
 .bar{
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 100vw;
 }
 
 #usc{
     justify-content: flex-end;
     background: #990000;
-    padding: 10px 50px;
 }
 
 #usc img{
     height: 30px;
+    padding: 10px 50px;
 }
 
 .usc {
@@ -95,9 +109,7 @@ img {
 }
 
 #slab {
-    /*justify-content: center;*/
-    /*height: 75px;*/
-    padding: 25px 100px;
+    justify-content: flex-start;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/slab/header.jpg");
     background-position: center;
     background-size: cover;
@@ -115,11 +127,14 @@ img {
     color: white;
 }
 
+#slab a{
+    padding: 25px 100px;
+}
+
 #nav {
     justify-content: space-between;
     height: 75px;
     background: #111111;
-    padding: 0px 100px;
     position: sticky;
     top: 0;
     left: 0;
@@ -183,6 +198,10 @@ a.text:visited {
     color: #999999;
 }
 
+#links{
+    padding: 0px 100px;
+}
+
 #nav a.link {
     margin-right: 30px;
     font-size: 15px;
@@ -238,6 +257,11 @@ a.link.router-link-exact-active {
 }
 
 /* Front Page */
+
+#content{
+    margin: 50px 0px;
+}
+
 .feature-text{
     width: 50%;
 }
@@ -315,7 +339,6 @@ a.link.router-link-exact-active {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    padding: 0px 50px;
     background: #111111;
 }
 
