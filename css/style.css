@@ -324,7 +324,7 @@ a.link.currentLink {
     margin-bottom: 50px;
 }
 
-#people hr {
+#people,#publications hr {
     margin-top:0px;
     margin-bottom:25px;
 }
@@ -366,6 +366,15 @@ a.link.currentLink {
 .social a:hover:before {
     visibility: visible;
     width: 100%;
+}
+
+/* Publications */
+#publications {
+    mragin-bottom:25px;
+}
+
+#publications h2 {
+    margin-top:50px;
 }
 
 /* Hero */
