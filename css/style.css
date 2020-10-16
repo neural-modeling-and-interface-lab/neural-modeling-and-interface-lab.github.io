@@ -324,7 +324,7 @@ a.link.currentLink {
     margin-bottom: 50px;
 }
 
-#people,#publications hr {
+#people hr {
     margin-top:0px;
     margin-bottom:25px;
 }
@@ -375,6 +375,11 @@ a.link.currentLink {
 
 #publications h2 {
     margin-top:50px;
+}
+
+#publications hr {
+    margin-top:0px;
+    margin-bottom:25px;
 }
 
 /* Hero */
