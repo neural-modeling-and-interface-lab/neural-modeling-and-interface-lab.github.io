@@ -38,7 +38,7 @@ hr{
 }
 
 button {width: 150px; height: 50px; cursor: pointer; color: whitesmoke;
-    background: #222222; border: none; border-radius: 10px;
+    background: black; border: none; border-radius: 10px;
     padding: 10px;
     transition: .5s;}
 
@@ -112,7 +112,7 @@ img {
 
 #slab {
     justify-content: flex-start;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/slab/header.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/slab/header.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -133,9 +133,9 @@ img {
 }
 
 #nav {
+    padding: 10px 0px;
     justify-content: space-between;
-    height: 75px;
-    background: #111111;
+    background: black;
     position: sticky;
     top: 0;
     left: 0;
@@ -147,7 +147,7 @@ img {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -163,7 +163,9 @@ img {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a {color: white;}
+.dropdown-content a:visited {color: white;}
+.dropdown-content a:hover {background-color: #111111;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
@@ -183,7 +185,7 @@ img {
 }
 
 .icon:hover{
-    background: #111111;
+    background: black;
 }
 
 .stretch{
@@ -198,7 +200,7 @@ a {
 }
 
 a:visited {
-    color: #555555;
+    color: #ffeb99;
 }
 
 #links{
@@ -207,11 +209,10 @@ a:visited {
 
 #nav a.link {
     margin-right: 30px;
-    font-size: 15px;
-    color: white;
-}
+    font-size: 15px;}
 
 a.link {
+    color: white;
     text-decoration: none;
     position: relative;
     cursor: pointer;
@@ -223,7 +224,7 @@ a.link:hover{
     color: #FFCC00;
 }
 
-.currentLink {
+a.link.currentLink {
     color: #FFCC00;
 }
 
@@ -265,7 +266,7 @@ a.link:hover{
 
 /* Front Page */
 .soon {
-    height: 200px;
+    height: 300px;
 }
 .content{
     margin: 100px 0px;
@@ -398,12 +399,31 @@ a.link:hover{
 
 #footer {
     display: flex;
-    height: 150px;
+    color: white;
+    /*height: 150px;*/
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    background: #111111;
+    background: #000000;
+    padding: 50px 100px;
 }
+
+#footer a{
+    font-size: 90%;
+}
+
+#footer p{
+    margin-top:5px;
+}
+
+#footer h3{
+    margin:0px;
+}
+
+#footer img{
+    height:100px;
+}
+
 
 .unavailable{
     color: #777777;
