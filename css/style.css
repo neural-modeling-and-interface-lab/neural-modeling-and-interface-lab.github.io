@@ -192,13 +192,13 @@ img {
     justify-content: flex-start;
 }
 
-a.text {
-    color: #FF76E9;
+a {
+    color: #FFCC00;
     text-decoration: none;
 }
 
-a.text:visited {
-    color: #999999;
+a:visited {
+    color: #555555;
 }
 
 #links{
@@ -208,6 +208,7 @@ a.text:visited {
 #nav a.link {
     margin-right: 30px;
     font-size: 15px;
+    color: white;
 }
 
 a.link {
@@ -263,13 +264,19 @@ a.link:hover{
 }
 
 /* Front Page */
-
+.soon {
+    height: 200px;
+}
 .content{
     margin: 100px 0px;
 }
 
 .feature-text{
     width: 50%;
+}
+
+.feature-head{
+    width: 25%;
 }
 
 .reverse{
@@ -391,7 +398,7 @@ a.link:hover{
 
 #footer {
     display: flex;
-    height: 200px;
+    height: 150px;
     justify-content: space-between;
     align-items: center;
     margin: auto;
