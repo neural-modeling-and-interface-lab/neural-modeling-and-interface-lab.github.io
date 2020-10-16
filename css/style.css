@@ -53,7 +53,7 @@ button a{
 }
 
 section{
-    width: 75%;
+    width: 90%;
     color: #222222;
 }
 
@@ -99,11 +99,12 @@ img {
 #usc{
     justify-content: flex-end;
     background: #990000;
+    z-index:2
 }
 
 #usc img{
     height: 30px;
-    padding: 10px 50px;
+    padding: 10px 25px;
 }
 
 .usc {
@@ -116,6 +117,7 @@ img {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index:2
     /*background-attachment: fixed;*/
 }
 
@@ -129,16 +131,19 @@ img {
 }
 
 #slab a{
-    padding: 25px 100px;
+    padding: 25px 45px;
 }
 
 #nav {
-    padding: 10px 0px;
+    height: 50px;
+    /*padding: 10px 0px;*/
+    align-items: center;
     justify-content: space-between;
     background: black;
     position: sticky;
     top: 0;
     left: 0;
+    z-index:0
 }
 
 
@@ -173,8 +178,18 @@ img {
 .dropdown:hover .dropbtn {}
 
 .dropicon{
+    padding-left: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    background: transparent;
+}
+.icon{
     width: 100%;
-    padding: 0px 20px 0px 0px;
+    /*padding: 20px 0px;*/
     text-align: center;
     display: flex;
     justify-content: center;
@@ -184,9 +199,9 @@ img {
     background: transparent;
 }
 
-.icon:hover{
-    background: black;
-}
+/*.icon:hover{*/
+/*    background: black;*/
+/*}*/
 
 .stretch{
     display: flex;
@@ -204,7 +219,7 @@ a:visited {
 }
 
 #links{
-    padding: 0px 100px;
+    padding: 0px 45px;
 }
 
 #nav a.link {
@@ -217,7 +232,7 @@ a.link {
     position: relative;
     cursor: pointer;
     padding: 5px 0px;
-    transition: .5s;
+    transition: color .5s;
 }
 
 a.link:hover{
@@ -269,7 +284,7 @@ a.link.currentLink {
     height: 300px;
 }
 .content{
-    margin: 100px 0px;
+    margin: 45px 0px;
 }
 
 .content a:visited{
@@ -296,16 +311,48 @@ a.link.currentLink {
     margin-right: 50px;
 }
 
-@media (max-width: 800px) {
-    /*.feature img{*/
-    /*    max-width: 100%;*/
-    /*    height: auto;*/
-    /*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-    /*}*/
+#menu-toggle{
+    flex-grow: 1;
+    color: white;
+    display:none;
+    text-align: center;
+}
 
-    #nav a.link{
-        display: none;
+@media (max-width: 800px) {
+
+    #menu-toggle {
+        margin-top:50px;
+        width: 100%;
+        display: block;
     }
+
+    .dropdown:hover .dropdown-content {display: none;}
+
+    .dropicon {display:none}
+
+    #links{
+        z-index:3;
+        position: relative; width: 100%;
+        background: black;
+        top: -225px; left: 0px;
+        /*height: 150px;*/
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        transition: top 0.5s ease-in-out;
+        -o-transition: top 0.5s ease-in-out;
+        -ms-transition: top 0.5s ease-in-out;
+        -moz-transition: top 0.5s ease-in-out;
+        -webkit-transition: top 0.5s ease-in-out;
+        flex-direction: column;
+    }
+
+    #links a.link {
+        margin: 0px;
+        font-size: 50px;}
+
+
     .feature-text{
         width: 80%;
         text-align: center;
@@ -337,6 +384,7 @@ a.link.currentLink {
 }
 
 .social a svg{
+    fill: darkgray;
     transition: .5s;
 }
 
@@ -348,7 +396,7 @@ a.link.currentLink {
 }
 
 .social a:hover svg {
-    fill: #666666;
+    fill: lightgray;
 }
 
 .social a:before {
@@ -423,7 +471,7 @@ a.link.currentLink {
     align-items: center;
     margin: auto;
     background: #000000;
-    padding: 50px 100px;
+    padding: 50px 45px;
 }
 
 #footer a{
