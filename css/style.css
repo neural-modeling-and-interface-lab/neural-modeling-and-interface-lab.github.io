@@ -272,6 +272,10 @@ a.link.currentLink {
     margin: 100px 0px;
 }
 
+.content a:visited{
+    color: #666666
+}
+
 .feature-text{
     width: 50%;
 }
