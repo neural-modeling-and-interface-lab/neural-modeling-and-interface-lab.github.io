@@ -344,7 +344,7 @@ a.link.currentLink {
     background-image: url('../assets/backgrounds/HMP.jpg');
 }
 .slide-2 {
-    background-image: url('../assets/backgrounds/array.JPG');
+    background-image: url('../assets/backgrounds/array.jpg');
 }
 .slide-3 {
     background-image: url('../assets/backgrounds/MIMO MISO shade arial.png');
@@ -446,7 +446,8 @@ a.link.currentLink {
 /* Research */
 
 #research h1{
-    /*margin-top:25px;*/
+    width: 250px;
+    text-align: center;
 }
 
 #research .feature{
@@ -512,11 +513,16 @@ a.link.currentLink {
 /* Publications */
 #publications h1 {
     margin-top:25px;
+    font-size: 22px
+}
+
+#publications p {
+    font-size: 80%
 }
 
 .underheader{
     margin-top:0px;
-    margin-bottom:25px;
+    margin-bottom:10px;
 }
 
 /* Resources */
