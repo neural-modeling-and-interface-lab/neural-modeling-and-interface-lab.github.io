@@ -100,7 +100,7 @@ img {
 #usc{
     justify-content: flex-end;
     background: #990000;
-    z-index:2
+    z-index:6;
 }
 
 #usc img{
@@ -118,7 +118,7 @@ img {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index:2
+    z-index:6
     /*background-attachment: fixed;*/
 }
 
@@ -144,7 +144,7 @@ img {
     position: sticky;
     top: 0;
     left: 0;
-    z-index:0
+    z-index:5;
 }
 
 
@@ -286,21 +286,62 @@ a.link.currentLink {
 }
 
 #img-carousel{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
     width: 75%;
-    height: 400px;
+    height: 500px;
     margin-top:25px;
 }
 
-#img-carousel img{
-    width: auto;
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    bottom: 0;
+}
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    opacity: 50%;
+    /*border-radius: 50px;*/
+    margin: 0 0.2em 1em;
+}
+.menu label:hover,
+.menu label:focus {
+    opacity: 100%;
+}
+.slide {
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 2;
+    padding: 8em 1em 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 3;
+    transition: left 0.65s ease-out;
+}
+
+.slide-1 {
+    background-image: url('../assets/hmp/HMP.jpg');
+}
+.slide-2 {
+    background-image: url('../assets/slab/array.JPG');
+}
+.slide-3 {
+    background-image: url('../assets/slab/MIMO MISO shade arial.png');
 }
 
 .content a:visited{
