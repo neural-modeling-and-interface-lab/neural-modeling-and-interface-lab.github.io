@@ -289,8 +289,8 @@ a.link.currentLink {
     position: relative;
     overflow: hidden;
     text-align: center;
-    width: 600px;
-    height: 400px;
+    width: calc(1100px / 1.9);
+    height: calc(600px / 1.9);
     margin-top:25px;
 }
 
@@ -328,8 +328,8 @@ a.link.currentLink {
     left: 100%;
     z-index: 2;
     padding: 8em 1em 0;
-    background-position: center;
-    background-size: auto 400px;
+    /*background-position: center;*/
+    background-size: auto calc(600px / 1.9);
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
     transition: left 0s 0.75s;
@@ -341,13 +341,13 @@ a.link.currentLink {
 }
 
 .slide-1 {
-    background-image: url('../assets/backgrounds/HMP.jpg');
+    background-image: url('../assets/featured/prosthesis.jpg');
 }
 .slide-2 {
-    background-image: url('../assets/backgrounds/array.jpg');
+    background-image: url('../assets/featured/lab.jpg');
 }
 .slide-3 {
-    background-image: url('../assets/backgrounds/MIMO MISO shade arial.png');
+    background-image: url('../assets/featured/kernels.jpg');
 }
 
 .content a:visited{
@@ -388,12 +388,12 @@ a.link.currentLink {
     }
 
     #img-carousel {
-        width: calc(1200px / 3);
-        height: calc(800px / 3);
+        width: calc(1100px / 2.5);
+        height: calc(600px / 2.5);
     }
 
     .slide {
-        background-size: auto calc(800px / 3);
+        background-size: auto calc(600px / 2.5);
     }
 
 
