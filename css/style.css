@@ -289,7 +289,7 @@ a.link.currentLink {
     position: relative;
     overflow: hidden;
     text-align: center;
-    width: 75%;
+    width: 600px;
     height: 400px;
     margin-top:25px;
 }
@@ -329,7 +329,7 @@ a.link.currentLink {
     z-index: 2;
     padding: 8em 1em 0;
     background-position: center;
-    background-size: auto auto;
+    background-size: auto 400px;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
     transition: left 0s 0.75s;
@@ -385,6 +385,15 @@ a.link.currentLink {
 
     .feature{
         justify-content: center;
+    }
+
+    #img-carousel {
+        width: calc(1200px / 3);
+        height: calc(800px / 3);
+    }
+
+    .slide {
+        background-size: auto calc(800px / 3);
     }
 
 
