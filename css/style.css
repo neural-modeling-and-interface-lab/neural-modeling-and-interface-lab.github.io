@@ -290,17 +290,22 @@ a.link.currentLink {
     overflow: hidden;
     text-align: center;
     width: 75%;
-    height: 500px;
+    height: 400px;
     margin-top:25px;
 }
 
 .menu {
-    position: absolute;
-    left: 0;
-    z-index: 4;
-    width: 100%;
-    bottom: 0;
+     position: absolute;
+     left: 0;
+     z-index: 4;
+     width: 100%;
+     bottom: 0;
+ }
+
+#img-carousel input{
+    visibility: hidden;
 }
+
 .menu label {
     cursor: pointer;
     display: inline-block;
@@ -324,8 +329,9 @@ a.link.currentLink {
     z-index: 2;
     padding: 8em 1em 0;
     background-position: center;
-    background-size: cover;
+    background-size: auto auto;
     background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
     transition: left 0s 0.75s;
 }
 [id^="slide"]:checked + .slide {
@@ -335,13 +341,13 @@ a.link.currentLink {
 }
 
 .slide-1 {
-    background-image: url('../assets/hmp/HMP.jpg');
+    background-image: url('../assets/backgrounds/HMP.jpg');
 }
 .slide-2 {
-    background-image: url('../assets/slab/array.JPG');
+    background-image: url('../assets/backgrounds/array.JPG');
 }
 .slide-3 {
-    background-image: url('../assets/slab/MIMO MISO shade arial.png');
+    background-image: url('../assets/backgrounds/MIMO MISO shade arial.png');
 }
 
 .content a:visited{
