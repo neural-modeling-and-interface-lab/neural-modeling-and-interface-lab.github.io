@@ -572,11 +572,16 @@ a.link.currentLink {
     display: flex;
     color: white;
     /*height: 150px;*/
-    /*justify-content: space-between;*/
+    justify-content: center;
     align-items: center;
     margin: auto;
     background: #000000;
-    padding: 10px 12.5%;
+    padding: 10px 0px;
+}
+
+#footer section{
+    display: flex;
+    align-items: center;
 }
 
 #footer a {
