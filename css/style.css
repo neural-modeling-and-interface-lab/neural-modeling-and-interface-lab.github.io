@@ -99,12 +99,13 @@ img {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    padding: 0px 12.5%;
+    /*max-width: 1200px;*/
+    /*padding: 0px 12.5%;*/
 }
 
 #usc{
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: right;
     background: #990000;
     z-index:6;
 }
@@ -119,13 +120,13 @@ img {
 }
 
 #slab {
-    justify-content: flex-start;
+    justify-content: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/slab/header.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index:6;
-    width: calc(100% - 10px)
+    width: 100%;
     /*background-attachment: fixed;*/
 }
 
@@ -146,7 +147,7 @@ img {
     height: 50px;
     padding: 10px auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: black;
     position: sticky;
     top: 0;
