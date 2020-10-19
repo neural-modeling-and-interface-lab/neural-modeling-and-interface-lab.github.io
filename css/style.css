@@ -289,14 +289,15 @@ a.link.currentLink {
 #carousel-bar{
     justify-content: center;
     align-items: flex-start;
+    max-width: 1200px;
 }
 
 #img-carousel{
     position: relative;
     overflow: hidden;
     text-align: center;
-    width: calc(1100px / 1.9);
-    height: calc(600px / 1.9);
+    width: 75vw;
+    height: calc((600 / 1100)*75vw);
     margin-top:25px;
 }
 
@@ -335,7 +336,7 @@ a.link.currentLink {
     z-index: 2;
     padding: 8em 1em 0;
     /*background-position: center;*/
-    background-size: auto calc(600px / 1.9);
+    background-size: auto calc((600 / 1100)*75vw);
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
     transition: left 0s 0.75s;
@@ -392,16 +393,6 @@ a.link.currentLink {
     .feature{
         justify-content: center;
     }
-
-    #img-carousel {
-        width: calc(1100px / 2.5);
-        height: calc(600px / 2.5);
-    }
-
-    .slide {
-        background-size: auto calc(600px / 2.5);
-    }
-
 
     #menu-toggle {
         margin:25px 0px 0px 0px;
