@@ -142,7 +142,7 @@ img {
 }
 
 #nav {
-    height: 50px;
+    height: 55px;
     padding: 10px auto;
     align-items: center;
     justify-content: center;
@@ -394,8 +394,8 @@ a.link.currentLink {
 
     .dropicon {display:none}
 
-    #nav{
-        padding: 0px;
+    #nav section{
+        width: 100%;
     }
 
     #links{
