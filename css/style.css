@@ -53,6 +53,7 @@ button a{
 }
 
 section{
+    max-width: 1200px;
     width: 75%;
     color: #222222;
 }
@@ -446,6 +447,7 @@ a.link.currentLink {
     }
 
     .feature-text{
+        max-width: 1200px;
         width: 75%;
         text-align: center;
     }
