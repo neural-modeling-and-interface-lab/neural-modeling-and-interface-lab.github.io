@@ -124,7 +124,8 @@ img {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index:6
+    z-index:6;
+    width: calc(100% - 10px)
     /*background-attachment: fixed;*/
 }
 
@@ -284,7 +285,7 @@ a.link.currentLink {
     position: relative;
     overflow: hidden;
     text-align: center;
-    width: 75vw;
+    width: 100%;
     height: calc((600 / 1100)*75vw);
     margin-top:25px;
 }
