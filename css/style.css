@@ -602,6 +602,7 @@ a.link.currentLink {
 }
 
 #footer-right{
+    text-align: right;
     flex-grow: 1;
 }
 
