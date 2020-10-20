@@ -217,17 +217,17 @@ img {
 }
 
 a {
-    color: black;
-    text-decoration: none;
-    transition: .5s;
+	color: #FFFFFF;
+	text-decoration: none;
+	transition: .5s;
 }
 
 a:hover{
-    color: #333333;
+	color: #FFED00;
 }
 
 a:visited {
-    color: #333333;
+	color: #FFFFFF;
 }
 
 #nav a.link {
@@ -585,7 +585,8 @@ a.link.currentLink {
 }
 
 #footer a {
-    font-size: 90%;
+	font-size: 90%;
+	color: #FFFFFF;
 }
 
 #footer p{
