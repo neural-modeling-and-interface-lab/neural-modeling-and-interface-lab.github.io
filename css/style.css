@@ -104,6 +104,7 @@ img {
     justify-content: center;
     text-align: right;
     background: #990000;
+    height: 50px;
     z-index:6;
 }
 
@@ -217,13 +218,13 @@ img {
 }
 
 a {
-	color: #FFFFFF;
+	color: black;
 	text-decoration: none;
 	transition: .5s;
 }
 
 a:hover{
-	color: #FFED00;
+	color: #FFCC00;
 }
 
 a:visited {
@@ -271,7 +272,7 @@ a.link.currentLink {
     height: 400px;
 }
 .content{
-    /*min-height: 50vh;*/
+    min-height: calc(100vh - 105px);
     margin: 25px 0px 25px 0px;
 }
 
