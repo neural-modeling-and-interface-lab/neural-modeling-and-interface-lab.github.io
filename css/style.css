@@ -272,8 +272,7 @@ a.link.currentLink {
     height: 400px;
 }
 .content{
-    min-height: calc(100vh - 105px);
-    margin: 25px 0px 25px 0px;
+	margin: 25px 0px 25px 0px;
 }
 
 #carousel-bar{
