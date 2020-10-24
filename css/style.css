@@ -1,5 +1,8 @@
 /*App and Nav*/
-
+html{
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
 html, body{
     margin: 0px;
     background: white;
@@ -273,6 +276,7 @@ a.link.currentLink {
 }
 .content{
 	margin: 25px 0px 25px 0px;
+    /*min-height: calc(100vh - 450px);*/
 }
 
 #carousel-bar{
