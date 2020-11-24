@@ -589,7 +589,12 @@ a.link.currentLink {
 }
 
 #footer img{
-    height:100px;
+    max-height:100px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+
+
 }
 
 #footer-left{
