@@ -13,3 +13,11 @@ function menuToggle() {
         x.style.top = "200px";
     }
 }
+
+function replaceWithCurrent(){
+    document.getElementById("people").innerHTML = `<current-people></current-people>`
+}
+
+function replaceWithAlumni(){
+    document.getElementById("people").innerHTML = `<alumni></alumni>`
+}
