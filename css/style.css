@@ -382,72 +382,6 @@ a.link.currentLink {
     text-align: center;
 }
 
-@media (max-width: 800px) {
-
-    .feature{
-        justify-content: center;
-    }
-
-    #menu-toggle {
-        margin:25px 0px 0px 0px;
-        width: 100%;
-        display: block;
-    }
-
-    .dropdown:hover .dropdown-content {display: none;}
-
-    .dropicon {display:none}
-
-    #nav section{
-        width: 100%;
-    }
-
-    #links{
-        z-index:3;
-        position: relative;
-        background: black;
-        top: -205px; left: 0px;
-        padding: 50px 12.5% 0px 12.5%;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        align-content: center;
-        transition: top 0.5s ease-in-out;
-        -o-transition: top 0.5s ease-in-out;
-        -ms-transition: top 0.5s ease-in-out;
-        -moz-transition: top 0.5s ease-in-out;
-        -webkit-transition: top 0.5s ease-in-out;
-        flex-direction: column;
-    }
-
-    #links a.link {
-        margin: 0px;
-        font-size: 50px;}
-
-    #research .feature-text, .feature-left{
-        margin: 0px auto 0px auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #resources .feature-text, .feature-left{
-        margin: 0px auto 0px auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .feature-text{
-        max-width: 1200px;
-        width: 75%;
-        text-align: center;
-    }
-    .margin-left{
-        margin-left: 0px;
-    }
-    .margin-right{
-        margin-right: 0px;
-    }
-}
 
 /* Research */
 
@@ -612,3 +546,92 @@ a.link.currentLink {
     cursor: default;
     font-size: 12px;
 }
+
+
+@media (max-width: 800px) {
+
+    .feature{
+        justify-content: center;
+    }
+
+    #menu-toggle {
+        margin:25px 0px 0px 0px;
+        width: 100%;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {display: none;}
+
+    .dropicon {display:none}
+
+    #nav section{
+        width: 100%;
+    }
+
+    #links{
+        z-index:3;
+        position: relative;
+        background: black;
+        top: -205px; left: 0px;
+        padding: 50px 12.5% 0px 12.5%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        transition: top 0.5s ease-in-out;
+        -o-transition: top 0.5s ease-in-out;
+        -ms-transition: top 0.5s ease-in-out;
+        -moz-transition: top 0.5s ease-in-out;
+        -webkit-transition: top 0.5s ease-in-out;
+        flex-direction: column;
+    }
+
+    #links a.link {
+        margin: 0px;
+        font-size: 50px;}
+
+    #research .feature-text, .feature-left{
+        margin: 0px auto 0px auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #resources .feature-text, .feature-left{
+        margin: 0px auto 0px auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature-text{
+        max-width: 1200px;
+        width: 75%;
+        text-align: center;
+    }
+    .margin-left{
+        margin-left: 0px;
+    }
+    .margin-right{
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /*#nav {*/
+    /*    background: red;*/
+    /*}*/
+
+    #slab h1 {
+        font-size: 25px;
+    }
+
+    #links{
+        top: -145px; left: 0px;
+        padding: 75px 12.5% 0px 12.5%;
+    }
+
+    #links a.link {
+        margin: 0px;
+        font-size: 25px;}
+}
+
