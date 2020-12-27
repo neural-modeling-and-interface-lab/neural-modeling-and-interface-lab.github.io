@@ -5,7 +5,7 @@ class CurrentPeople extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-      <h1>Research Assistants</h1>
+      <h1>Postdoctoral Researchers</h1>
         <hr class="underheader"/>
         <div id="Huijing Xu" class="feature">
             <div class="feature-left">
