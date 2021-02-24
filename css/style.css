@@ -414,9 +414,11 @@ a.link.currentLink {
     height: auto;
 }
 
-#new .feature h2{
-font-size: 80%
-} 
+#news .feature h3{
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
+}
 
 /* People */
 
