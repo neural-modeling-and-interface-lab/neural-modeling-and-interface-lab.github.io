@@ -1,16 +1,18 @@
 function menuToggle() {
     var x = document.getElementById("links");
-    console.log('toggled')
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    if (x.style.top === "200px") {
-        x.style.top = "-205px";
-    } else if (x.style.top === "100px") {
-        x.style.top = "-140px";
-    }
-    else if (vw <= 600){
-        x.style.top = "100px";
-    } else if (vw > 600){
-        x.style.top = "200px";
+    if (vw <= 600) {
+        if (x.style.top === "0px"){
+            x.style.top = "-330px";
+        } else {
+            x.style.top = "0px";
+        }
+    } else {
+        if (x.style.top === "0px"){
+            x.style.top = "-475px";
+        } else {
+            x.style.top = "0px";
+        }
     }
 }
 

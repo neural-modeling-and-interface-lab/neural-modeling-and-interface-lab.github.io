@@ -266,6 +266,7 @@ a.link.currentLink {
 
 .feature img{
     max-width: 250px;
+    width: 250px;
     height: auto;
     margin: 10px 0px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -391,6 +392,15 @@ a.link.currentLink {
     align-items: center;
     margin:25px 0px;
 }
+
+/* News */
+
+#news .feature{
+    justify-content: flex-start;
+    align-items: center;
+    margin:25px 0px;
+}
+
 /* People */
 
 #people-selector{
@@ -587,8 +597,10 @@ a.link.currentLink {
         z-index:3;
         position: relative;
         background: black;
-        top: -205px; left: 0px;
+        top: -475px; left: 0px;
         padding: 50px 12.5% 0px 12.5%;
+        height: 540px;
+        box-sizing: border-box;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
@@ -641,7 +653,8 @@ a.link.currentLink {
     }
 
     #links{
-        top: -145px; left: 0px;
+        top: -330px; left: 0px;
+        height: 390px;
         padding: 75px 12.5% 0px 12.5%;
     }
 
