@@ -16,7 +16,8 @@ class Alumni extends HTMLElement {
                 <h2 class="top-margin">Pen-Ning Yu</h2>
                 <p>Pen-Ning Yu completed his Ph.D. in Biomedical Engineering under the supervision of Dr. Dong Song in September 2020.
                     Pen-Ning's research interests include electrophysiology, EEG analysis, nonlinear dynamical modeling, machine learning, and seizure prediction.</p>
-
+<p>He is now an Assistant Professor of Mechanical Engineering at National Cheng Kung University in Taiwan.
+                </p>
             </div>
         </div>
 
