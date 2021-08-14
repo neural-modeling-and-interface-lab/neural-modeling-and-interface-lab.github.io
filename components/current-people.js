@@ -183,6 +183,22 @@ class CurrentPeople extends HTMLElement {
                 <p>In her spare time, Yilei enjoys sewing, boba, and going for weekend drives by the beach.</p>
             </div>
         </div>
+        <div id="yilei" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/john_square.jpg"/>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/john-pace-452185142/">
+                        <div>
+                            <svg viewBox="0 0 20 24" width="20" ><use xlink:href="#linkedin"/></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">John Pace</h2>
+                <p>John Pace is a Computational Neuroscience student at the University of Southern California and is trained in computational neurology and biology that joined the lab in March of 2021. He is active in Neuroscience seminars, medical organizations on and around campus, in addition to his experience as a Health Administrative Intern at PIH Health and previous research with NASA's Student Payload Opportunity with Citizen Science. (SPOCS). He actively takes part in neuroscience-based bioengineering research through the Viterbi School of Engineering and is pursuing a joint bachelors with a Masters in Health Administration (M.H.A.), and an eventual Doctor of Medicine (M.D.).</p>
+            </div>
+        </div>
     `;
     }
 }
