@@ -120,6 +120,29 @@ class CurrentPeople extends HTMLElement {
             </div>
         </div>
 
+        <div id="zhouxiao" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/zhouxiao_square.jpg"/>
+                <div class="social">
+                    <a href="https://linkedin.com/in/zhouxiao-lu">
+                        <div>
+                            <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#linkedin"/></svg>
+                        </div>
+                    </a>
+                    <a href="https://github.com/amanda1u1u">
+                        <div>
+                            <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#github"/></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">Zhouxiao Lu</h2>
+                <p>Zhouxiao Lu is a Ph.D. student at the Department of Biomedical Engineering. She graduated with a B.S. in Biomedical Engineering and a minor in neuroscience from the University of North Carolina at Chapel Hill in 2020. Zhouxiao had experience in animal experiments and is interested in neurotechnology, especially brain-machine interfaces. She enjoys circuit design, hardware programming, and signal processing. Zhouxiao is passionate about the diagnosis and treatment of neurological disorders such as Alzheimer’s Disease.</p>
+				<p>In her leisure time, Zhouxiao enjoys cooking, hanging out with friends, and playing video games.
+                </p>
+            </div>
+        </div>
         <h1>Undergraduate Students</h1>
         <hr class="underheader"/>
 
