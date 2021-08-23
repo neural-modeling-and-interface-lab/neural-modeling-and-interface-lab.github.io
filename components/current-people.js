@@ -226,7 +226,7 @@ class CurrentPeople extends HTMLElement {
 
         <div id="robert" class="feature">
             <div class="feature-left">
-                <img src="assets/people/robert_square.jpg"/>
+                <img src="assets/people/rob_square.jpg"/>
                 <div class="social">
                     <a href="https://www.linkedin.com/in/robert-sutherland-4a065b173/">
                         <div>
