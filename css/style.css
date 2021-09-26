@@ -325,11 +325,11 @@ a.link.currentLink {
 .menu label {
     cursor: pointer;
     display: inline-block;
-    width: 30px;
-    height: 4px;
-    background: #fff;
-    opacity: 50%;
-    /*border-radius: 50px;*/
+    width: 50px;
+    height: 10px;
+    background: #ffff00;
+    opacity: 60%;
+  	border-radius: 4px;
     margin: 0 0.2em 1em;
 }
 .menu label:hover,
