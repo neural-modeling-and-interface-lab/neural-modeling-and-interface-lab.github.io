@@ -29,7 +29,7 @@ class Alumni extends HTMLElement {
                             <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#scholar"/></svg>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/sahar-elyahoodayan-78b8734b/">
+                    <a href="https://www.linkedin.com/in/sahar-elyahoodayan-ph-d-78b8734b/">
                         <div>
                             <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#linkedin"/></svg>
                         </div>
