@@ -151,7 +151,7 @@ class CurrentPeople extends HTMLElement {
             <div class="feature-left">
                 <img src="assets/people/zihan_square.jpg"/>
                 <div class="social">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/zihan-jin-6ab3a921b/">
                         <div>
                             <svg viewBox="0 0 20 24" width="20" ><use xlink:href="#linkedin"/></svg>
                         </div>
