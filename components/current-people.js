@@ -143,6 +143,29 @@ class CurrentPeople extends HTMLElement {
                 </p>
             </div>
         </div>
+
+        <h1>Master Students</h1>
+        <hr class="underheader"/>
+
+        <div id="zihan" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/zihan_square.jpg"/>
+                <div class="social">
+                    <a href="">
+                        <div>
+                            <svg viewBox="0 0 20 24" width="20" ><use xlink:href="#linkedin"/></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">Zihan Jin</h2>
+                <p>Zihan Jin is a master’s student, planning to obtain a Master’s degree in Biomedical Engineering. She graduated with a B.S. in Mechanical Engineering in 2020. Zihan is interested in neural interfaces and neural decoding. She is trained in animal experiments to test devices for large-scale recording and stimulation. Zihan also learns computational modeling methods that can be used for hippocampal and cortical circuit study. She is motivated by helping people who suffer from various neurological disorders to restore and enhance the injured memory function.</p>
+                <p>Zihan is a fan of Real Madrid. In her spare time, she enjoys playing board games, especially Living Card Games.</p>
+            </div>
+        </div>
+
+
         <h1>Undergraduate Students</h1>
         <hr class="underheader"/>
 
