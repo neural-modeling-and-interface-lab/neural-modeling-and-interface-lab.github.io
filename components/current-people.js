@@ -204,6 +204,17 @@ class CurrentPeople extends HTMLElement {
             </div>
         </div>
 
+        <div id="summer" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/summer_square.jpg"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">Summer Ngo</h2>
+                <p>I am a biomedical engineering student, who is also minoring in computer programming. I am currently interested in studying any neural or tissue-related topics within biomedical engineering. I hope to gain the necessary lab experience to pursue my own independent research and eventually attend graduate school and attain a PhD degree. </p>
+				<p>In my spare time, I enjoy playing video games, sleeping in, and drinking boba!</p>
+            </div>
+        </div>
+
     `;
     }
 }
