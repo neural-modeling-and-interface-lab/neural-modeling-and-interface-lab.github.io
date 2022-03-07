@@ -215,6 +215,17 @@ class CurrentPeople extends HTMLElement {
             </div>
         </div>
 
+        <div id="victoria" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/victoria_square.jpg"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">Victoria Jimenez</h2>
+                <p>Victoria Jimenez is a Biomedical Engineering student at the University of Southern California. She is involved in engineering organizations on campus as well as coding programs to integrate in her studies. She is working on her scribe certificate and EMT license, with plans to attend medical school in the future. She hopes to pursue a career combining engineering and medicine to study Alzheimer’s, as well as other diseases.</p>
+				<p>In her spare time she enjoys traveling and spending time with family.</p>
+            </div>
+        </div>
+
     `;
     }
 }
