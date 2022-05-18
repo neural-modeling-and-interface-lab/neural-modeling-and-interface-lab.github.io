@@ -653,7 +653,7 @@ a.link.currentLink {
     .feature-text{
         max-width: 1200px;
         width: 75%;
-        text-align: center;
+        text-align: left;
     }
     .margin-left{
         margin-left: 0px;
