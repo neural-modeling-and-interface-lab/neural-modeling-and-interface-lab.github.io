@@ -1,1 +1,10 @@
-# neural-modeling-and-interface-lab.github.io
+# Website for the Neural Modeling and Interface Lab
+This repository is served to slab.usc.edu through Github Pages.
+
+## Branches
+- Publish to the live site through `main` 
+- Push changes to Github without updating the live site through `staging`
+
+
+## Acknowledgments
+This repository was or
