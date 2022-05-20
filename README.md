@@ -1,3 +1,6 @@
-# neural-modeling-and-interface-lab.github.io
+# Website for the Neural Modeling and Interface Lab
+This repository is served to slab.usc.edu through Github Pages.
 
-Hi This is just me making a test to push what I think I am pushing to the staging aspect of the website, which will have no effect on the actual USC website at all. :D
+## Branches
+- Publish to the live site through `main` 
+- Push changes to Github without updating the live site through `staging`
