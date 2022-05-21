@@ -379,7 +379,7 @@ a.link.currentLink {
 
 #menu-toggle{
     flex-grow: 1;
-    color: white;
+    color: #FFC72C;
     display:none;
     text-align: center;
 }
