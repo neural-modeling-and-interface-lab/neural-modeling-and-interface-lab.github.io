@@ -144,6 +144,29 @@ class CurrentPeople extends HTMLElement {
             </div>
         </div>
 
+        <div id="jason" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/jason_square.jpg"/>
+                <div class="social">
+                    <a href="">
+                        <div>
+                            <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#linkedin"/></svg>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div>
+                            <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#github"/></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">Chenlin (Jason) Xu</h2>
+                <p>Jason joined the Song lab in 2022 as a Ph.D. research assistant. He received his B.Eng. degree in Chemical Engineering from Harbin Engineering University in China and M.S. degree in Biomedical Engineering from Duke University in US. His current research focus on using machine learning to develop large-scale realistic model of the hippocampus to study memory functions. Jason has keen interests in AI, neurotechnology, and all kinds of topics pertain to bioelectronics/bioinstrumentation. </p>
+				<p>Outside the lab, He enjoys playing piano, badminton, strategy games, acting in theater, reading, and exploring lots of food.</p>
+            </div>
+        </div>
+
         <h1>Master Students</h1>
         <hr class="underheader"/>
 
