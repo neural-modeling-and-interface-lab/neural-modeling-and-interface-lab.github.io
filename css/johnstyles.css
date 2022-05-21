@@ -1,0 +1,36 @@
+body{
+    background-color: lightslategray
+
+}
+h1{
+    color: #990000;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h2{
+    color: #FFC72C;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    color: #990000;
+    border: 2px solid #FFC72C;
+    padding: 30px;
+    margin: 50px
+}
+jo{
+    color: brown;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+h4{
+    font-size: 15px;
+}
+img{
+    height: 400px;
+    
+}
+logoimg{
+    height: 60px;
+    width: 60px;
+}
