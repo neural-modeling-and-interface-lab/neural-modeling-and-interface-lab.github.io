@@ -15,6 +15,7 @@
     </head>
     <body>
         <div id="app">
+            <header>
             <div id ="usc" class ="bar">
                 <section>
                     <a href="https://usc.edu/"><img = src="assets/usc/usc-shield-name-white.png"></a>
@@ -30,34 +31,41 @@
 
             <!--John's Version of the Navigation Bar
             - What I am trying to do here is create a dropdown menu from the already highlighted
-            - news option, indicating that there is a 'Featured News' and an 'Archived News'
-            -->
-            <div id="nav"  class="bar">
-                <section>
-                    <div id="links" class="stretch">
-                        <a href="index.html" class="link">Home</a>
-                        <a href="research.html" class="link">Research</a>
-                        <a href="people.html" class="link">People</a>
-                        <div class="dropdown">
-                            <button class="dropbtn"><a class="link currentLink">News</a></button>
-                            <div class="dropdown-content">
-                              <a href="/feat-news.html">Featured News</a>
-                              <a href="/news.html">Archived News</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="dropbtn"><a class="link">Publications</a></button>
-                            <div class="dropdown-content">
-                              <a href="/feat-news.html">Featured Publications</a>
-                              <a href="/news.html">All Publications</a>
-                            </div>
-                        </div>
-                        <a href="resources.html" class="link">Resources</a>
-                        <div id="menu-toggle" class="toggle" onclick="menuToggle()"><div class="icon"><i class="fas fa-angle-down fa-3x"></i></div></div>
-                    </div>
-                </section>
-            </div>
+            - news option, indicating that there is a 'Featured News' and an 'All News'
 
+            Updated by Garrett on May 22nd (and moved to the rest of the site)
+            -->
+
+
+     <!--Navbar-->
+     <div id="nav" class="bar">
+        <section>
+            <div id="links" class="stretch">
+                <a href="index.html" class="link">Home</a>
+                <a href="research.html" class="link">Research</a>
+                <a href="people.html" class="link">People</a>
+                <div class="dropdown">
+                    <a href="/news.html" class="currentLink">News</a>
+                    <div class="dropdown-content">
+                        <a href="/feat-news.html"  class="currentLink">Featured News</a>
+                        <a href="/news.html">All News</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/publications.html">Publications</a>
+                    <div class="dropdown-content">
+                        <a href="/feat-pub.html">Featured Publications</a>
+                        <a href="/publications.html">All Publications</a>
+                    </div>
+                </div>
+                <a href="resources.html" class="link">Resources</a>
+                <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                    <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
             <!--The actual content of the featured news page-->
     <!--Content-->
     <section id='news' class="content">

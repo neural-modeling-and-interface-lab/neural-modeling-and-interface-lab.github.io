@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id=app>
-
+    <header>
     <div id="usc" class="bar">
         <section>
         <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png"/></a>
@@ -27,20 +27,36 @@
     </div>
 
 
-    <!--Navbar-->
-    <div id="nav"  class="bar">
-        <section>
-        <div id="links" class="stretch">
-            <a href="index.html" class="link">Home</a>
-            <a href="research.html" class="link">Research</a>
-            <a href="people.html" class="link">People</a>
-            <a href="news.html" class="link">News</a>
-            <a href="publications.html" class="link currentLink">Publications</a>
-            <a href="resources.html" class="link">Resources</a>
-            <div id="menu-toggle" class="toggle" onclick="menuToggle()"><div class="icon"><i class="fas fa-angle-down fa-3x"></i></div></div>
+    
+         <!--Navbar-->
+         <div id="nav" class="bar">
+            <section>
+                <div id="links" class="stretch">
+                    <a href="index.html" class="link">Home</a>
+                    <a href="research.html" class="link">Research</a>
+                    <a href="people.html" class="link">People</a>
+                    <div class="dropdown">
+                        <a href="/news.html">News</a>
+                        <div class="dropdown-content">
+                            <a href="/feat-news.html">Featured News</a>
+                            <a href="/news.html">All News</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="/publications.html" class="currentLink">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="/feat-pub.html">Featured Publications</a>
+                            <a href="/publications.html" class="currentLink">All Publications</a>
+                        </div>
+                    </div>
+                    <a href="resources.html" class="link">Resources</a>
+                    <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                        <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+                    </div>
+                </div>
+            </section>
         </div>
-        </section>
-    </div>
+    </header>
 
 
     <!--Content-->
