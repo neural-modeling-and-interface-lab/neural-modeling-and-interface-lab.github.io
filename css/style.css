@@ -162,6 +162,10 @@ img {
     z-index:5;
 }
 
+#usc, #slab {
+    z-index: 10;
+}
+
 
 
 
@@ -395,6 +399,9 @@ a:visited {
     color: #FFC72C;
     display:none;
     text-align: center;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
 }
 
 
@@ -612,12 +619,12 @@ a:visited {
     }
 
     #menu-toggle {
-        margin:25px 0px 0px 0px;
+        /* transform: translateY(50%); */
         width: 100%;
         display: block;
+        background: rgba(0, 0, 0, 0.3);
     }
 
-    .dropdown:hover .dropdown-content {display: none;}
 
     .dropicon {display:none}
 
@@ -629,25 +636,30 @@ a:visited {
         z-index:3;
         position: relative;
         background: black;
-        top: -475px; left: 0px;
-        padding: 50px 12.5% 0px 12.5%;
-        height: 540px;
+        padding: 0px;
+        max-height: 0;
+        overflow: hidden;
         box-sizing: border-box;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
-        align-content: center;
-        transition: top 0.5s ease-in-out;
-        -o-transition: top 0.5s ease-in-out;
-        -ms-transition: top 0.5s ease-in-out;
-        -moz-transition: top 0.5s ease-in-out;
-        -webkit-transition: top 0.5s ease-in-out;
         flex-direction: column;
+        color: transparent;
     }
 
-    #links a.link {
+    #links a {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #links.open {
+        padding: 25px 12.5% 25px 12.5%;
+        max-height: 5000px;
+    }
+
+    #links a {
         margin: 0px;
-        font-size: 50px;}
+    }
 
     #research .feature-text, .feature-left{
         margin: 0px auto 0px auto;
@@ -672,6 +684,17 @@ a:visited {
     .margin-right{
         margin-right: 0px;
     }
+
+
+    .dropdown-content {
+        position: relative;
+        color: white;
+        opacity: 1;
+    }
+
+    #links .dropdown-content a {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -683,14 +706,4 @@ a:visited {
     #slab h1 {
         font-size: 25px;
     }
-
-    #links{
-        top: -330px; left: 0px;
-        height: 390px;
-        padding: 75px 12.5% 0px 12.5%;
-    }
-
-    #links a.link {
-        margin: 0px;
-        font-size: 25px;}
 }
