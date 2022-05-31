@@ -78,6 +78,7 @@
         </section>
     </div>
 </div>
+<p>This is a test to confirm that the live server works and that the boolean logic is consistent</p>
 </body>
 
 
@@ -94,7 +95,10 @@
             let date = new Date(data[item]['Date'])
             let month = months[date.getMonth()]
             var dateStr = month + ' ' + date.getDate() + ', ' + date.getFullYear();
+            console.log(new Number(date.getFullYear()),  new Number(date.getFullYear()) > 2017);
+            console.log(date.getFullYear());
 
+        /*if(new Number(date.getFullYear()) > 2017){*/
             container.innerHTML += `
                     <div class="feature">
                         <div class="feature-left">
@@ -107,6 +111,7 @@
                         </div>
                     </div>
                 `
+            /*}*/
         }
     })
 </script>

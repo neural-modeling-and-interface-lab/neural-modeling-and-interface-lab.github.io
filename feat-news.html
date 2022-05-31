@@ -12,10 +12,10 @@
         <script type="text/javascript" src="js/site.js"></script>
         <title>Featured News — Neural Modeling and Interface Lab</title>
         
-    </head>
-    <body>
-        <div id="app">
-            <header>
+ </head>
+<body>
+<div id="app">
+    <header>
             <div id ="usc" class ="bar">
                 <section>
                     <a href="https://usc.edu/"><img = src="assets/usc/usc-shield-name-white.png"></a>
@@ -109,12 +109,15 @@
             let container = document.getElementById('news')
             const months = ["January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"];
-            for (let item = 0; item < data.length; item++) {
+            
+                for (let item = 0; item < data.length; item++) {
                 let date = new Date(data[item]['Date'])
                 let month = months[date.getMonth()]
                 var dateStr = month + ' ' + date.getDate() + ', ' + date.getFullYear();
+        
+            }
                 
-    
+                if(new Number(date.getFullYear() > 2017)){
                 container.innerHTML += `
                         <div class="feature">
                             <div class="feature-left">
@@ -127,7 +130,8 @@
                             </div>
                         </div>
                     `
+                }
             }
-        })
+        )
     </script>
 </html>
