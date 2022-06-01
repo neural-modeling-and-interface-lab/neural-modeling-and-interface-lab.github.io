@@ -10,7 +10,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script type="text/javascript" src="js/site.js"></script>
-        <title>Featured News — Neural Modeling and Interface Lab</title>
+        <title>Featured and Internal News — Neural Modeling and Interface Lab</title>
         
  </head>
 <body>
@@ -43,22 +43,28 @@
             <div id="links" class="stretch">
                 <a href="index.html" class="link">Home</a>
                 <a href="research.html" class="link">Research</a>
-                <a href="people.html" class="link">People</a>
                 <div class="dropdown">
-                    <a href="/news.html" class="currentLink">News</a>
+                    <a href="/publications.html">People</a>
                     <div class="dropdown-content">
-                        <a href="/feat-news.html"  class="currentLink">Featured News</a>
-                        <a href="/news.html">All News</a>
+                        <a href="/gallery.html">Gallery</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/feat-news.html" class="currentLink">News</a>
+                    <div class="dropdown-content">
+                        <a href="/feat-news.html"  class="currentLink">News</a>
+                        <a href="/mediacov.html">Media Coverage</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <a href="/publications.html">Publications</a>
                     <div class="dropdown-content">
                         <a href="/feat-pub.html">Featured Publications</a>
-                        <a href="/publications.html">All Publications</a>
+                        <a href="/publications.html">Publication Archive</a>
                     </div>
                 </div>
                 <a href="resources.html" class="link">Resources</a>
+                <a href="gallery.html" class = "link">Gallery</a>
             </div>
             <div id="menu-toggle" class="toggle" onclick="menuToggle()">
                 <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
@@ -68,25 +74,26 @@
 </header>
             <!--The actual content of the featured news page-->
     <!--Content-->
-    <section id='news' class="content">
-        <p>Hello everyone. I am confused and lost on what exactly I need to be doing here.</p>
-    </section>
-            <!--The original Navigation Bar Code:
-                <div id="nav"  class="bar">
-        <section>
-        <div id="links" class="stretch">
-            <a href="index.html" class="link currentLink">Home</a>
-            <a href="research.html" class="link">Research</a>
-            <a href="people.html" class="link">People</a>
-            <a href="feat-news.html" class="link">Featured News</a>
-            <a href="feat-pub.html" class="link">Featured Publications</a>
-            <a href="resources.html" class="link">Resources</a>
-            <div id="menu-toggle" class="toggle" onclick="menuToggle()"><div class="icon"><i class="fas fa-angle-down fa-3x"></i></div></div>
-        </div>
-        </section>
+
     </div>
-            -->
+        <section id="news" class = "content">
+        <div id = "lab_news">
+            <h1>Internal Lab News</h1>
+            <p>A page dedicated to the up and coming events within our lab.</p>
         </div>
+        <div id = "lab_news">
+            <h2>Dr. Fazad Massoudi, M.D, M.B.A., visits the</h2>
+            <hr>
+            <h3>May 27th, 2022</h3>
+            <p>He visited as part of a delegation.</p>
+        </div>
+        <div id = "lab_news">
+            <h2>Xiwei She Defends Thesis and Achieves Doctoral Status</h2>
+            <hr>
+            <h3>May 12th, 2022</h3>
+            <p>Following over ___ years of work in the Dong Song Neural Interface and Modeling Lab, Ph.D. student, now Dr. Xiwei She has successuflly defended their thesis and has earned the title of a Ph.D. Scholar in Biomedical Enginnering.</p>
+        </div>
+    </section>
         <div id="footer" class="bar">
             <section>
                 <div id="footer-left">
@@ -100,38 +107,5 @@
             </section>
         </div>
     </body>
-    <script>
-        let file = './assets/news/news.csv'
-        d3.csv(file).then(function (data) {
-            let headers = Object.keys(data[0]) // then taking the first row object and getting an array of the keys
-    
-            data.sort((a, b) => new Date(b['Date']) - new Date(a['Date']))
-            let container = document.getElementById('news')
-            const months = ["January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"];
-            
-                for (let item = 0; item < data.length; item++) {
-                let date = new Date(data[item]['Date'])
-                let month = months[date.getMonth()]
-                var dateStr = month + ' ' + date.getDate() + ', ' + date.getFullYear();
-        
-            }
-                
-                if(new Number(date.getFullYear() > 2017)){
-                container.innerHTML += `
-                        <div class="feature">
-                            <div class="feature-left">
-                            <a href="${data[item]['URL']}"><img src="assets/news/images/${data[item]['Image']}"/></a>
-                            </div>
-                            <div class="feature-text margin-left">
-                                <p>${dateStr}</p>
-                                <h3>${data[item]['Title']}</h3>
-                                <a href="${data[item]['URL']}"><button style="margin-top: 10px;">Read Here</button></a>
-                            </div>
-                        </div>
-                    `
-                }
-            }
-        )
-    </script>
+   
 </html>

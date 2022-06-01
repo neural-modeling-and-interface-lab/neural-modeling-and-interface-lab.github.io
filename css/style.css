@@ -206,7 +206,7 @@ img {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {opacity: 1;}
 
-.dropdown:hover .dropbtn {}
+/*.dropdown:hover .dropbtn {}*/
 
 .dropicon{
     padding-left: 10px;
@@ -706,4 +706,41 @@ a:visited {
     #slab h1 {
         font-size: 25px;
     }
+}
+/* Lab Featured News Section */
+#lab_news{
+    
+    
+    /*height: 150px;*/
+    justify-content: center;
+    align-items: center;
+    
+    border: 20px #990000;
+    padding: 50px;
+}
+#lab_news p{
+    margin-top: 5px;
+    margin: 20px;
+    color:#000000;
+}
+#lab_news a{
+    font-size: 90%;
+    color:rgba(0, 0, 0, 100);
+}
+#lab_news h1{
+    margin: 10px;
+    color: #000000;
+}
+#lab_news h2{
+    margin: 5px;
+    color:#000000;
+    padding: 5px;
+}
+#lab_news h3{
+    color: #990000;
+    margin: 15px;
+}
+#lab_news_header{
+    justify-content: right;
+    align-content: left;
 }
