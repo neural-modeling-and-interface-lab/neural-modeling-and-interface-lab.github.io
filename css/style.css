@@ -195,7 +195,7 @@ img {
     padding: 12px 16px;
     margin: 0;
     text-decoration: none;
-    display: block;
+    display: block; 
 }
 
 /* Change color of dropdown links on hover */
@@ -743,4 +743,13 @@ a:visited {
 #lab_news_header{
     justify-content: right;
     align-content: left;
+}
+#lab_news img{
+
+    align-self: center;
+    margin: 25px;
+    padding: 0%;
+    max-width: 100%;
+    width: auto;   
+    height: auto;
 }
