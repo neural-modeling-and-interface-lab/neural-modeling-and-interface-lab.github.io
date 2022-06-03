@@ -144,6 +144,29 @@ class CurrentPeople extends HTMLElement {
             </div>
         </div>
 
+        <div id="cbcGirard" class="feature">
+            <div class="feature-left">
+                <img src="assets/people/cbcGirard.jpg"/>
+                <div class="social">
+                    <a href="https://linkedin.com/in/cbcgirard">
+                        <div>
+                            <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#linkedin"/></svg>
+                        </div>
+                    </a>
+                    <a href="https://github.com/cbcGirard">
+                        <div>
+                            <svg viewBox="0 0 20 20" width="20" ><use xlink:href="#github"/></svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="feature-text margin-left">
+                <h2 class="top-margin">Christopher B.C. Girard</h2>
+                <p>Chris earned both a B.S. in Engineering Physics from Biola University, and a B.S. in Biomedical Engineering from USC, via the two schools' 3-2 transfer program. Continuing through an M.S. and a circuitous early PhD career in BME, he eventually landed in Dr. Song's lab, studying methods for accelerated simulation of electrical phenomena in the extracellular space. As an educator at heart, he has been fortunate to serve as a TA at both Biola and USC, as well as an adjunct instructor at Mount St. Mary's University.</p>
+                <p>An inveterate tinkerer, Chris dabbles with home automation and DIY IOT, 3D printing, carpentry, CNC and manual machining, home brewing, guitar, and piano.</p>
+            </div>
+        </div>
+
         <h1>Master Students</h1>
         <hr class="underheader"/>
 
