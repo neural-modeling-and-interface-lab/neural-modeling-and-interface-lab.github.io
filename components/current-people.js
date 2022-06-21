@@ -204,6 +204,17 @@ class CurrentPeople extends HTMLElement {
             </div>
         </div>
 
+    <div id="ziyue" class="feature">
+        <div class="feature-left">
+            <img src="assets/people/ziyue_square.jpg"/>
+        </div>
+        <div class="feature-text margin-left">
+            <h2 class="top-margin">Ziyue Zhu</h2>
+            <p>Ziyue Zhu is a Biomedical Engineering (cellular & molecular track) student at the University of Southern California and joined the lab in March of 2022. She is interested in new technologies in biomedical engineering especially brain-machine interfaces. She wishes to pursue a doctoral degree in the field of BME and become a researcher and professor in the future. </p>
+            <p>Outside the lab, she likes to sing, playing guitar, and music production.</p>
+            </div>
+    </div>
+
         <div id="summer" class="feature">
             <div class="feature-left">
                 <img src="assets/people/summer_square.jpg"/>

@@ -48,6 +48,9 @@ hr{
     border-top: 1px solid darkgray;
     /*margin: 50px 0px;*/
 }
+hr.new4 {
+    border: 1px solid #990000;
+  }
 
 button {width: 150px; height: 50px; cursor: pointer; color: whitesmoke;
     background: black; border: none; border-radius: 10px;
@@ -769,3 +772,71 @@ a:visited {
     height: auto !important;
     margin-bottom:5px; /* to match column gap */
  }
+ /* Ongoing Projects Page */
+ #projects{   
+    /*height: 150px;*/
+    justify-content: center;
+    align-items: center;
+    
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 50px;
+}
+ #projects-selector{
+    display: flex;
+    margin: 25px 0px 25px 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects-selector button{
+    /*width: 300px;*/
+    flex-grow: 1;
+    margin: 0px 25px;
+}
+
+#projects .feature {
+    margin-bottom: 50px;
+}
+
+#projects hr {
+    margin-top:0px;
+    margin-bottom:25px;
+}
+#projects img{
+    align-self: left;
+    width: auto;
+    height: auto;
+    padding: 0%;
+   
+
+}
+/* Featured Publication Page*/
+
+#feat-pub{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 150px;
+    margin-right: auto;
+}
+#feat-pub .feature {
+    margin-bottom: 50px;
+}
+
+#feat-pub hr {
+    margin-top:0px;
+    margin-bottom:25px;
+}
+#feat-pub img{
+    align-self: left;
+    width: auto;
+    height: auto;
+    padding: 0%;
+   
+
+}
+ 
