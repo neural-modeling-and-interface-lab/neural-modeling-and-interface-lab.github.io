@@ -62,7 +62,7 @@ class FeaturedPublications extends HTMLElement{
         <hr class="new4"/>
         <div id="FeatArticle3" class="feature">
         <div class="feature-left">
-            <img src="assets/news/images/Art2.jpg" style="width: 900px; height: auto;"/>
+            <img src="assets/news/images/frontierslogo.png" style="width: 900px; height: auto;"/>
             <div class="social">
                 <a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.616063/full">
                     <div>
@@ -93,7 +93,7 @@ class FeaturedPublications extends HTMLElement{
     <hr class="new4"/>
     <div id="FeatArticle4" class="feature">
     <div class="feature-left">
-        <img src="assets/news/images/Art2.jpg" style="width: 900px; height: auto;"/>
+        <img src="assets/news/images/IEEE_Xplore_Logo.png" style="width: 900px; height: auto;"/>
         <div class="social">
             <a href="https://ieeexplore.ieee.org/document/9630986">
                 <div>
@@ -104,7 +104,7 @@ class FeaturedPublications extends HTMLElement{
     </div>
     <div class="feature-text margin-left">
         <h2 class="top-margin">Low Intensity Repetitive Transcranial Magnetic Stimulation Modulates Spontaneous Spiking Activities in Rat Cortex</h2>
-        <h3>February 21th, 2021</h3>
+        <h3>December 9th, 2021</h3>
         <p>Repetitive transcranial magnetic stimulation (rTMS) is a non-invasive technique for neuromodulation. Even at low intensities, 
         rTMS can alter the structure and function of neural circuits; yet the underlying mechanism remains unclear. Here we report a 
         new experimental paradigm for studying the effect of low intensity rTMS (LI-rTMS) on single neuron spiking activities in 
@@ -120,7 +120,7 @@ class FeaturedPublications extends HTMLElement{
 <hr class="new4"/>
 <div id="FeatArticle5" class="feature">
 <div class="feature-left">
-    <img src="assets/news/images/Art2.jpg" style="width: 900px; height: auto;"/>
+    <img src="assets/news/images/Art5.jpg" style="width: 900px; height: 200px;"/>
     <div class="social">
         <a href="https://iopscience.iop.org/article/10.1088/1741-2552/aaaed7">
             <div>
