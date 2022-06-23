@@ -159,7 +159,7 @@ img {
     align-items: center;
     justify-content: center;
     background: black;
-    z-index:5;
+    z-index:10;
     /* overflow: hidden; */
 }
 
@@ -873,5 +873,14 @@ a:visited {
     padding: 0%;
    
 
+}
+#currentprojects{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 150px;
+    margin-right: auto;
 }
  
