@@ -807,6 +807,35 @@ a:visited {
     height: auto !important;
     margin-bottom:5px; /* to match column gap */
  }
+ .image{
+    
+    width: 400px;
+    position: relative;
+ }
+ .image__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+ }
+ .image__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+ }
+ .image__title{
+    font-size: 2em;
+    font-weight: 500;
+
+ }
  /* Ongoing Projects Page */
  #projects{   
     /*height: 150px;*/
