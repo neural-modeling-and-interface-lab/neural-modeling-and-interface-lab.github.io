@@ -798,32 +798,34 @@ a:visited {
     -webkit-column-gap:5px; /* give it a 5px gap between columns */
     -moz-column-count:5;
     -moz-column-gap:5px;
-    column-count:5;
-    column-gap:5px;
+    column-count:3;
+    column-gap:10px;
+    align-items: center;
+    justify-content: center;
  }
  #gallery img {
     
     width: 100% !important;
     height: auto !important;
-    margin-bottom:5px; /* to match column gap */
+    margin-bottom:20px; /* to match column gap */
  }
  .image{
     
-    width: 400px;
+    width: 100% !important;
     position: relative;
  }
  .image__img{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: auto !important;
  }
  .image__overlay{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     color: #FFFFFF;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
