@@ -9,8 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <script type="text/javascript" src="js/site.js"></script>
-    <script src="components/alumni.js" type="text/javascript" defer></script>
-    <script src="components/current-people.js" type="text/javascript" defer></script>
     <title>Alumni — Neural Modeling and Interface Lab</title>
 </head>
 <div id=app>
@@ -42,17 +40,17 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="./people.html">People</a>
+                    <a href="./people.html" class = "link currentLink">People</a>
                     <div class="dropdown-content">
-                        <a href="./gallery.html">Gallery</a>
-                        <a href ="../people.html">Current Members</a>
                         <a href = "../alumni.html">Alumni</a>
+                        <a href ="../people.html">Current Members</a>
+                        <a href="../gallery.html">Lab Gallery</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <a href="./feat-news.html">News</a>
                     <div class="dropdown-content">
-                        <a href="./feat-news.html">News</a>
+                        <a href="./feat-news.html"> Featured News</a>
                         <a href="./mediacov.html">News Archive</a>
                     </div>
                 </div>
@@ -64,6 +62,9 @@
                     </div>
                 </div>
                 <a href="./resources.html" class="link">Resources</a>
+                <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                    <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+                </div>
         </section>
     </div>
     </header>
