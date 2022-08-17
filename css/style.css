@@ -931,4 +931,51 @@ a:visited {
     margin-left: 150px;
     margin-right: auto;
 }
- 
+
+/* New Responsive Grid Layout for Galleries and New Menu Ideas*/
+#gallery section{
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 75%;
+    padding: 0 10px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+  }
+
+  .lab-shoot-image {
+    background-image: url(/GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot2.jpg);
+  }
+
+  
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
