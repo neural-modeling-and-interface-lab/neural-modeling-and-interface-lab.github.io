@@ -295,10 +295,16 @@ a:visited {
 .soon {
     height: 400px;
 }
-.content{
+.content { 
 	margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     /*min-height: calc(100vh - 450px);*/
 }
+.content > img { height: 300px; 
+margin: 10px; }
 
 #carousel-bar{
     justify-content: center;
