@@ -300,10 +300,10 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    
     /*min-height: calc(100vh - 450px);*/
 }
-.content > img { height: 300px; 
+.content > img { height:275px; 
 margin: 10px; }
 
 #carousel-bar{
@@ -797,69 +797,26 @@ margin: 10px; }
     width: auto;   
     height: auto;
 }
-#gallery {
-    padding: 20px;
-    line-height:0;
-    -webkit-column-count:5; /* split it into 5 columns */
-    -webkit-column-gap:5px; /* give it a 5px gap between columns */
-    -moz-column-count:5;
-    -moz-column-gap:5px;
-    column-count:3;
-    column-gap:20px;
+.gallery {
+margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
  }
+ .gallery > img { height:275px; 
+    margin: 10px; }
+
+ 
  #gallery img {
-    
+    /*
     width: 100% !important;
     height: auto !important;
-    margin-bottom:20px; /* to match column gap */
+    margin-bottom:20px; 
+    */
  }
- .image{
-    
-    width: 100% !important;
-    position: relative;
- }
- .image__img{
-    display: block;
-    width: 100% !important;
-    height: auto !important;
- }
- .image__overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #FFFFFF;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.5s;
- }
- .image__overlay >* {
-    transform: translateY(20px);
-    transition: transform 0.5s;
- }
- .image__overlay:hover{
-    opacity: 1;
- }
- .image__overlay:hover >* {
-    transform: translateY(0);
- }
- .image__title{
-    font-size: 2em;
-    font-weight: 500;
- }
- .image__description{
-    font-size: 1em;
-    margin-top: 2em;
-    margin-left: 0.5em;  
- }
+
+
 
  /* Ongoing Projects Page */
  #projects{   
@@ -939,10 +896,12 @@ margin: 10px; }
 }
 
 /* New Responsive Grid Layout for Galleries and New Menu Ideas*/
-#gallery section{
-    justify-content: center;
+#gallery {
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 50px;
+    justify-content: center;
 }
 .row {
     display: flex;
