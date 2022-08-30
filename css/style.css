@@ -360,6 +360,7 @@ margin: 10px; }
 .menu label:hover,
 .menu label:focus {
     opacity: 100%;
+    margin-top: 0px;
 }
 
 [id^="slide"]:checked + .slide {
