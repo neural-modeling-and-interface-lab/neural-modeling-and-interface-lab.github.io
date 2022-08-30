@@ -10,6 +10,10 @@ html, body{
     font-family: arial, sans-serif;
 }
 
+header {
+    width: 100%;
+}
+
 p{
     line-height: 125%;
 }
@@ -44,10 +48,13 @@ hr{
     border-top: 1px solid darkgray;
     /*margin: 50px 0px;*/
 }
+hr.new4 {
+    border: 1px solid #990000;
+  }
 
 button {width: 150px; height: 50px; cursor: pointer; color: whitesmoke;
     background: black; border: none; border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     transition: .5s;}
 
 
@@ -109,7 +116,7 @@ img {
     text-align: right;
     background: #990000;
     height: 50px;
-    z-index:6;
+    z-index:5;
 }
 
 #usc img{
@@ -148,35 +155,49 @@ img {
 
 #nav {
     height: 55px;
-    padding: 10px auto;
+    /* padding: 10px auto; */
     align-items: center;
     justify-content: center;
     background: black;
-    position: sticky;
-    top: 0;
-    left: 0;
     z-index:5;
+    /* overflow: hidden; */
+}
+
+#usc, #slab {
+    z-index: 10;
+    position: sticky;
 }
 
 
+
+
+.dropdown {
+    color: white;
+    position: relative;
+}
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
+
+    opacity: 0;
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 5;
+    position: absolute; 
+    top: calc(100% + 15px);
+    left: 0;
+    transition: 0.5s;
 }
 
+
 /* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
+#links .dropdown-content a {
     font-size: 13px;
     padding: 12px 16px;
+    margin: 0;
     text-decoration: none;
-    display: block;
+    display: block; 
 }
 
 /* Change color of dropdown links on hover */
@@ -185,9 +206,9 @@ img {
 .dropdown-content a:hover {background-color: #111111;}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {opacity: 1;}
 
-.dropdown:hover .dropbtn {}
+/*.dropdown:hover .dropbtn {}*/
 
 .dropicon{
     padding-left: 10px;
@@ -235,24 +256,22 @@ a:visited {
 	color: #FFFFFF;
 }
 
-#nav a.link {
-    margin-right: 30px;
-    font-size: 15px;}
 
-a.link {
+#links a {
     color: white;
+    margin-right: 30px;
+    font-size: 15px;
+    cursor: pointer;
     text-decoration: none;
     position: relative;
-    cursor: pointer;
-    padding: 5px 0px;
     transition: color .5s;
 }
 
-a.link:hover{
+#links a:hover{
     color: #FFCC00;
 }
 
-a.link.currentLink {
+#links a.currentLink {
     color: #FFCC00;
 }
 
@@ -276,10 +295,16 @@ a.link.currentLink {
 .soon {
     height: 400px;
 }
-.content{
+.content { 
 	margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
     /*min-height: calc(100vh - 450px);*/
 }
+.content > img { height:275px; 
+margin: 10px; }
 
 #carousel-bar{
     justify-content: center;
@@ -378,10 +403,14 @@ a.link.currentLink {
 }
 
 #menu-toggle{
-    flex-grow: 1;
-    color: white;
+    /* flex-grow: 1; */
+    color: #FFC72C;
     display:none;
     text-align: center;
+    /* margin-bottom: 25px; */
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
 }
 
 
@@ -487,9 +516,7 @@ a.link.currentLink {
 
 /* Publications */
 #publications p {
-    font-size: 100
-&
-&
+    font-size: 100;
 }
 
 .underheader{
@@ -596,31 +623,56 @@ a.link.currentLink {
 
 @media (max-width: 800px) {
 
+    #slab h1{
+        /* margin: 0px 10px 0px 0px; */
+        font-size: 25px;
+    }
+
     .feature{
         justify-content: center;
     }
 
     #menu-toggle {
-        margin:25px 0px 0px 0px;
+        /* transform: translateY(50%); */
+        /* width: 100%;
+        display: block;
+        background: rgba(0, 0, 0, 0.3); */
+        /* margin:25px 0px 0px 0px; */
         width: 100%;
         display: block;
     }
 
-    .dropdown:hover .dropdown-content {display: none;}
 
     .dropicon {display:none}
 
     #nav section{
         width: 100%;
+        z-index: 5;
     }
 
     #links{
-        z-index:3;
+        /* z-index:3;
         position: relative;
         background: black;
-        top: -475px; left: 0px;
-        padding: 50px 12.5% 0px 12.5%;
-        height: 540px;
+        padding: 0px;
+        max-height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        color: transparent; 
+        z-index: index 4; */
+        position: relative;
+        background: black;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(calc(-100% + 50px));
+        /* padding: 50px 12.5% 0px 12.5%; */
+        padding: 10px 12.5% 0px 12.5%;
+        /* height: 540px; */
         box-sizing: border-box;
         flex-wrap: wrap;
         justify-content: center;
@@ -634,9 +686,26 @@ a.link.currentLink {
         flex-direction: column;
     }
 
+    #links.open {
+        transform: translateY(0px);
+    }
+
+    .dropdown-content {
+        top: 0;
+    }
+
+    #links a {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #links a {
+        margin: 0px;
+    }
+
     #links a.link {
         margin: 0px;
-        font-size: 50px;}
+        font-size: 25px;}
 
     #research .feature-text, .feature-left{
         margin: 0px auto 0px auto;
@@ -661,25 +730,217 @@ a.link.currentLink {
     .margin-right{
         margin-right: 0px;
     }
+
+
+    .dropdown-content {
+        position: relative;
+        color: white;
+        opacity: 1;
+    }
+
+    #links .dropdown-content a {
+        padding: 10px;
+    }
 }
 
-@media (max-width: 600px) {
-
-    /*#nav {*/
-    /*    background: red;*/
-    /*}*/
-
+/* @media (max-width: 600px) {
     #slab h1 {
         font-size: 25px;
     }
+} */
 
-    #links{
-        top: -330px; left: 0px;
-        height: 390px;
-        padding: 75px 12.5% 0px 12.5%;
-    }
 
-    #links a.link {
-        margin: 0px;
-        font-size: 25px;}
+/* Lab Featured News Section */
+#lab_news{
+    
+    
+    /*height: 150px;*/
+    justify-content: center;
+    align-items: center;
+    
+    border: 20px #990000;
+    padding: 50px;
+    margin: 100px;
 }
+#lab_news p{
+    margin-top: 5px;
+    margin: 20px;
+    color:#000000;
+}
+#lab_news a{
+    font-size: 90%;
+    color:rgba(0, 0, 0, 100);
+}
+#lab_news h1{
+    margin: 10px;
+    color: #000000;
+}
+#lab_news h2{
+    margin: 5px;
+    color:#000000;
+    padding: 5px;
+}
+#lab_news h3{
+    color: #990000;
+    margin: 15px;
+}
+#lab_news_header{
+    justify-content: right;
+    align-content: left;
+}
+#lab_news img{
+
+    align-self: center;
+    margin: 25px;
+    padding: 0%;
+    max-width: 100%;
+    width: auto;   
+    height: auto;
+}
+.gallery {
+margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+ }
+ .gallery > img { height:275px; 
+    margin: 10px; }
+
+ 
+ #gallery img {
+    /*
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:20px; 
+    */
+ }
+
+
+
+ /* Ongoing Projects Page */
+ #projects{   
+    /*height: 150px;*/
+    justify-content: center;
+    align-items: center;
+    
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 300px;
+}
+ #projects-selector{
+    display: flex;
+    margin: 25px 0px 25px 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects-selector button{
+    /*width: 300px;*/
+    flex-grow: 1;
+    margin: 0px 25px;
+}
+
+#projects .feature {
+    margin-bottom: 50px;
+}
+
+#projects hr {
+    margin-top:0px;
+    margin-bottom:25px;
+}
+#projects img{
+    align-self: left;
+    width: auto;
+    height: auto;
+    padding: 0%;
+   
+
+}
+/* Featured Publication Page*/
+
+#feat-pub{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 150px;
+    margin-right: auto;
+}
+#feat-pub .feature {
+    margin-bottom: 50px;
+}
+
+#feat-pub hr {
+    margin-top:0px;
+    margin-bottom:25px;
+}
+#feat-pub img{
+    align-self: left;
+    width: auto;
+    height: auto;
+    padding: 0%;
+   
+
+}
+#currentprojects{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+/* New Responsive Grid Layout for Galleries and New Menu Ideas*/
+#gallery {
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 75%;
+    padding: 0 10px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+  }
+
+  .lab-shoot-image {
+    background-image: url(/GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot2.jpg);
+  }
+
+  
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

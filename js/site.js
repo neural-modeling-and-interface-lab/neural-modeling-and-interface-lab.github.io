@@ -1,19 +1,6 @@
 function menuToggle() {
-    var x = document.getElementById("links");
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    if (vw <= 600) {
-        if (x.style.top === "0px"){
-            x.style.top = "-330px";
-        } else {
-            x.style.top = "0px";
-        }
-    } else {
-        if (x.style.top === "0px"){
-            x.style.top = "-475px";
-        } else {
-            x.style.top = "0px";
-        }
-    }
+    var links = document.getElementById("links");
+    links.classList.toggle('open')
 }
 
 function replaceWithCurrent(){

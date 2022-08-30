@@ -223,9 +223,21 @@ class CurrentPeople extends HTMLElement {
             </div>
             <div class="feature-text margin-left">
                 <h2 class="top-margin">John Pace</h2>
-                <p>John Pace is a Computational Neuroscience student at the University of Southern California and is trained in computational neurology and biology that joined the lab in March of 2021. He is active in Neuroscience seminars, medical organizations on and around campus, in addition to his experience as a Health Administrative Intern at PIH Health and previous research with NASA's Student Payload Opportunity with Citizen Science. (SPOCS). He actively takes part in neuroscience-based bioengineering research through the Viterbi School of Engineering and is pursuing a joint bachelors with a Masters in Health Administration (M.H.A.), and an eventual Doctor of Medicine (M.D.).</p>
+                <p>John Pace is a Neuroscience student at the University of Southern California and is trained in computational neurology and biology that joined the lab in March of 2021. He is active in Neuroscience seminars, medical organizations on and around campus, in addition to his experience as a Health Administrative Intern at PIH Health and previous research with NASA's Student Payload Opportunity with Citizen Science. (SPOCS). He actively takes part in neuroscience-based bioengineering research through the Viterbi School of Engineering and is pursuing a joint bachelors with a Masters in Health Administration (M.H.A.), and an eventual Doctor of Medicine (M.D.).</p>
+                <p> In his free time, John enjoys kayaking, listening to City Pop Music, and spending time with his family and friends. 
             </div>
         </div>
+
+    <div id="ziyue" class="feature">
+        <div class="feature-left">
+            <img src="assets/people/ziyue_square.jpg"/>
+        </div>
+        <div class="feature-text margin-left">
+            <h2 class="top-margin">Ziyue Zhu</h2>
+            <p>Ziyue Zhu is a Biomedical Engineering (cellular & molecular track) student at the University of Southern California and joined the lab in March of 2022. She is interested in new technologies in biomedical engineering especially brain-machine interfaces. She wishes to pursue a doctoral degree in the field of BME and become a researcher and professor in the future. </p>
+            <p>Outside the lab, she likes to sing, playing guitar, and music production.</p>
+            </div>
+    </div>
 
         <div id="summer" class="feature">
             <div class="feature-left">

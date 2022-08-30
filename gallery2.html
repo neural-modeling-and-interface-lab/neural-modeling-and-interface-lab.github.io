@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name="description" content="Responsive Image Gallery">
+    <meta name="author" content="John C. Pace">
+    <link rel=icon href=assets/favicon.ico> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/site.js"></script>
+    <title>Lab Gallery - Neural Modeling and Interface Lab</title>
+    <!-- Plan here to try the new Flex Grow Responsive Grid-->
+</head>
+<body>
+    <div id="app">
+        <header>
+                <div id ="usc" class ="bar">
+                    <section>
+                        <a href="https://usc.edu/"><img = src="assets/usc/usc-shield-name-white.png"></a>
+                    </section>
+                </div>
+                <div id ="slab" class = "bar">
+                    <section>
+                        <a class="logo" href="/index.html" rel="noopener"><h1 class="usc">USC</h1><h1 class="lab">Neural Modeling and Interface Lab</h1></a>
+                    </section>
+                </div>
+    
+    
+    
+                <!--John's Version of the Navigation Bar
+                - What I am trying to do here is create a dropdown menu from the already highlighted
+                - news option, indicating that there is a 'Featured News' and an 'All News'
+    
+                Updated by Garrett on May 22nd (and moved to the rest of the site)
+                -->
+    
+    
+         <!--Navbar-->
+         <!--
+         <div id="nav" class="bar">
+            <section>
+                <div id="links" class="stretch">
+                    <a href="./index.html" class="link">Home</a>
+                    <div class = "dropdown">
+                        <a href="./Research_Pages/research-goals.html" class="link">Research</a>
+                        <div class = "dropdown-content">
+                            <a href="./Research_Pages/research-goals.html">Research Goals</a>
+                            <a href = "./Research_Pages/currentprojects.html">Current Projects</a>
+                            <a href = "./Research_Pages/projects.html">Past Projects</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./publications.html">People</a>
+                        <div class="dropdown-content">
+                            <a href="./gallery.html">Gallery</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./feat-news.html" class="link">News</a>
+                        <div class="dropdown-content">
+                            <a href="./feat-news.html"  class="link">News</a>
+                            <a href="./mediacov.html">Media Coverage</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./publications.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="./feat-pub.html">Featured Publications</a>
+                            <a href="./publications.html">Publication Archive</a>
+                        </div>
+                    </div>
+                    <a href="./resources.html" class="link">Resources</a>
+                   
+                </div>
+                <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                    <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+                </div>
+            </section>
+        </div>
+    -->
+        <div id="nav" class="bar">
+            <section>
+                <div id="links" class="stretch">
+                    <a href="./index.html">Home</a>
+                    <div class = "dropdown">
+                        <a href="./Research_Pages/research-goals.html" class="link">Research</a>
+                        <div class = "dropdown-content">
+                            <a href="./Research_Pages/research-goals.html">Overview</a>
+                            <a href = "./Research_Pages/projects.html">Projects</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./people.html"class = "link currentLink">People</a>
+                        <div class="dropdown-content">
+                            <a href ="./people.html">Current Members</a>
+                            <a href = "./alumni.html">Alumni</a>
+                            <a href="./gallery2.html">Lab Gallery</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./feat-news.html">News</a>
+                        <div class="dropdown-content">
+                            <a href="./feat-news.html"> Featured News</a>
+                            <a href="./mediacov.html">News Archive</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./feat-pub.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="./feat-pub.html">Featured Publications</a>
+                            <a href="./publications.html">All Publications</a>
+                        </div>
+                    </div>
+                    <a href="./resources.html" class="link">Resources</a>
+                    
+                <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                    <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+                </div>
+            </section>
+           
+        </div>
+    </header>
+                <!--The actual content of the featured news page-->
+        <!--Content-->
+
+
+        <section class = "gallery" style="margin-top: 20px;">
+            <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/LPS_11.jpg">    
+            <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot1.jpg">
+                <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot3.jpg">
+                <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/LS_14.jpg">
+                <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot5.jpg">
+                <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot7.jpg">
+                <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot8.jpg">
+                <img src="GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot9.jpg">
+                <img src = "GalleryAlbums/GalleryPhotos/xiweidonggraduationsquare2.jpg">
+                <img src = "GalleryAlbums/GalleryPhotos/XiweiGraduation_3.jpg">
+                <img src = "GalleryAlbums/GalleryPhotos/XiweiGraduation_2.jpg">
+
+
+
+
+        </section>
+
+        <!--
+        <section>
+            <div class = "image">
+                <img class = "image__img" src = "assets/people/bryan.jpg" alt = "Bryan Moore, MD, Ph.D.">
+                <div class = "image__overlay">
+                    <div class = "image__title">Bryan Moore</div>
+                    <p class = "image__description">
+                        A really cool dude. 
+                    </p>
+                </div>
+            </div>
+        </section>
+    -->
+            
+        <section>
+
+        </section>
+            </div>
+            <div id="footer" class="bar">
+                <section>
+                    <div id="footer-left">
+                        <a class="logo"><p class="usc">USC</p><p class="lab">Neural Modeling and Interface Lab</p></a>
+                        <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089" target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building,
+                            <br/>Los Angeles, CA 90089</a>
+                    </div>
+                    <div id="footer-right">
+                        <a href="https://viterbischool.usc.edu/" ><img src="assets/usc/viterbi.jpg"></a>
+                    </div>
+                </section>
+            </div>
+
+</body>
+</html>

@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <title>Publications — Neural Modeling and Interface Lab</title>
+    <title>Publication Archive — Neural Modeling and Interface Lab</title>
     <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
 <div id=app>
-
+    <header>
     <div id="usc" class="bar">
         <section>
         <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png"/></a>
@@ -27,20 +27,50 @@
     </div>
 
 
-    <!--Navbar-->
-    <div id="nav"  class="bar">
-        <section>
-        <div id="links" class="stretch">
-            <a href="index.html" class="link">Home</a>
-            <a href="research.html" class="link">Research</a>
-            <a href="people.html" class="link">People</a>
-            <a href="news.html" class="link">News</a>
-            <a href="publications.html" class="link currentLink">Publications</a>
-            <a href="resources.html" class="link">Resources</a>
-            <div id="menu-toggle" class="toggle" onclick="menuToggle()"><div class="icon"><i class="fas fa-angle-down fa-3x"></i></div></div>
+    
+         <!--Navbar-->
+         <div id="nav" class="bar">
+            <section>
+                <div id="links" class="stretch">
+                    <a href="./index.html" class="link">Home</a>
+                    <div class = "dropdown">
+                        <a href="./Research_Pages/research-goals.html">Research</a>
+                        <div class = "dropdown-content">
+                            <a href="./Research_Pages/research-goals.html">Overview</a>
+                            <a href = "./Research_Pages/projects.html">Projects</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./people.html">People</a>
+                        <div class="dropdown-content">
+                            <a href ="./people.html">Current Members</a>
+                            <a href = "./alumni.html">Alumni</a>
+                            <a href="./gallery2.html">Lab Gallery</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./feat-news.html">News</a>
+                        <div class="dropdown-content">
+                            <a href="./feat-news.html"> Featured News</a>
+                            <a href="./mediacov.html">News Archive</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="./feat-pub.html"class="link currentLink">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="./feat-pub.html">Featured Publications</a>
+                            <a href="./publications.html">All Publications</a>
+                        </div>
+                    </div>
+                    <a href="./resources.html" class="link">Resources</a>
+                    
+                
+                <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                    <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+                </div>
+            </section>
         </div>
-        </section>
-    </div>
+    </header>
 
 
     <!--Content-->

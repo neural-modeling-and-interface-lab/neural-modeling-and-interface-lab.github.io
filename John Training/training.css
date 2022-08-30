@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(144, 144, 224);
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.cat{
+    height: 300px;
+    width: 300px;
+}
+.cat-text{
+    background-color: red;
+    font-size: large;
+    
+    
+}
+
+h0{
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+.New-Image{
+    height: 300px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}

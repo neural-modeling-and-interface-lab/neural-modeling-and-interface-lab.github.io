@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <meta http-equiv=X-UA-Compatible content="IE=edge">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <link rel=icon href=assets/favicon.ico>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script type="text/javascript" src="js/site.js"></script>
+        <title> Featured News — Neural Modeling and Interface Lab</title>
+
+ </head>
+<body>
+<div id="app">
+    <header>
+            <div id ="usc" class ="bar">
+                <section>
+                    <a href="https://usc.edu/"><img = src="assets/usc/usc-shield-name-white.png"></a>
+                </section>
+            </div>
+            <div id ="slab" class = "bar">
+                <section>
+                    <a class="logo" href="/index.html" rel="noopener"><h1 class="usc">USC</h1><h1 class="lab">Neural Modeling and Interface Lab</h1></a>
+                </section>
+            </div>
+
+
+
+            <!--John's Version of the Navigation Bar
+            - What I am trying to do here is create a dropdown menu from the already highlighted
+            - news option, indicating that there is a 'Featured News' and an 'All News'
+
+            Updated by Garrett on May 22nd (and moved to the rest of the site)
+            -->
+
+
+     <!--Navbar-->
+     <div id="nav" class="bar">
+        <section>
+            <div id="links" class="stretch">
+                <a href="./index.html" class="link">Home</a>
+                <div class = "dropdown">
+                    <a href="./Research_Pages/research-goals.html" class="link">Research</a>
+                    <div class = "dropdown-content">
+                        <a href="./Research_Pages/research-goals.html">Overview</a>
+                        <a href = "./Research_Pages/projects.html">Projects</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./publications.html">People</a>
+                    <div class="dropdown-content">
+                        <a href ="./people.html">Current Members</a>
+                        <a href = "./alumni.html">Alumni</a>
+                        <a href="./gallery2.html">Lab Gallery</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./feat-news.html" class="link currentLink">News</a>
+                    <div class="dropdown-content">
+                        <a href="./feat-news.html"> Featured News</a>
+                        <a href="./mediacov.html">News Archive</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./feat-pub.html">Publications</a>
+                    <div class="dropdown-content">
+                        <a href="./feat-pub.html">Featured Publications</a>
+                        <a href="./publications.html">Publication Archive</a>
+                    </div>
+                </div>
+                <a href="./resources.html" class="link">Resources</a>
+                
+           
+            <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+                <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+            </div>
+        </section>
+    </div>
+</header>
+            <!--The actual content of the featured news page-->
+    <!--Content-->
+
+    <section id='research' class="content">
+        <h1>Featured Lab News</h1>
+        <hr class="new4"/>
+    <!--
+        <div id="B@PContracts" class="feature">
+            <div class="feature-left">
+              <img src="./assets/resources/brainatplay.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2>Brains@Play Receives First Contracts</h2>
+                <hr>
+                <h3>June 23rd, 2022</h3>
+                <p>Since transitioning Brains@Play from an academic research collective with Dr. Song and Marientina Gotsis into a small startup, Garrett Flynn (BS 21, MA 22) has landed their first contract with Dr. Chris Crawford at the University of Alabama’s Human Technology and Interaction Lab to build educational materials on EEG / EMG technology for high schoolers.</p>
+                <a href="https://brainsatplay.com"><h3 class="top-margin">Brains@Play</h3></a>
+				<p>A spin-off company from the lab that develops Open Web tools for neuroscience research and education</p>
+            </div>
+            <div class = "feature-text margin-right">
+                <a href ="https://alzheimersnewstoday.com/news/brain-implant-help-people-memory-loss/">
+                    <button style="margin-top: 10px;">Learn More</button>
+                  </a>
+            </div>
+          </div>
+          <hr class="new4"/>
+        <div id="sfnabstracts2022" class="feature">
+            <div class="feature-left">
+              <img src="./assets/images/SFN_icon.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2>Dong Song Lab Submits Abstracts for SFN 2022.</h2>
+                <hr>
+                <h3>June 15th, 2022</h3>
+                <p>Following months of steadfast work, the partners within our lab (Post-Doc and PhD student alike) were more than proud to submit their most recent abstracts for the Society For Neuroscience (SFN) 2022 Conference. This year, the SFN Conference will be hosted in San Diego, CA. Wenxuan Jiang, Huijing Xu, and Dr. Bryan Moore submitted abstracts for the upcoming conference. </p>
+            </div>
+          </div>
+        --> 
+<!--
+<div id="xiweithesisdefense" class="feature">
+    <div class="feature-left">
+        <img src="./GalleryAlbums/GalleryPhotos/xiweidonggraduationsquare2.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+    </div>
+    <div class="feature-text margin-left">
+        <h2> Ph.D. student Xiwei Shé Defends Thesis and Achieves Doctoral Status</h2>
+        <hr>
+        <h3>May 12th, 2022</h3>
+        <p>Following over years of work in the Dong Song Neural Interface and Modeling Lab, Ph.D. student, now Dr. Xiwei Shé has successuflly defended their thesis and has earned the title of a Ph.D. Scholar in Biomedical Enginnering.</p>
+    </div>
+    </div>
+    
+    <div id="classof2022" class="feature">
+        <div class="feature-left">
+            <img src="./assets/images/GraduationGif.gif" style="max-width: 250px; margin: 10; width: 250;"/>
+        </div>
+        <div class="feature-text margin-left">
+            <h2>Congratulations to the Class of 2022: Graduates in Our Lab</h2>
+            <hr>
+            <h3>May 11th, 2022</h3>
+            <p>Dr. Xiwei Shé, Yilei Dong and Robert Sutherland graduated from their respective programs on a Thursday afternoon.</p>
+        </div>
+        </div>
+    --> 
+        <!--Article #5-->
+        <div id="HippocampusPursuit" class="feature">
+            <div class="feature-left">
+              <img src="./assets/news/images/USCViterbi_Logo.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2>In Pursuit of a Realistic Model of the Hippocampus</h2>
+                <hr>
+                <h3>October 13th, 2021</h3>
+                <p>USC Viterbi biomedical engineers have secured $1.2 million in BRAIN Initiative funding to create a model of the hippocampus that is functionally indistinguishable from the real thing.</p>
+            </div>
+            <!--Button To Access Article-->
+            <div class = "feature-text margin-right">
+                <a href ="https://viterbischool.usc.edu/news/2021/10/in-pursuit-of-a-realistic-model-of-the-hippocampus/">
+                    <button style="margin-top: 10px;">Read Here</button>
+                  </a>
+            </div>
+          </div>
+        <!--Article #6-->
+          <div id="SmarterWSJ" class="feature">
+            <div class="feature-left">
+              <img src="./assets/news/images/WSJ_Brain.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2>How to Get Smarter: Start With the Brain Itself</h2>
+                <hr>
+                <h3>August 12th, 2021</h3>
+                <p>"On the frontier of neuroscience, researchers are inventing devices to upgrade memory, enhance learning abilities and communicate using only our minds"</p>
+            </div>
+                        <!--Button To Access Article-->
+            <div class = "feature-text margin-right">
+                <a href ="https://www.wsj.com/articles/how-to-get-smarter-start-with-the-brain-itself-11628784077">
+                    <button style="margin-top: 10px;">Read Here</button>
+                    </a>
+            </div>
+          </div>
+            <!--Article #7-->
+            <div id="EpilepsyGameChanger" class="feature">
+                <div class="feature-left">
+                  <img src="./assets/news/images/USCViterbi_Logo.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+                </div>
+                <div class="feature-text margin-left">
+                    <h2>Early Warning for Seizures Could Be a Game-Changer for Epilepsy Patients</h2>
+                    <hr>
+                    <h3>February 19th, 2021 </h3>
+                    <p>USC researchers have harnessed a powerful mathematical model to provide advanced seizure prediction, revolutionizing epilepsy management and treatment.</p>
+                </div>
+                <!--Button for Art #7-->
+                <div class = "feature-text margin-right">
+                    <a href ="https://viterbischool.usc.edu/news/2021/02/early-warning-for-seizures-could-be-a-game-changer-for-epilepsy-patients/">
+                        <button style="margin-top: 10px;">Read Here</button>
+                      </a>
+                </div>
+            </div>
+        <!--Article #8-->
+        <div id="ALZTodayArt8" class="feature">
+            <div class="feature-left">
+              <img src="./assets/images/Art8_ALZ.jpg" style="max-width: 250px; margin: 10; width: 250;"/>
+            </div>
+            <div class="feature-text margin-left">
+                <h2>Brain Implant Could Help People With Memory Loss</h2>
+                <hr>
+                <h3>October 6th, 2015</h3>
+                <p>"Researchers at University of Southern California at Los Angeles (USC) Viterbi School of Engineering and Wake Forest Baptist Medical Center in Winston-Salem, North Carolina have developed a brain prosthesis designed to help individuals suffering from memory loss associated with Alzheimer’s Disease (AD) and other forms of dementia form new memories, even when the memory center of the brain, called the hippocampus, is damaged."</p>
+            </div>
+            <div class = "feature-text margin-right">
+                <a href ="https://alzheimersnewstoday.com/news/brain-implant-help-people-memory-loss/">
+                    <button style="margin-top: 10px;">Read Here</button>
+                  </a>
+            </div>
+          </div>
+
+
+    <!--Next Article-->
+    </section>
+    </div>
+        
+    </body>
+   
+</html>
