@@ -7,3 +7,5 @@ This repository is served to slab.usc.edu through Github Pages.
 
 # John trying other silly things: He has learned. 
 
+## Second Attempt
+

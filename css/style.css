@@ -116,7 +116,7 @@ img {
     text-align: right;
     background: #990000;
     height: 50px;
-    z-index:6;
+    z-index:5;
 }
 
 #usc img{
@@ -155,18 +155,17 @@ img {
 
 #nav {
     height: 55px;
-    padding: 10px auto;
+    /* padding: 10px auto; */
     align-items: center;
     justify-content: center;
     background: black;
-    position: sticky;
-    top: 0;
-    left: 0;
     z-index:5;
+    /* overflow: hidden; */
 }
 
 #usc, #slab {
     z-index: 10;
+    position: sticky;
 }
 
 
@@ -184,7 +183,7 @@ img {
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 5;
     position: absolute; 
     top: calc(100% + 15px);
     left: 0;
@@ -296,10 +295,16 @@ a:visited {
 .soon {
     height: 400px;
 }
-.content{
+.content { 
 	margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
     /*min-height: calc(100vh - 450px);*/
 }
+.content > img { height:275px; 
+margin: 10px; }
 
 #carousel-bar{
     justify-content: center;
@@ -398,10 +403,11 @@ a:visited {
 }
 
 #menu-toggle{
-    flex-grow: 1;
+    /* flex-grow: 1; */
     color: #FFC72C;
     display:none;
     text-align: center;
+    /* margin-bottom: 25px; */
     /* position: absolute;
     bottom: 0;
     left: 0; */
@@ -617,15 +623,23 @@ a:visited {
 
 @media (max-width: 800px) {
 
+    #slab h1{
+        /* margin: 0px 10px 0px 0px; */
+        font-size: 25px;
+    }
+
     .feature{
         justify-content: center;
     }
 
     #menu-toggle {
         /* transform: translateY(50%); */
+        /* width: 100%;
+        display: block;
+        background: rgba(0, 0, 0, 0.3); */
+        /* margin:25px 0px 0px 0px; */
         width: 100%;
         display: block;
-        background: rgba(0, 0, 0, 0.3);
     }
 
 
@@ -633,10 +647,11 @@ a:visited {
 
     #nav section{
         width: 100%;
+        z-index: 5;
     }
 
     #links{
-        z-index:3;
+        /* z-index:3;
         position: relative;
         background: black;
         padding: 0px;
@@ -647,7 +662,36 @@ a:visited {
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        color: transparent;
+        color: transparent; 
+        z-index: index 4; */
+        position: relative;
+        background: black;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(calc(-100% + 50px));
+        /* padding: 50px 12.5% 0px 12.5%; */
+        padding: 10px 12.5% 0px 12.5%;
+        /* height: 540px; */
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+        transition: top 0.5s ease-in-out;
+        -o-transition: top 0.5s ease-in-out;
+        -ms-transition: top 0.5s ease-in-out;
+        -moz-transition: top 0.5s ease-in-out;
+        -webkit-transition: top 0.5s ease-in-out;
+        flex-direction: column;
+    }
+
+    #links.open {
+        transform: translateY(0px);
+    }
+
+    .dropdown-content {
+        top: 0;
     }
 
     #links a {
@@ -655,14 +699,13 @@ a:visited {
         font-size: 20px;
     }
 
-    #links.open {
-        padding: 25px 12.5% 25px 12.5%;
-        max-height: 5000px;
-    }
-
     #links a {
         margin: 0px;
     }
+
+    #links a.link {
+        margin: 0px;
+        font-size: 25px;}
 
     #research .feature-text, .feature-left{
         margin: 0px auto 0px auto;
@@ -700,16 +743,13 @@ a:visited {
     }
 }
 
-@media (max-width: 600px) {
-
-    /*#nav {*/
-    /*    background: red;*/
-    /*}*/
-
+/* @media (max-width: 600px) {
     #slab h1 {
         font-size: 25px;
     }
-}
+} */
+
+
 /* Lab Featured News Section */
 #lab_news{
     
@@ -757,22 +797,27 @@ a:visited {
     width: auto;   
     height: auto;
 }
-#gallery {
-  
-    line-height:0;
-    -webkit-column-count:5; /* split it into 5 columns */
-    -webkit-column-gap:5px; /* give it a 5px gap between columns */
-    -moz-column-count:5;
-    -moz-column-gap:5px;
-    column-count:5;
-    column-gap:5px;
+.gallery {
+margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
  }
+ .gallery > img { height:275px; 
+    margin: 10px; }
+
+ 
  #gallery img {
-    
+    /*
     width: 100% !important;
     height: auto !important;
-    margin-bottom:5px; /* to match column gap */
+    margin-bottom:20px; 
+    */
  }
+
+
+
  /* Ongoing Projects Page */
  #projects{   
     /*height: 150px;*/
@@ -781,7 +826,7 @@ a:visited {
     
     border: 20px #990000;
     padding: 50px;
-    margin-left: 50px;
+    margin-left: 300px;
 }
  #projects-selector{
     display: flex;
@@ -840,4 +885,62 @@ a:visited {
    
 
 }
- 
+#currentprojects{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 20px #990000;
+    padding: 50px;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+/* New Responsive Grid Layout for Galleries and New Menu Ideas*/
+#gallery {
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 75%;
+    padding: 0 10px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+  }
+
+  .lab-shoot-image {
+    background-image: url(/GalleryAlbums/GalleryPhotos/LabPhotoShoot_522/Shot2.jpg);
+  }
+
+  
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
