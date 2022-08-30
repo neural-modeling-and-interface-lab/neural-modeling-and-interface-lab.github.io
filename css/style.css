@@ -428,7 +428,7 @@ margin: 10px; }
 #news .feature{
     justify-content: flex-start;
     align-items: center;
-    margin:25px 0px;
+    margin: 5px 0px;
 }
 
 #news .feature img{
