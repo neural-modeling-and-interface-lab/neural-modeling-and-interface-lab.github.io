@@ -284,8 +284,8 @@ a:visited {
 }
 
 .feature img{
-    max-width: 250px;
-    width: 250px;
+    max-width: 400px;
+    width: 400px;
     height: auto;
     margin: 10px 0px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -383,7 +383,7 @@ margin: 10px; }
 }
 
 .feature-text{
-   width: calc(100% - (250px + 50px))
+   width: calc(100% - (400px + 50px))
 }
 
 .feature-head{
