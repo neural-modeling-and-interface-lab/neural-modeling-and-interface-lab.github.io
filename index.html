@@ -1,128 +1,91 @@
 <!DOCTYPE html>
 <html lang=en>
-
 <head>
-    <meta charset=utf-8>
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <link rel=icon href=assets/favicon.ico> 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/site.js"></script>
-    <title>Home - Neural Modeling and Interface Lab</title>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=assets/favicon.ico>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/site.js"></script>
+<title>Home - Neural Modeling and Interface Lab</title>
 </head>
 
 <body>
-    <div id=app>
-
-        <header>
-            <div id="usc" class="bar">
-                <section>
-                    <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png" /></a>
-                </section>
-            </div>
-
-            <div id="slab" class="bar">
-                <section>
-                    <a class="logo" href='index.html' rel="noopener">
-                        <h1 class="usc">USC</h1>
-                        <h1 class="lab">Neural Modeling and Interface Lab</h1>
-                    </a>
-                </section>
-            </div>
-
-
-            <!--Navbar-->
-            <div id="nav" class="bar">
-                <section>
-                    <div id="links" class="stretch">
-                        <a href="./index.html" class="link currentLink">Home</a>
-                        <div class = "dropdown">
-                            <a href="./Research_Pages/research-goals.html" class="link">Research</a>
-                            <div class = "dropdown-content">
-                                <a href="./Research_Pages/research-goals.html">Overview</a>
-                                <a href = "./Research_Pages/projects.html">Projects</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="./people.html">People</a>
-                            <div class="dropdown-content">
-                                <a href ="./people.html">Current Members</a>
-                                <a href = "./alumni.html">Alumni</a>
-                                <a href="./gallery2.html">Lab Gallery</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="./feat-news.html">News</a>
-                            <div class="dropdown-content">
-                                <a href="./feat-news.html">Recent News</a>
-                                <a href="./mediacov.html">News Archive</a>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="./feat-pub.html">Publications</a>
-                            <div class="dropdown-content">
-                                <a href="./feat-pub.html">Recent Publications</a>
-                                <a href="./publications.html">All Publications</a>
-                            </div>
-                        </div>
-                        <a href="./resources.html" class="link">Resources</a>
-                        
-                    <div id="menu-toggle" class="toggle" onclick="menuToggle()">
-                        <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
-                    </div>
-                </section>
-               
-            </div>
-        </header>
-
-
-        <div id="carousel-bar" class="bar top-margin">
-            <section>
-                <div id="img-carousel">
-                    <div class="menu">
-                        <label for="slide-dot-1"></label>
-                        <label for="slide-dot-2"></label>
-                        <label for="slide-dot-3"></label>
-                    </div>
-                    <input id="slide-dot-1" type="radio" name="slides" checked>
-                    <div class="slide slide-1"></div>
-                    <input id="slide-dot-2" type="radio" name="slides">
-                    <div class="slide slide-2"></div>
-                    <input id="slide-dot-3" type="radio" name="slides">
-                    <div class="slide slide-3"></div>
-                </div>
-            </section>
-        </div>
-
-
-        <!--Content-->
-        <section class="content">
-            <h2>We develop brain-like devices that can mimic and restore cognitive functions.</h2>
-            <p>To pursue this goal, we use a combined experimental and computational strategy to (1) Understand how nervous systems such as the hippocampus perform higher-order cognitive functions, (2) Develop
-                        next-generation modeling and neural interface methodologies to investigate brain functions during naturalistic behaviors, and (3) Build cortical prostheses that can restore cognitive functions lost in
-                        diseases or injuries.</p>
-        </section>
+<div id=app>
+  <header>
+  <div id="usc" class="bar">
+    <section> <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png" /></a> </section>
   </div>
-        <!--Footer-->
-        <div id="footer" class="bar">
-            <section>
-                <div id="footer-left">
-                    <a class="logo">
-                        <p class="usc">USC</p>
-                        <p class="lab">Neural Modeling and Interface Lab</p>
-                    </a>
-                    <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089"
-                        target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building,
-                        <br />Los Angeles, CA 90089</a>
-                </div>
-                <div id="footer-right">
-                    <a href="https://viterbischool.usc.edu/"><img src="assets/usc/viterbi.jpg"></a>
-                </div>
-            </section>
-        </div>
+  <div id="slab" class="bar">
+    <section> <a class="logo" href='index.html' rel="noopener">
+      <h1 class="usc">USC</h1>
+      <h1 class="lab">Neural Modeling and Interface Lab</h1>
+      </a> </section>
+  </div>
+  
+  <!--Navbar-->
+  <div id="nav" class="bar">
+    <section>
+    <div id="links" class="stretch"> <a href="./index.html" class="link currentLink">Home</a>
+      <div class = "dropdown"> <a href="./Research_Pages/research-goals.html" class="link">Research</a>
+        <div class = "dropdown-content"> <a href="./Research_Pages/research-goals.html">Overview</a> <a href = "./Research_Pages/projects.html">Projects</a> </div>
+      </div>
+      <div class="dropdown"> <a href="./people.html">People</a>
+        <div class="dropdown-content"> <a href ="./people.html">Current Members</a> <a href = "./alumni.html">Alumni</a> <a href="./gallery2.html">Lab Gallery</a> </div>
+      </div>
+      <div class="dropdown"> <a href="./feat-news.html">News</a>
+        <div class="dropdown-content"> <a href="./feat-news.html">Recent News</a> <a href="./mediacov.html">News Archive</a> </div>
+      </div>
+      <div class="dropdown"> <a href="./feat-pub.html">Publications</a>
+        <div class="dropdown-content"> <a href="./feat-pub.html">Recent Publications</a> <a href="./publications.html">All Publications</a> </div>
+      </div>
+      <a href="./resources.html" class="link">Resources</a>
+      <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+        <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+      </div>
+      </section>
     </div>
+    </header>
+    <div id="carousel-bar" class="bar top-margin">
+      <section>
+        <div id="img-carousel">
+          <div class="menu">
+            <label for="slide-dot-1"></label>
+            <label for="slide-dot-2"></label>
+            <label for="slide-dot-3"></label>
+          </div>
+          <input id="slide-dot-1" type="radio" name="slides" checked>
+          <div class="slide slide-1"></div>
+          <input id="slide-dot-2" type="radio" name="slides">
+          <div class="slide slide-2"></div>
+          <input id="slide-dot-3" type="radio" name="slides">
+          <div class="slide slide-3"></div>
+        </div>
+      </section>
+    </div>
+    
+    <!--Content-->
+    <section class="content">
+      <h2>We develop brain-like devices that can mimic and restore cognitive functions.</h2>
+      <p>To pursue this goal, we use a combined experimental and computational strategy to (1) Understand how nervous systems such as the hippocampus perform higher-order cognitive functions, (2) Develop
+        next-generation modeling and neural interface methodologies to investigate brain functions during naturalistic behaviors, and (3) Build cortical prostheses that can restore cognitive functions lost in
+        diseases or injuries.</p>
+    </section>
+  </div>
+  <!--Footer-->
+  <div id="footer" class="bar">
+    <section>
+      <div id="footer-left"> <a class="logo">
+        <p class="usc">USC</p>
+        <p class="lab">Neural Modeling and Interface Lab</p>
+        </a> <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089"
+                        target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building, <br />
+        Los Angeles, CA 90089</a> </div>
+      <div id="footer-right"> <a href="https://viterbischool.usc.edu/"><img src="assets/usc/viterbi.jpg"></a> </div>
+    </section>
+  </div>
+</div>
 </body>
-
 </html>
