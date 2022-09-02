@@ -1,100 +1,71 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <meta charset=utf-8>
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <link rel=icon href=assets/favicon.ico>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
-    <title>News Archive — Neural Modeling and Interface Lab</title>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=assets/favicon.ico>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v6.min.js"></script> 
+<script type="text/javascript" src="js/site.js"></script>
+<title>News Archive — Neural Modeling and Interface Lab</title>
 </head>
 <body>
 <div id=app>
+<header>
+<div id="usc" class="bar">
+  <section> <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png"/></a> </section>
+</div>
+<div id="slab" class="bar">
+  <section> <a class="logo" href='./index.html' rel="noopener">
+    <h1 class="usc">USC</h1>
+    <h1 class="lab">Neural Modeling and Interface Lab</h1>
+    </a> </section>
+</div>
 
-        <header>
-    <div id="usc" class="bar">
-        <section>
-            <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png"/></a>
-        </section>
+<!--Navbar-->
+<div id="nav" class="bar">
+  <section>
+  <div id="links" class="stretch"> <a href="./index.html" class="link">Home</a>
+    <div class = "dropdown"> <a href="./Research_Pages/research-goals.html" class="link">Research</a>
+      <div class = "dropdown-content"> <a href="./Research_Pages/research-goals.html">Overview</a> <a href = "./Research_Pages/projects.html">Projects</a> </div>
     </div>
-
-    <div id="slab" class="bar">
-        <section>
-            <a class="logo" href='./index.html' rel="noopener"><h1 class="usc">USC</h1><h1 class="lab">Neural Modeling and Interface Lab</h1></a>
-        </section>
+    <div class="dropdown"> <a href="./publications.html">People</a>
+      <div class="dropdown-content"> <a href ="./people.html">Current Members</a> <a href = "./alumni.html">Alumni</a> <a href="./gallery2.html">Lab Gallery</a> </div>
     </div>
-
-
-   
-    <!--Navbar-->
-    <div id="nav" class="bar">
-        <section>
-            <div id="links" class="stretch">
-                <a href="./index.html" class="link">Home</a>
-                <div class = "dropdown">
-                    <a href="./Research_Pages/research-goals.html" class="link">Research</a>
-                    <div class = "dropdown-content">
-                        <a href="./Research_Pages/research-goals.html">Overview</a>
-                        <a href = "./Research_Pages/projects.html">Projects</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="./publications.html">People</a>
-                    <div class="dropdown-content">
-                        <a href ="./people.html">Current Members</a>
-                        <a href = "./alumni.html">Alumni</a>
-                        <a href="./gallery2.html">Lab Gallery</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="./feat-news.html" class="link currentLink">News</a>
-                    <div class="dropdown-content">
-                        <a href="./feat-news.html">Recent News</a>
-                        <a href="./mediacov.html">News Archive</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="./feat-pub.html">Publications</a>
-                    <div class="dropdown-content">
-                        <a href="./feat-pub.html">Recent Publications</a>
-                        <a href="./publications.html">Publication Archive</a>
-                    </div>
-                </div>
-                <a href="./resources.html" class="link">Resources</a>
-                
-            <div id="menu-toggle" class="toggle" onclick="menuToggle()">
-                <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
-            </div>
-        </section>
+    <div class="dropdown"> <a href="./feat-news.html" class="link currentLink">News</a>
+      <div class="dropdown-content"> <a href="./feat-news.html">Recent News</a> <a href="./mediacov.html">News Archive</a> </div>
     </div>
-</header>
-
-    <!--Content-->
-    <section id='news' class="content">
+    <div class="dropdown"> <a href="./feat-pub.html">Publications</a>
+      <div class="dropdown-content"> <a href="./feat-pub.html">Recent Publications</a> <a href="./publications.html">Publication Archive</a> </div>
+    </div>
+    <a href="./resources.html" class="link">Resources</a>
+    <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+      <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+    </div>
     </section>
-
-    <!--Footer-->
-    <div id="footer" class="bar">
-        <section>
-            <div id="footer-left">
-                <a class="logo"><p class="usc">USC</p><p class="lab">Neural Modeling and Interface Lab</p></a>
-                <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089" target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building,
-                    <br/>Los Angeles, CA 90089</a>
-            </div>
-            <div id="footer-right">
-                <a href="https://viterbischool.usc.edu/" ><img src="assets/usc/viterbi.jpg"></a>
-            </div>
-        </section>
-    </div>
+  </div>
+  </header>
+  
+  <!--Content-->
+  <section id='news' class="content"> </section>
+  
+  <!--Footer-->
+  <div id="footer" class="bar">
+    <section>
+      <div id="footer-left"> <a class="logo">
+        <p class="usc">USC</p>
+        <p class="lab">Neural Modeling and Interface Lab</p>
+        </a> <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089" target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building, <br/>
+        Los Angeles, CA 90089</a> </div>
+      <div id="footer-right"> <a href="https://viterbischool.usc.edu/" ><img src="assets/usc/viterbi.jpg"></a> </div>
+    </section>
+  </div>
 </div>
 <p>This is a test to confirm that the live server works and that the boolean logic is consistent</p>
 </body>
-
-
 <script>
     let file = './assets/news/news.csv'
     d3.csv(file).then(function (data) {
@@ -127,6 +98,4 @@
         }
     })
 </script>
-
 </html>
-
