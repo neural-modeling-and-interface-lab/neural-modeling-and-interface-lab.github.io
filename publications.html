@@ -1,216 +1,166 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <meta charset=utf-8>
-    <meta http-equiv=X-UA-Compatible content="IE=edge">
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <link rel=icon href=assets/favicon.ico>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    <title>Publication Archive — Neural Modeling and Interface Lab</title>
-    <script type="text/javascript" src="js/site.js"></script>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=assets/favicon.ico>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+<title>Publication Archive — Neural Modeling and Interface Lab</title>
+<script type="text/javascript" src="js/site.js"></script>
 </head>
+
 <body>
 <div id=app>
-    <header>
+  <header>
     <div id="usc" class="bar">
-        <section>
-        <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png"/></a>
-        </section>
+      <section> <a href="https://www.usc.edu/"><img src="assets/usc/usc-shield-name-white.png"/></a> </section>
     </div>
-
     <div id="slab" class="bar">
-        <section>
-        <a class="logo" href='./index.html' rel="noopener"><h1 class="usc">USC</h1><h1 class="lab">Neural Modeling and Interface Lab</h1></a>
-        </section>
+      <section> <a class="logo" href='./index.html' rel="noopener">
+        <h1 class="usc">USC</h1>
+        <h1 class="lab">Neural Modeling and Interface Lab</h1>
+        </a> </section>
     </div>
-
-
     
-         <!--Navbar-->
-         <div id="nav" class="bar">
-            <section>
-                <div id="links" class="stretch">
-                    <a href="./index.html" class="link">Home</a>
-                    <div class = "dropdown">
-                        <a href="./Research_Pages/research-goals.html">Research</a>
-                        <div class = "dropdown-content">
-                            <a href="./Research_Pages/research-goals.html">Overview</a>
-                            <a href = "./Research_Pages/projects.html">Projects</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a href="./people.html">People</a>
-                        <div class="dropdown-content">
-                            <a href ="./people.html">Current Members</a>
-                            <a href = "./alumni.html">Alumni</a>
-                            <a href="./gallery2.html">Lab Gallery</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a href="./feat-news.html">News</a>
-                        <div class="dropdown-content">
-                            <a href="./feat-news.html">Recent News</a>
-                            <a href="./mediacov.html">News Archive</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a href="./feat-pub.html"class="link currentLink">Publications</a>
-                        <div class="dropdown-content">
-                            <a href="./feat-pub.html">Recent Publications</a>
-                            <a href="./publications.html">All Publications</a>
-                        </div>
-                    </div>
-                    <a href="./resources.html" class="link">Resources</a>
-                    
-                
-                <div id="menu-toggle" class="toggle" onclick="menuToggle()">
-                    <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
-                </div>
-            </section>
+    <!--Navbar-->
+    <div id="nav" class="bar">
+      <section>
+        <div id="links" class="stretch"> <a href="./index.html" class="link">Home</a>
+          <div class = "dropdown"> <a href="./Research_Pages/research-goals.html">Research</a>
+            <div class = "dropdown-content"> <a href="./Research_Pages/research-goals.html">Overview</a> <a href = "./Research_Pages/projects.html">Projects</a> </div>
+          </div>
+          <div class="dropdown"> <a href="./people.html">People</a>
+            <div class="dropdown-content"> <a href ="./people.html">Current Members</a> <a href = "./alumni.html">Alumni</a> <a href="./gallery2.html">Lab Gallery</a> </div>
+          </div>
+          <div class="dropdown"> <a href="./feat-news.html">News</a>
+            <div class="dropdown-content"> <a href="./feat-news.html">Recent News</a> <a href="./mediacov.html">News Archive</a> </div>
+          </div>
+          <div class="dropdown"> <a href="./feat-pub.html"class="link currentLink">Publications</a>
+            <div class="dropdown-content"> <a href="./feat-pub.html">Recent Publications</a> <a href="./publications.html">All Publications</a> </div>
+          </div>
+          <a href="./resources.html" class="link">Resources</a>
+          <div id="menu-toggle" class="toggle" onclick="menuToggle()">
+            <div class="icon"><i class="fas fa-angle-down fa-3x"></i></div>
+          </div>
         </div>
-    </header>
-
-
-    <!--Content-->
-    <section id='publications' class="content">
-		<h1 class="top-margin">2022</h1>
-		
-		<hr class="underheader"/>
-		
-		<p><a href="https://www.frontiersin.org/articles/10.3389/fnhum.2022.933401/full">Roeder, B.M., Riley, M.R., She, X., Dakos, A.S., Robinson, B.S., Moore, B.J., Couture, D.E., Laxton, A., Popli, G., Clary, H.M., Sam, M., Heck, C., Nune, G., Lee, B., Liu, C., Shaw, S., Gong, H., Marmarelis, V.Z., Berger, T.W., Deadwyler, S.A., Song, D., Hampson, R.E.  Patterned hippocampal stimulation facilitates memory in patients with a history of head impact and/or brain injury.  Frontiers in Human Neuroscience, 2022, DOI: 10.3389/fnhum.2022.933401.</a></p>
-		
-        <p><a href="https://www.nature.com/articles/s41593-022-01044-2">Ammothumkandy, A., Ravina, K., Wolseley, V., Tartt, A.N., Yu, P-N., Corona, L., Zhang, N., Nune, G., Kalayjian, L., Mann, J.J., Rosoklija, G.B., Arango, V., Dwork, A.D., Lee, B., Smith, J.A.D., Song, D., Berger, T.W., Heck, C.N., Chow, R.H., Boldrini, M., Liu, C.Y., Russin, J.J., and Bonaguidi, M.A.  Altered adult neurogenesis and gliogenesis in mesial temporal lobe epilepsy patients.  Nature Neuroscience, 2022, 25, 493-503, DOI: /10.1038/s41593-022-01044-2.</a></p>
-		
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S016502702200019X?via%3Dihub">She, X., Robinson, B.S., Flynn, G., Berger, T.W., and Song, D.  Accelerating input-output model estimations with parallel computing for testing hippocampal memory prostheses in human.  Journal of Neuroscience Methods, 2022, DOI: 10.1016/j.jneumeth.2022.109492.</a></p>
-<h1 class="top-margin">2021</h1>
-        
-		<hr class="underheader"/>
-        <p><a href="https://direct.mit.edu/neco/article-abstract/doi/10.1162/neco_a_01459/107912/A-Double-Layer-Multi-Resolution-Classification?redirectedFrom=fulltext">She, X., Berger, T.W., and Song, D.  A double-layer multi-resolution classification model for decoding spatio-temporal patterns of spikes.  Neural Computation, 2021, DOI: 10.1162/neco_a_01459.</a></p>
-		<p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.616063/full">Elyahoodayan, S., Jiang, W., Lee, C., Shao, A., Weiland, G., Whalen, J., Petrossians, A., and Song, D.  Stimulation of recording of the hippocampus using the same Pt-Ir Coated Microelectrodes. Frontiers in Neuroscience, 2021, DOI: 10.3389/fnins.2021.616063.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/abdd43/meta">Yu, P-N., Liu, C.Y., Heck, C.N., Berger, T.W.  and Song, D.  A Sparse multiscale nonlinear autoregressive model for seizure prediction.  Journal of Neural Engineering, 2021, DOI: 10.1088/1741-2552/abdd43.</a></p>
-		 <p><a href="https://ieeexplore.ieee.org/document/9630986">Jiang, W., Isenhart, R., Kistler, N., Lu, Z., Xu, H., Lee, D., Liu, C.Y., and Song, D.  Low intensity repetitive transcranial magnetic stimulation modulates spontaneous spiking activities in rat cortex.  Proceedings of the IEEE EMBC Conference, 2021, 6318-6321.</a></p>
-<h1 class="top-margin">2020</h1>
-        <hr class="underheader"/>
-        <p><a href="https://ieeexplore.ieee.org/document/9176458">Moore, B., Berger, T.W., and Song, D.  Validation of a convolutional neural network model for spike transformation using a generalized linear model.  Proceedings of the IEEE EMBC Conference, 2020, 3236-3239.</a></p>
-<p><a href="https://ieeexplore.ieee.org/document/9175490">She, X., Berger, T.W., and Song, D.  Accelerating estimation of a multi-input, multi-output model of the hippocampus with a parallel computing strategy.  Proceedings of the IEEE EMBC Conference, 2020, 2479-2482.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S016502702030056X">Elyahoodayan, S., Larson, C., Cobo, A., Meng, E., and Song, D.  Acute in vivo testing of a polymer cuff electrode with integrated microfluidic channels for stimulation, recording, and drug delivery on rat sciatic nerve.  Journal of Neuroscience Methods, 2020, 336, 108634, DOI: 10.1016/j.jneumeth.2020.108634.</a></p>
-        <p><a href="https://www.mdpi.com/2079-9292/9/11/1834">Chowdhury, M.H., Elyahoodayan, S., Song, D., and Cheung, R.C.C.  An FPGA-based neuron activity extraction unit for wireless neural interface.  Electronics, 2020, 9(11), 1834, DOI: 10.3390/electronics9111834.</a></p>
-<p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2020.00072/full">Bingham, C.S., Paknahad, J., Girard, C.B.C., Loizos, K., Bouteiller, J-M.C., Song, D., Gianluca, L., and Berger, T.W.  Admittance method for estimating local field potentials generated in a multi-scale neuron model of the hippocampus.  Frontiers in Computational Neuroscience, DOI: 10.3389/fncom.2020.00072.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/9115295">Scholten, K., Larson, C., Xu, H., Song, D., and Meng, E.  A 512-channel multi-layer polymer-based neural probe array.  IEEE Journal of Microelectromechanical Systems, 2020, 29(5), 1054-1058, DOI: 10.1109/JMEMS.2020.2999550.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/9122439">Wang, X., Hirschberg, A.W., Xu, H., Slingsby-Smith, Z., Lecomte, A., Scholten, K., Song, D., and Meng, E.  A Parylene neural probe array for multi-region deep brain recordings.  IEEE Journal of Microelectromechanical Systems, 2020, 29(4), 499-513, DOI: 10.1109/JMEMS.2020.3000235.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027020301680">Scholten, K., Meng, E., Knaack, G., and Song, D.  Editorial: interfacing with the peripheral nervous system.  Journal of Neuroscience Methods, 2020, 340, 108745, DOI: 10.1016/j.jneumeth.2020.108745.</a></p>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2020.00013/full">Bingham, C.S., Mergenthal, A., Bouteiller, J-M.C., Song, D., Gianluca, L., and Berger, T.W.  ROOTS: An algorithm to generate biologically realistic cortical axons and an application to electroceutical modeling.  Frontiers in Computational Neuroscience, 2020, DOI: 10.3389/fncom.2020.00013.</a></p>
-        <h1 class="top-margin">2019</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2019.01011/full">Elyahoodayan, S., Jiang, W., Xu, H., and Song, D.  A multi-channel asynchronous neurostimulator with artifact suppression for neural code-based stimulations.  Frontiers in Neuroscience, 2019, DOI: 10.3389/fnins.2019.01011.</a></p>
-        <p><a href="https://direct.mit.edu/neco/article/31/7/1327/8493/Multi-Input-Multi-Output-Neuronal-Mode-Network">Geng, K., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z. Multi-input, multi-output neuronal mode network approach to modeling the encoding dynamics and functional connectivity of neural systems.  Neural Computation, 2019, 31, 1-29, DOI: 10.1162/NECO_a_01204.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/8620523">Yu, G., Bouteiller J-M.C., Song, D., and Berger, T.W.  Axonal anatomy optimizes spatial encoding in the rat entorhinal-dentate system: a computational study.  IEEE Transactions on Biomedical Engineering, 2019, 66(10), 2728-2739, DOI: 10.1109/TBME.2019.2894410.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/8568995">Cobo, A.M., Larson, C., Scholten, K., Miranda, J.A., Elyahoodayan, S., Song, D., Pikov, V., and Meng, E.  Parylene-based cuff electrode with integrated microfluidics for peripheral nerve recording, stimulation and drug delivery.  Journal of Microelectromechanical Systems, 2019, 38, 36-49, DOI: 10.1109/JMEMS.2018.2881908.</a></p>
-        <h1 class="top-margin">2018</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2018.00058/full">Hu E., Bouteiller J-M.C., Song D., and Berger T.W. Simulated postsynaptic calcium dynamics using an integrated model of spine properties, membrane channels, and pumps: validation, and an extension towards multi-scale calcium modeling.  Frontiers in Computational Neuroscience, 2018, DOI: 10.3389/fncom.2018.00058.</a></p>
-        <p><a href="https://direct.mit.edu/neco/article/30/9/2472/8395/ASIC-Implementation-of-a-Nonlinear-Dynamical-Model">Qiao, Z., Han, Y., Han, X., Xu, H., Li, W.X.Y., Song, D., Berger, T.W., and Cheung, R.C.C.  ASIC implementation of a nonlinear dynamical model for hippocampal prosthesis.  Neural Computation, 2018, 30, 2472-2499, DOI:10.1162/neco_a_01107.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/aaaed7">Hampson, R.E., Song, D., Robinson, B.S., Fetterhoff, D., Dakos, A.S., Roeder, B.M., Wicks, R.T., Witcher, M.R., Couture, D.E., Laxton, A.W., Munger-Clary, H., Popli, G., Sollman, M.J., Marmarelis, V.Z., Berger, T.W., and Deadwyler, S.A.  A hippocampal neural prosthetic for restoration of human memory function.  Journal of Neural Engineering, 2018, 15, 036014, DOI: 10.1088/1741-2552/aaaed7.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/7556386">Song, D., Robinson, B.S., Hampson, R.E., Marmarelis, V.Z., Deadwyler, S.A., and Berger, T.W.  Sparse large-scale nonlinear dynamical modeling of human hippocampus for memory prostheses.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2018, 26(2), 272-280, DOI: 10.1109/TNSRE.2016.2604423.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/8269392">Bingham, C.S., Loizos, K., Yu, G., Gilbert, A., Bouteiller, J-M.C., Song, D., Gianluca, L., and Berger, T.W.   Model-based analysis of electrode placement and pulse amplitude for hippocampal stimulation.  IEEE Transactions on Biomedical Engineering, 2018, DOI: 10.1109/TBME.2018.2791860.</a></p>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2017.00734/full">Ramirez-Zamora, A., Giordano, J., Gunduz, A., Brown, P., Sanchez, J., Foote, K.D., Almeida, L., Starr, P., Bronte-Stewart, H.M., Hu, W., McIntyre, C., Goodman, W., Kumsa, D., Grill, W.M., Walker, H., Johnson, M., Vitek, J.L., Greene, D., Rizzuto, D.S., Song, D., Berger, T.W., Hampson, R.E., Deadwyler, S.A., Hochberg, L., Schiff, N., Stypulkowski, P., Worrell, G., Tiruvadi, V., Mayberg, H., Jimenez-Shahed, J., Pranav, N., Sheth, S., Gross, R., Lempka, S.F., Deeb, W., and Okun, M.S.  Evolving applications, technological challenges and future opportunities in neuromodulation: Proceedings of the Fifth Annual Deep Brain Stimulation Think Tank.  Frontiers in Neuroscience, 2018, DOI: 10.3389/fnins.2017.00734.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/aa9451">Xu, H., Hirschberg, A.W., Scholten, K., Berger, T.W., Song, D., and Meng, E.  Acute in vivo testing of a conformal polymer microelectrode array for multi-region hippocampal recording.  Journal of Neural Engineering, 2018, 15, 016017, DOI: 10.1088/1741-2552/aa9451.</a></p>
-        <h1 class="top-margin">2017</h1>
-        <hr class="underheader"/>
-        <p><a href="https://direct.mit.edu/neco/article/30/1/149/8333/Mechanism-Based-and-Input-Output-Modeling-of-the">Geng, K., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z. Mechanism-based and input-output modeling of the key neuronal connections and signal transformations in the CA3-CA1 regions of the hippocampus.  Neural Computation, 2017, 30, 149-183, DOI: 10.1162/NECO_a_01031.</a></p>
-        <p><a href="https://www.tandfonline.com/doi/abs/10.1080/10618600.2016.1222292?journalCode=ucgs20">Sienkiewicz, E., Song, D., Breidt, F.J., Wang, H.  Sparse functional dynamical model—a big data approach.  Journal of Computational and Graphical Statistics, 2017, 26(2), 319-329, DOI: 10.1080/10618600.2016.1222292.</a></p>
-        <h1 class="top-margin">2016</h1>
-        <hr class="underheader"/>
-        <p><a href="https://direct.mit.edu/neco/article/28/11/2320/8507/Identification-of-Stable-Spike-Timing-Dependent">Robinson, B.S., Berger, T.W., and Song, D.  Identification of stable spike-timing-dependent plasticity from spiking activity with generalized multilinear modeling.  Neural Computation, 2016, 28:11, 2320-2351, DOI: 10.1162/NECO_a_00883.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0014488616301492?via%3Dihub">Deadwyler, S.A., Hampson, R.E., Song, D., Opris, I., Gerhardt, G.A., Marmarelis, V.Z., and Berger, T.W.  A cognitive prosthesis for memory facilitation by closed-loop functional ensemble stimulation of hippocampal neurons in primate brain.  Experimental Neurology, 2016, DOI: 10.1016/j.expneurol.2016.05.031.</a></p>
-        <p><a href="https://www.worldscientific.com/doi/abs/10.1142/S0218126616400041">Li, W.X.Y., Cheung, R.C.C., Xin, Y., Song, D., and Berger, T.W.  An FPGA-based high-performance neural ensemble spiking activity simulator utilizing generalized Volterra kernel and complexity analysis.  Journal of Circuits, Systems, and Computers, 2016, 25(1), 164004.</a></p>
-        <h1 class="top-margin">2015</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2015.00155/full">Hendrickson, P., Yu, G., Song, D., and Berger, T.W.  Interactions between inhibitory interneurons and excitatory associational circuitry in determining spatio-temporal dynamics of hippocampal dentate granule cells: a large-scale computational study.  Frontiers in Systems Neuroscience, 2015, DOI: 10.3389/fnsys.2015.00155.</a></p>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2015.00317/full">Opris, I., Santos, L., Gerhardt, G.A., Song, D., Berger, T.W., Hampson, R.E., and V.Z., Deadwyler, S.A.  Distributed encoding of spatial and object categories in primate hippocampal microcircuits.  Frontiers in Neuroscience, 2015, DOI: 10.3389/fnins.2015.00317.</a></p>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2015.00112/full">Hu, E, Bouteiller, J-M.C., Song, D., Baudry, M., and Berger, T.W.  Volterra representation enables modeling of complex synaptic nonlinear dynamics in large-scale simulations.  Frontiers in Computational Neuroscience, 2015, DOI: 10.3389/fncom.2015.00112.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/12/5/056017/meta">Sandler, R., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z.  Hippocampal closed-loop modeling and implications for seizure stimulation design.  Journal of Neural Engineering, 2015, 12, 056017.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/7124441">Hendrickson, P., Yu, G., Song, D., and Berger, T.W.  A million-plus neuron model of the hippocampal dentate gyrus: critical role for topography in determining spatio-temporal network dynamics.  IEEE Transactions on Biomedical Engineering, 2015, 63, 199-209.  DOI: 10.1109/TBME.2015.2445771.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027014003483">Song, D., Chan, R.H.M., Robinson, B.S., Marmarelis, V.Z., Opris, I., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Identification of functional synaptic plasticity from spiking activities using nonlinear dynamical modeling.  Journal of Neuroscience Methods, 2015, 244, 123-135, DOI: 10.1016/j.jneumeth.2014.09.023.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027014003355">Hsiao, M-C., Yu, P-N., Song, D., Liu, C.Y., Heck, C.N., Millett, D., and Berger, T.W.  An in vitro seizure model from human hippocampal slices using multi-electrode arrays.  Journal of Neuroscience Methods, 2015, 244, 154-163, DOI: 10.1016/j.jneumeth.2014.09.010.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/7117392">Xin, Y., Li, W.X.Y., Zhang, Z., Cheung, R.C.C., Song, D., and Berger, T.W.  An application specific instruction set processor (ASIP) for adaptive filters in neural prosthetics.  IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2015, DOI: 10.1109/TCBB.2015.2440248.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/7001200">Ghaderi, V., Song, D., Choma, J., and Berger, T.W.  Nonlinear cognitive signal processing in ultra-low-power programmable analog hardware.  IEEE Transaction on Circuits and Systems II, 2015, 62(2), 124-128.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/pii/S0006899314017442">Deadwyler, S.A., Berger, T.W., Opris, I., Song, D., and Hampson, R.E.  Neurons and networks organizing and sequencing memories.  Brain Research, 2015, DOI: 10.1016/j.brainres.2014.12.037.</a></p>
-        <h1 class="top-margin">2014</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2014.00097/full">Song, D., Harway, M., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Extraction and restoration of hippocampal spatial memories with nonlinear dynamical modeling.  Frontiers in Systems Neuroscience, 2014, DOI: 10.3389/fnsys.2014.00097.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027014004117">Sandler, R., Deadwyler, S.A., Hampson, R.E., Song, D., Berger, T.W., and Marmarelis, V.Z.  System identification of point-process neural systems using probability based Volterra kernels.  Journal of Neuroscience Methods, 2015, 179-192, DOI: 10.1016/j.jneumeth.2014.11.013.</a></p>
-        <p><a href="https://link.springer.com/article/10.1007%2Fs10827-014-0530-8">Sandler, R., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z.  Model-based assessment of an in-vivo predictive relationship from CA1 to CA3 in the rodent hippocampus.  Journal of Computational Neuroscience, 2015, 38, 89-103, DOI: 10.1007/s10827-014-0530-8.</a></p>
-<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0026269214000913">Xin, Y., Li, W.X.Y., Cheung, R.C.C., Chan, R.H.M., Yan, H., Song, D., and Berger, T.W.  An FPGA based scalable architecture of a stochastic state point process filter (SSPPF) to track the nonlinear dynamics underlying neural spiking.  Microelectronics Journal, 2014, 45(6), 690-701.</a></p>
-        <h1 class="top-margin">2013</h1>
-        <hr class="underheader"/>
-        <p><a href="https://link.springer.com/article/10.1007%2Fs10827-013-0455-7">Song, D., Wang, H., Tu, C.Y., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Identification of sparse neural functional connectivity using penalized likelihood estimation and basis functions.  Journal of Computational Neuroscience, 2013, 35, 335-357.</a></p>
-        <p><a href="https://link.springer.com/article/10.1007%2Fs10827-013-0475-3">Marmarelis, V.Z., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  On parsing the neural code in the prefrontal cortex of primates using principle dynamic modes.  Journal of Computational Neuroscience, 2013, DOI: 10.1007/s10827-013-0475-3.</a></p>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2013.00120/full">Deadwyler, S.A., Berger, T.W., Sweat, A., Song, D., Chan, R.H.M., Opris, I., Gerhardt, G.A., Marmarelis, V.Z., and Hampson, R.E.  Donor/recipient enhancement of memory in rat hippocampus.  Frontiers in Systems Neuroscience, 2013, DOI: 10.3389/fnsys.2013.00120.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/10/6/066013">Hampson, R.E., Song, D., Opris, I., Santos, L., Shin, D., Gerhardt, G.A., Marmarelis, V.Z., Berger, T.W., and Deadwyler, S.A.  Facilitation of memory encoding in primate hippocampus by a neuroprosthesis that promotes task specific neural firing.  Journal of Neural Engineering, 2013, 10, 066013.</a></p>
-        <p><a href="https://www.nature.com/articles/srep02285">Opris, I., Santos, L., Gerhardt, G.A., Song, D., Berger, T.W., Hampson, R.E., and V.Z., Deadwyler, S.A.  Prefrontal cortical microcircuits bind perception to executive control.  Scientific Reports, 2013, DOI: 10.1038/srep02285.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/6464609">Li, W.X.Y., Chan, R.H.M., Song, D., Berger, T.W., and Cheung, R.C.C.  Real-time prediction of neuronal population spiking activity using FPGA.  IEEE Transactions on Biomedical Circuits and Systems, 2013, 7, 489-498.</a></p>
-        <p><a href="https://www.frontiersin.org/articles/10.3389/fncir.2013.00020/full">Hsiao, M-C., Song, D., and Berger, T.W.  Nonlinear dynamical model based control of in vitro hippocampal output.  Frontiers in Neural Circuits, 2013, 7: Article 20, 1-14.</a></p>
-        <p><a href="https://link.springer.com/article/10.1007%2Fs10827-012-0407-7">Marmarelis, V.Z., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Nonlinear modeling of dynamic interactions within neuronal ensembles using principal dynamic modes.  Journal of Computational Neuroscience, 2013, 34(1): 73-87.</a></p>
-        <h1 class="top-margin">2012</h1>
-        <hr class="underheader"/>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/9/6/066003">Marmarelis, V.Z., Shin, D., Hampson, R.E., Deadwyler, S.A., Song, D., and Berger, T.W.  Design of optimal stimulation patterns for neuronal ensembles based on Volterra-type hierarchical modeling.  Journal of Neural Engineering, 2012, 9, 066003.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/6310138">Berger, T.W., Song, D., Chan, R.H.M., Shin, D., Marmarelis, V.Z., Hampson, R.E., Sweatt, A.J., Heck, C.N., Liu, C.Y., Wills, J., LaCoss, J., Granacki, J.J., Gerhardt, G.A., and Deadwyler, S.A.  Role of the hippocampus in memory formation: restorative encoding memory integration neural device as a cognitive neural prosthesis.  IEEE Pulse, 2012, 3(5): 17-22.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/9/5/056012">Hampson, R.E., Gerhardt, G.A., Marmarelis, V.Z., Song, D., Opris, I., Santos, L., Berger, T.W., Deadwyler, S.A.  Facilitation and restoration of cognitive function in primate prefrontal cortex by a neuroprosthesis that utilizes minicolumn-specific neural firing.  Journal of Neural Engineering, 2012, 9(5): 056012.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/6179544">Hampson, R.E., Song, D., Chan, R.H.M., Sweatt, A.J., Riley, M., Goonawardena, A., Marmarelis, V.Z., Gerhardt, G.A., Berger, T.W., and Deadwyler, S.A.  Closing the loop for memory prostheses: detecting the role of hippocampal neural ensembles using nonlinear models.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2012, 20(4): 510-525.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/6171067">Berger, T.W., Song, D., Chan, R.H.M., Marmarelis,V.Z., LaCoss, J., Wills, J., Hampson, R.E., Deadwyler, S.A., and Granacki, J.J.  A hippocampal cognitive prosthesis: Multi-input, multi-output nonlinear modeling and VLSI implementation.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2012, 20(2): 198-211.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/6171069">Hampson, R.E., Song, D., Chan, R.H.M., Sweatt, A.J., Fuqua, J., Gerhardt, G.A., Marmarelis, V.Z., Berger, T.W., and Deadwyler, S.A.  A nonlinear model for cortical prosthetics: memory facilitation by hippocampal ensemble stimulation.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2012, 20(2): 184-197.</a></p>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1878875011010813">Taghva, A., Song, D., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Determination of relevant neuron-neuron connections for neural prosthetics using time-delayed mutual information: Tutorial and preliminary results.  World Neurosurgery, 2012, doi: 10.1016/j.wneu.2011.09.002.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/6095608">Lu, U., Roach, S.M., Song, D., and Berger, T.W.  Nonlinear dynamic modeling of neuron action potential threshold during synaptically-driven broadband intracellular activity.  IEEE Transactions on Biomedical Engineering, 2012, 59, 706-716.</a></p>
-        <h1 class="top-margin">2011</h1>
-        <hr class="underheader"/>
-        <p><a href="https://ieeexplore.ieee.org/document/6112182">Li, W.X.Y., Chan, R.H.M., Zhang, W., Cheung, R.C.C., Song, D., and Berger, T.W.  High-performance and scalable system architecture of generalized Laguerre-Volterra MIMO models for neural population spiking activities.  IEEE Journal on Emerging and Selected Topics in Circuits and Systems, 2011, 1(4): 489-501.</a></p>
-        <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/8/4/046017">Berger, T.W., Hampson, R.E., Song, D., Goonawardena, A., Marmarelis, V.Z., and Deadwyler, S.A.  A cortical neural prosthesis for restoring and enhancing memory.  Journal of Neural Engineering, 2011, 8, 046017.</a></p>
-        <p><a href="https://journals.lww.com/behaviouralpharm/Abstract/2011/08000/Memory_encoding_in_hippocampal_ensembles_is.6.aspx">Hampson, R.E., Sweatt, A.J., Goonawardena, A.V., Song, D., Chan, R.H.M., Berger, T.W., and Deadwyler, S.A.  Memory encoding in hippocampus is negatively influenced by cannabinoid CB1 receptors.  Behavioural Pharmacology, 2011, 22(4): 335-346.</a></p>
-        <h1 class="top-margin">2010</h1>
-        <hr class="underheader"/>
-        <p><a href="https://ieeexplore.ieee.org/document/5686918">Lu, U., Song, D., and Berger, T.W.  Nonlinear dynamic modeling of synaptically driven single hippocampal neuron intracellular activity.  IEEE Transactions on Biomedical Engineering, 2010, 58, 1303-1313.</a></p>
-        <p><a href="https://ieeexplore.ieee.org/document/5424199">Berger, T.W., Song, D., Chan, R.H.W., and Marmarelis, V.Z.  The neurobiological basis of cognition: Identification by multi-input, multi-output nonlinear dynamic modeling.  Proceedings of the IEEE, 2010, 98, 356-374.</a></p>
-        <h1 class="top-margin">2009</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S089360800900094X">Song, D., Chan, R.H.M., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Nonlinear modeling of neural population dynamics for hippocampal prostheses.  Neural Networks, 2009, 22, 1340-1351.</a></p>
-        <p><a href="https://link.springer.com/article/10.1007%2Fs10827-008-0097-3">Song, D., Marmarelis, V.Z., and Berger, T.W.  Parametric and non-parametric modeling of short-term synaptic plasticity. Part I: Computational study.  Journal of Computational Neuroscience, 2009, 26, 1-19.</a></p>
-        <p><a href="https://link.springer.com/article/10.1007%2Fs10827-008-0098-2">Song, D., Wang, Z., Marmarelis, V.Z., and Berger, T.W.  Parametric and non-parametric modeling of short-term synaptic plasticity. Part II: Experimental study.  Journal of Computational Neuroscience, 2009, 26, 21-37.</a></p>
-        <h1 class="top-margin">2007</h1>
-        <hr class="underheader"/>
-        <p><a href="https://ieeexplore.ieee.org/document/4203029">Song, D., Chan, R.H.M., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Nonlinear dynamic modeling of spike train transformations for hippocampal-cortical prostheses.  IEEE Transactions on Biomedical Engineering, 2007, 54, 1053-1066.</a></p>
-        <h1 class="top-margin">2006</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027005003080">Gholmieh, G., Soussou, W., Han, M., Ahuja, A., Hsiao, M.-C., Song, D., Tanguay, Jr., A.R., and Berger, T.W. Custom-designed, high-density conformal planar multielectrode arrays for brain slice electrophysiology.  Journal of Neuroscience Methods, 2006, 152, 116-129.</a></p>
-        <h1 class="top-margin">2005</h1>
-        <hr class="underheader"/>
-        <p><a href="https://ieeexplore.ieee.org/document/1511498">Berger, T.W., Ahuja, A., Courellis, S.H., Deadwyler, S.A., Erinjippurath, G., Gerhardt, G.A., Gholmieh, G, Granacki, J.J., Hampson, R., Hsiao, M-C., LaCoss, J., Marmarelis, V.Z., Nasiatka, P., Srinivasan, V., Song, S., Tanguay, Jr., A.R., and Wills, J.  Restoring lost cognitive function: Hippocampal-cortical neural prostheses.  IEEE Engineering in Medicine and Biology Magazine, 2005, 24, 30-44.</a></p>
-        <h1 class="top-margin">2002</h1>
-        <hr class="underheader"/>
-        <p><a href="https://onlinelibrary.wiley.com/doi/10.1002/hipo.10105">Song, D., Wang, Z., and Berger, T.W.  Contribution of T-type VDCCs to TEA-induced long-term synaptic modification in hippocampal CA1 and dentate gyrus.  Hippocampus, 2002, 12, 689-697.</a></p>
-        <p><a href="https://onlinelibrary.wiley.com/doi/10.1002/hipo.10104">Wang, Z., Song, D., and Berger, T.W.  Contribution of NMDA receptor-channels to the expression of LTP in the hippocampal dentate gyrus.  Hippocampus, 2002, 12, 680-688.</a></p>
-        <h1 class="top-margin">2001</h1>
-        <hr class="underheader"/>
-        <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1074742701940328">Song, D., Xie, X., Wang, Z., and Berger, T.W.  Differential effect of TEA on long-term synaptic modification in hippocampal CA1 and dentate gyrus in vitro.  Neurobiology of Learning and Memory, 2001, 76, 375-387.</a></p>
-
-    </section>
-
-    <!--Footer-->
-    <div id="footer" class="bar">
-        <section>
-            <div id="footer-left">
-                <a class="logo"><p class="usc">USC</p><p class="lab">Neural Modeling and Interface Lab</p></a>
-                <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089" target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building,
-                    <br/>Los Angeles, CA 90089</a>
-            </div>
-            <div id="footer-right">
-                <a href="https://viterbischool.usc.edu/" ><img src="assets/usc/viterbi.jpg"></a>
-            </div>
-        </section>
+      </section>
     </div>
+  </header>
+  
+  <!--Content-->
+  <section id="publications" class="content">
+    <h2 class="top-margin">2022</h2>
+    <p><a href="">Xu, H., Scholten, K., Jiang, W., Ortigoza-Diaz, J-L., Lu, Z., Liu, X., Meng, E., and Song, D.  Generic Parylene Microelectrode Array Implanted with Dip-coating Method into the Rat Brain.  Proceedings of the IEEE EMBC Conference, 2022, 224-227.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnhum.2022.933401/full">Roeder, B.M., Riley, M.R., She, X., Dakos, A.S., Robinson, B.S., Moore, B.J., Couture, D.E., Laxton, A., Popli, G., Clary, H.M., Sam, M., Heck, C., Nune, G., Lee, B., Liu, C., Shaw, S., Gong, H., Marmarelis, V.Z., Berger, T.W., Deadwyler, S.A., Song, D., Hampson, R.E.  Patterned hippocampal stimulation facilitates memory in patients with a history of head impact and/or brain injury.  Frontiers in Human Neuroscience, 2022, DOI: 10.3389/fnhum.2022.933401.</a></p>
+    <p><a href="https://www.nature.com/articles/s41593-022-01044-2">Ammothumkandy, A., Ravina, K., Wolseley, V., Tartt, A.N., Yu, P-N., Corona, L., Zhang, N., Nune, G., Kalayjian, L., Mann, J.J., Rosoklija, G.B., Arango, V., Dwork, A.D., Lee, B., Smith, J.A.D., Song, D., Berger, T.W., Heck, C.N., Chow, R.H., Boldrini, M., Liu, C.Y., Russin, J.J., and Bonaguidi, M.A.  Altered adult neurogenesis and gliogenesis in mesial temporal lobe epilepsy patients.  Nature Neuroscience, 2022, 25, 493-503, DOI: /10.1038/s41593-022-01044-2.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S016502702200019X?via%3Dihub">She, X., Robinson, B.S., Flynn, G., Berger, T.W., and Song, D.  Accelerating input-output model estimations with parallel computing for testing hippocampal memory prostheses in human.  Journal of Neuroscience Methods, 2022, DOI: 10.1016/j.jneumeth.2022.109492.</a></p>
+    <h2 class="top-margin">2021</h2>
+    <p><a href="https://direct.mit.edu/neco/article-abstract/doi/10.1162/neco_a_01459/107912/A-Double-Layer-Multi-Resolution-Classification?redirectedFrom=fulltext">She, X., Berger, T.W., and Song, D.  A double-layer multi-resolution classification model for decoding spatio-temporal patterns of spikes.  Neural Computation, 2021, DOI: 10.1162/neco_a_01459.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2021.616063/full">Elyahoodayan, S., Jiang, W., Lee, C., Shao, A., Weiland, G., Whalen, J., Petrossians, A., and Song, D.  Stimulation of recording of the hippocampus using the same Pt-Ir Coated Microelectrodes. Frontiers in Neuroscience, 2021, DOI: 10.3389/fnins.2021.616063.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/abdd43/meta">Yu, P-N., Liu, C.Y., Heck, C.N., Berger, T.W.  and Song, D.  A Sparse multiscale nonlinear autoregressive model for seizure prediction.  Journal of Neural Engineering, 2021, DOI: 10.1088/1741-2552/abdd43.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/9630986">Jiang, W., Isenhart, R., Kistler, N., Lu, Z., Xu, H., Lee, D., Liu, C.Y., and Song, D.  Low intensity repetitive transcranial magnetic stimulation modulates spontaneous spiking activities in rat cortex.  Proceedings of the IEEE EMBC Conference, 2021, 6318-6321.</a></p>
+    <h2 class="top-margin">2020</h2>
+    <p><a href="https://ieeexplore.ieee.org/document/9176458">Moore, B., Berger, T.W., and Song, D.  Validation of a convolutional neural network model for spike transformation using a generalized linear model.  Proceedings of the IEEE EMBC Conference, 2020, 3236-3239.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/9175490">She, X., Berger, T.W., and Song, D.  Accelerating estimation of a multi-input, multi-output model of the hippocampus with a parallel computing strategy.  Proceedings of the IEEE EMBC Conference, 2020, 2479-2482.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S016502702030056X">Elyahoodayan, S., Larson, C., Cobo, A., Meng, E., and Song, D.  Acute in vivo testing of a polymer cuff electrode with integrated microfluidic channels for stimulation, recording, and drug delivery on rat sciatic nerve.  Journal of Neuroscience Methods, 2020, 336, 108634, DOI: 10.1016/j.jneumeth.2020.108634.</a></p>
+    <p><a href="https://www.mdpi.com/2079-9292/9/11/1834">Chowdhury, M.H., Elyahoodayan, S., Song, D., and Cheung, R.C.C.  An FPGA-based neuron activity extraction unit for wireless neural interface.  Electronics, 2020, 9(11), 1834, DOI: 10.3390/electronics9111834.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2020.00072/full">Bingham, C.S., Paknahad, J., Girard, C.B.C., Loizos, K., Bouteiller, J-M.C., Song, D., Gianluca, L., and Berger, T.W.  Admittance method for estimating local field potentials generated in a multi-scale neuron model of the hippocampus.  Frontiers in Computational Neuroscience, DOI: 10.3389/fncom.2020.00072.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/9115295">Scholten, K., Larson, C., Xu, H., Song, D., and Meng, E.  A 512-channel multi-layer polymer-based neural probe array.  IEEE Journal of Microelectromechanical Systems, 2020, 29(5), 1054-1058, DOI: 10.1109/JMEMS.2020.2999550.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/9122439">Wang, X., Hirschberg, A.W., Xu, H., Slingsby-Smith, Z., Lecomte, A., Scholten, K., Song, D., and Meng, E.  A Parylene neural probe array for multi-region deep brain recordings.  IEEE Journal of Microelectromechanical Systems, 2020, 29(4), 499-513, DOI: 10.1109/JMEMS.2020.3000235.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027020301680">Scholten, K., Meng, E., Knaack, G., and Song, D.  Editorial: interfacing with the peripheral nervous system.  Journal of Neuroscience Methods, 2020, 340, 108745, DOI: 10.1016/j.jneumeth.2020.108745.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2020.00013/full">Bingham, C.S., Mergenthal, A., Bouteiller, J-M.C., Song, D., Gianluca, L., and Berger, T.W.  ROOTS: An algorithm to generate biologically realistic cortical axons and an application to electroceutical modeling.  Frontiers in Computational Neuroscience, 2020, DOI: 10.3389/fncom.2020.00013.</a></p>
+    <h2 class="top-margin">2019</h2>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2019.01011/full">Elyahoodayan, S., Jiang, W., Xu, H., and Song, D.  A multi-channel asynchronous neurostimulator with artifact suppression for neural code-based stimulations.  Frontiers in Neuroscience, 2019, DOI: 10.3389/fnins.2019.01011.</a></p>
+    <p><a href="https://direct.mit.edu/neco/article/31/7/1327/8493/Multi-Input-Multi-Output-Neuronal-Mode-Network">Geng, K., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z. Multi-input, multi-output neuronal mode network approach to modeling the encoding dynamics and functional connectivity of neural systems.  Neural Computation, 2019, 31, 1-29, DOI: 10.1162/NECO_a_01204.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/8620523">Yu, G., Bouteiller J-M.C., Song, D., and Berger, T.W.  Axonal anatomy optimizes spatial encoding in the rat entorhinal-dentate system: a computational study.  IEEE Transactions on Biomedical Engineering, 2019, 66(10), 2728-2739, DOI: 10.1109/TBME.2019.2894410.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/8568995">Cobo, A.M., Larson, C., Scholten, K., Miranda, J.A., Elyahoodayan, S., Song, D., Pikov, V., and Meng, E.  Parylene-based cuff electrode with integrated microfluidics for peripheral nerve recording, stimulation and drug delivery.  Journal of Microelectromechanical Systems, 2019, 38, 36-49, DOI: 10.1109/JMEMS.2018.2881908.</a></p>
+    <h2 class="top-margin">2018</h2>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2018.00058/full">Hu E., Bouteiller J-M.C., Song D., and Berger T.W. Simulated postsynaptic calcium dynamics using an integrated model of spine properties, membrane channels, and pumps: validation, and an extension towards multi-scale calcium modeling.  Frontiers in Computational Neuroscience, 2018, DOI: 10.3389/fncom.2018.00058.</a></p>
+    <p><a href="https://direct.mit.edu/neco/article/30/9/2472/8395/ASIC-Implementation-of-a-Nonlinear-Dynamical-Model">Qiao, Z., Han, Y., Han, X., Xu, H., Li, W.X.Y., Song, D., Berger, T.W., and Cheung, R.C.C.  ASIC implementation of a nonlinear dynamical model for hippocampal prosthesis.  Neural Computation, 2018, 30, 2472-2499, DOI:10.1162/neco_a_01107.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/aaaed7">Hampson, R.E., Song, D., Robinson, B.S., Fetterhoff, D., Dakos, A.S., Roeder, B.M., Wicks, R.T., Witcher, M.R., Couture, D.E., Laxton, A.W., Munger-Clary, H., Popli, G., Sollman, M.J., Marmarelis, V.Z., Berger, T.W., and Deadwyler, S.A.  A hippocampal neural prosthetic for restoration of human memory function.  Journal of Neural Engineering, 2018, 15, 036014, DOI: 10.1088/1741-2552/aaaed7.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/7556386">Song, D., Robinson, B.S., Hampson, R.E., Marmarelis, V.Z., Deadwyler, S.A., and Berger, T.W.  Sparse large-scale nonlinear dynamical modeling of human hippocampus for memory prostheses.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2018, 26(2), 272-280, DOI: 10.1109/TNSRE.2016.2604423.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/8269392">Bingham, C.S., Loizos, K., Yu, G., Gilbert, A., Bouteiller, J-M.C., Song, D., Gianluca, L., and Berger, T.W.   Model-based analysis of electrode placement and pulse amplitude for hippocampal stimulation.  IEEE Transactions on Biomedical Engineering, 2018, DOI: 10.1109/TBME.2018.2791860.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2017.00734/full">Ramirez-Zamora, A., Giordano, J., Gunduz, A., Brown, P., Sanchez, J., Foote, K.D., Almeida, L., Starr, P., Bronte-Stewart, H.M., Hu, W., McIntyre, C., Goodman, W., Kumsa, D., Grill, W.M., Walker, H., Johnson, M., Vitek, J.L., Greene, D., Rizzuto, D.S., Song, D., Berger, T.W., Hampson, R.E., Deadwyler, S.A., Hochberg, L., Schiff, N., Stypulkowski, P., Worrell, G., Tiruvadi, V., Mayberg, H., Jimenez-Shahed, J., Pranav, N., Sheth, S., Gross, R., Lempka, S.F., Deeb, W., and Okun, M.S.  Evolving applications, technological challenges and future opportunities in neuromodulation: Proceedings of the Fifth Annual Deep Brain Stimulation Think Tank.  Frontiers in Neuroscience, 2018, DOI: 10.3389/fnins.2017.00734.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2552/aa9451">Xu, H., Hirschberg, A.W., Scholten, K., Berger, T.W., Song, D., and Meng, E.  Acute in vivo testing of a conformal polymer microelectrode array for multi-region hippocampal recording.  Journal of Neural Engineering, 2018, 15, 016017, DOI: 10.1088/1741-2552/aa9451.</a></p>
+    <h2 class="top-margin">2017</h2>
+    <p><a href="https://direct.mit.edu/neco/article/30/1/149/8333/Mechanism-Based-and-Input-Output-Modeling-of-the">Geng, K., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z. Mechanism-based and input-output modeling of the key neuronal connections and signal transformations in the CA3-CA1 regions of the hippocampus.  Neural Computation, 2017, 30, 149-183, DOI: 10.1162/NECO_a_01031.</a></p>
+    <p><a href="https://www.tandfonline.com/doi/abs/10.1080/10618600.2016.1222292?journalCode=ucgs20">Sienkiewicz, E., Song, D., Breidt, F.J., Wang, H.  Sparse functional dynamical model—a big data approach.  Journal of Computational and Graphical Statistics, 2017, 26(2), 319-329, DOI: 10.1080/10618600.2016.1222292.</a></p>
+    <h2 class="top-margin">2016</h2>
+    <p><a href="https://direct.mit.edu/neco/article/28/11/2320/8507/Identification-of-Stable-Spike-Timing-Dependent">Robinson, B.S., Berger, T.W., and Song, D.  Identification of stable spike-timing-dependent plasticity from spiking activity with generalized multilinear modeling.  Neural Computation, 2016, 28:11, 2320-2351, DOI: 10.1162/NECO_a_00883.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0014488616301492?via%3Dihub">Deadwyler, S.A., Hampson, R.E., Song, D., Opris, I., Gerhardt, G.A., Marmarelis, V.Z., and Berger, T.W.  A cognitive prosthesis for memory facilitation by closed-loop functional ensemble stimulation of hippocampal neurons in primate brain.  Experimental Neurology, 2016, DOI: 10.1016/j.expneurol.2016.05.031.</a></p>
+    <p><a href="https://www.worldscientific.com/doi/abs/10.1142/S0218126616400041">Li, W.X.Y., Cheung, R.C.C., Xin, Y., Song, D., and Berger, T.W.  An FPGA-based high-performance neural ensemble spiking activity simulator utilizing generalized Volterra kernel and complexity analysis.  Journal of Circuits, Systems, and Computers, 2016, 25(1), 164004.</a></p>
+    <h2 class="top-margin">2015</h2>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2015.00155/full">Hendrickson, P., Yu, G., Song, D., and Berger, T.W.  Interactions between inhibitory interneurons and excitatory associational circuitry in determining spatio-temporal dynamics of hippocampal dentate granule cells: a large-scale computational study.  Frontiers in Systems Neuroscience, 2015, DOI: 10.3389/fnsys.2015.00155.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnins.2015.00317/full">Opris, I., Santos, L., Gerhardt, G.A., Song, D., Berger, T.W., Hampson, R.E., and V.Z., Deadwyler, S.A.  Distributed encoding of spatial and object categories in primate hippocampal microcircuits.  Frontiers in Neuroscience, 2015, DOI: 10.3389/fnins.2015.00317.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fncom.2015.00112/full">Hu, E, Bouteiller, J-M.C., Song, D., Baudry, M., and Berger, T.W.  Volterra representation enables modeling of complex synaptic nonlinear dynamics in large-scale simulations.  Frontiers in Computational Neuroscience, 2015, DOI: 10.3389/fncom.2015.00112.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/12/5/056017/meta">Sandler, R., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z.  Hippocampal closed-loop modeling and implications for seizure stimulation design.  Journal of Neural Engineering, 2015, 12, 056017.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/7124441">Hendrickson, P., Yu, G., Song, D., and Berger, T.W.  A million-plus neuron model of the hippocampal dentate gyrus: critical role for topography in determining spatio-temporal network dynamics.  IEEE Transactions on Biomedical Engineering, 2015, 63, 199-209.  DOI: 10.1109/TBME.2015.2445771.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027014003483">Song, D., Chan, R.H.M., Robinson, B.S., Marmarelis, V.Z., Opris, I., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Identification of functional synaptic plasticity from spiking activities using nonlinear dynamical modeling.  Journal of Neuroscience Methods, 2015, 244, 123-135, DOI: 10.1016/j.jneumeth.2014.09.023.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027014003355">Hsiao, M-C., Yu, P-N., Song, D., Liu, C.Y., Heck, C.N., Millett, D., and Berger, T.W.  An in vitro seizure model from human hippocampal slices using multi-electrode arrays.  Journal of Neuroscience Methods, 2015, 244, 154-163, DOI: 10.1016/j.jneumeth.2014.09.010.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/7117392">Xin, Y., Li, W.X.Y., Zhang, Z., Cheung, R.C.C., Song, D., and Berger, T.W.  An application specific instruction set processor (ASIP) for adaptive filters in neural prosthetics.  IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2015, DOI: 10.1109/TCBB.2015.2440248.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/7001200">Ghaderi, V., Song, D., Choma, J., and Berger, T.W.  Nonlinear cognitive signal processing in ultra-low-power programmable analog hardware.  IEEE Transaction on Circuits and Systems II, 2015, 62(2), 124-128.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/pii/S0006899314017442">Deadwyler, S.A., Berger, T.W., Opris, I., Song, D., and Hampson, R.E.  Neurons and networks organizing and sequencing memories.  Brain Research, 2015, DOI: 10.1016/j.brainres.2014.12.037.</a></p>
+    <h2 class="top-margin">2014</h2>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2014.00097/full">Song, D., Harway, M., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Extraction and restoration of hippocampal spatial memories with nonlinear dynamical modeling.  Frontiers in Systems Neuroscience, 2014, DOI: 10.3389/fnsys.2014.00097.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027014004117">Sandler, R., Deadwyler, S.A., Hampson, R.E., Song, D., Berger, T.W., and Marmarelis, V.Z.  System identification of point-process neural systems using probability based Volterra kernels.  Journal of Neuroscience Methods, 2015, 179-192, DOI: 10.1016/j.jneumeth.2014.11.013.</a></p>
+    <p><a href="https://link.springer.com/article/10.1007%2Fs10827-014-0530-8">Sandler, R., Song, D., Hampson, R.E., Deadwyler, S.A., Berger, T.W., and Marmarelis, V.Z.  Model-based assessment of an in-vivo predictive relationship from CA1 to CA3 in the rodent hippocampus.  Journal of Computational Neuroscience, 2015, 38, 89-103, DOI: 10.1007/s10827-014-0530-8.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0026269214000913">Xin, Y., Li, W.X.Y., Cheung, R.C.C., Chan, R.H.M., Yan, H., Song, D., and Berger, T.W.  An FPGA based scalable architecture of a stochastic state point process filter (SSPPF) to track the nonlinear dynamics underlying neural spiking.  Microelectronics Journal, 2014, 45(6), 690-701.</a></p>
+    <h2 class="top-margin">2013</h2>
+    <p><a href="https://link.springer.com/article/10.1007%2Fs10827-013-0455-7">Song, D., Wang, H., Tu, C.Y., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Identification of sparse neural functional connectivity using penalized likelihood estimation and basis functions.  Journal of Computational Neuroscience, 2013, 35, 335-357.</a></p>
+    <p><a href="https://link.springer.com/article/10.1007%2Fs10827-013-0475-3">Marmarelis, V.Z., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  On parsing the neural code in the prefrontal cortex of primates using principle dynamic modes.  Journal of Computational Neuroscience, 2013, DOI: 10.1007/s10827-013-0475-3.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fnsys.2013.00120/full">Deadwyler, S.A., Berger, T.W., Sweat, A., Song, D., Chan, R.H.M., Opris, I., Gerhardt, G.A., Marmarelis, V.Z., and Hampson, R.E.  Donor/recipient enhancement of memory in rat hippocampus.  Frontiers in Systems Neuroscience, 2013, DOI: 10.3389/fnsys.2013.00120.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/10/6/066013">Hampson, R.E., Song, D., Opris, I., Santos, L., Shin, D., Gerhardt, G.A., Marmarelis, V.Z., Berger, T.W., and Deadwyler, S.A.  Facilitation of memory encoding in primate hippocampus by a neuroprosthesis that promotes task specific neural firing.  Journal of Neural Engineering, 2013, 10, 066013.</a></p>
+    <p><a href="https://www.nature.com/articles/srep02285">Opris, I., Santos, L., Gerhardt, G.A., Song, D., Berger, T.W., Hampson, R.E., and V.Z., Deadwyler, S.A.  Prefrontal cortical microcircuits bind perception to executive control.  Scientific Reports, 2013, DOI: 10.1038/srep02285.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/6464609">Li, W.X.Y., Chan, R.H.M., Song, D., Berger, T.W., and Cheung, R.C.C.  Real-time prediction of neuronal population spiking activity using FPGA.  IEEE Transactions on Biomedical Circuits and Systems, 2013, 7, 489-498.</a></p>
+    <p><a href="https://www.frontiersin.org/articles/10.3389/fncir.2013.00020/full">Hsiao, M-C., Song, D., and Berger, T.W.  Nonlinear dynamical model based control of in vitro hippocampal output.  Frontiers in Neural Circuits, 2013, 7: Article 20, 1-14.</a></p>
+    <p><a href="https://link.springer.com/article/10.1007%2Fs10827-012-0407-7">Marmarelis, V.Z., Shin, D., Song, D., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Nonlinear modeling of dynamic interactions within neuronal ensembles using principal dynamic modes.  Journal of Computational Neuroscience, 2013, 34(1): 73-87.</a></p>
+    <h2 class="top-margin">2012</h2>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/9/6/066003">Marmarelis, V.Z., Shin, D., Hampson, R.E., Deadwyler, S.A., Song, D., and Berger, T.W.  Design of optimal stimulation patterns for neuronal ensembles based on Volterra-type hierarchical modeling.  Journal of Neural Engineering, 2012, 9, 066003.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/6310138">Berger, T.W., Song, D., Chan, R.H.M., Shin, D., Marmarelis, V.Z., Hampson, R.E., Sweatt, A.J., Heck, C.N., Liu, C.Y., Wills, J., LaCoss, J., Granacki, J.J., Gerhardt, G.A., and Deadwyler, S.A.  Role of the hippocampus in memory formation: restorative encoding memory integration neural device as a cognitive neural prosthesis.  IEEE Pulse, 2012, 3(5): 17-22.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/9/5/056012">Hampson, R.E., Gerhardt, G.A., Marmarelis, V.Z., Song, D., Opris, I., Santos, L., Berger, T.W., Deadwyler, S.A.  Facilitation and restoration of cognitive function in primate prefrontal cortex by a neuroprosthesis that utilizes minicolumn-specific neural firing.  Journal of Neural Engineering, 2012, 9(5): 056012.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/6179544">Hampson, R.E., Song, D., Chan, R.H.M., Sweatt, A.J., Riley, M., Goonawardena, A., Marmarelis, V.Z., Gerhardt, G.A., Berger, T.W., and Deadwyler, S.A.  Closing the loop for memory prostheses: detecting the role of hippocampal neural ensembles using nonlinear models.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2012, 20(4): 510-525.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/6171067">Berger, T.W., Song, D., Chan, R.H.M., Marmarelis,V.Z., LaCoss, J., Wills, J., Hampson, R.E., Deadwyler, S.A., and Granacki, J.J.  A hippocampal cognitive prosthesis: Multi-input, multi-output nonlinear modeling and VLSI implementation.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2012, 20(2): 198-211.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/6171069">Hampson, R.E., Song, D., Chan, R.H.M., Sweatt, A.J., Fuqua, J., Gerhardt, G.A., Marmarelis, V.Z., Berger, T.W., and Deadwyler, S.A.  A nonlinear model for cortical prosthetics: memory facilitation by hippocampal ensemble stimulation.  IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2012, 20(2): 184-197.</a></p>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1878875011010813">Taghva, A., Song, D., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Determination of relevant neuron-neuron connections for neural prosthetics using time-delayed mutual information: Tutorial and preliminary results.  World Neurosurgery, 2012, doi: 10.1016/j.wneu.2011.09.002.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/6095608">Lu, U., Roach, S.M., Song, D., and Berger, T.W.  Nonlinear dynamic modeling of neuron action potential threshold during synaptically-driven broadband intracellular activity.  IEEE Transactions on Biomedical Engineering, 2012, 59, 706-716.</a></p>
+    <h1 class="top-margin">2011</h1>
+    <p><a href="https://ieeexplore.ieee.org/document/6112182">Li, W.X.Y., Chan, R.H.M., Zhang, W., Cheung, R.C.C., Song, D., and Berger, T.W.  High-performance and scalable system architecture of generalized Laguerre-Volterra MIMO models for neural population spiking activities.  IEEE Journal on Emerging and Selected Topics in Circuits and Systems, 2011, 1(4): 489-501.</a></p>
+    <p><a href="https://iopscience.iop.org/article/10.1088/1741-2560/8/4/046017">Berger, T.W., Hampson, R.E., Song, D., Goonawardena, A., Marmarelis, V.Z., and Deadwyler, S.A.  A cortical neural prosthesis for restoring and enhancing memory.  Journal of Neural Engineering, 2011, 8, 046017.</a></p>
+    <p><a href="https://journals.lww.com/behaviouralpharm/Abstract/2011/08000/Memory_encoding_in_hippocampal_ensembles_is.6.aspx">Hampson, R.E., Sweatt, A.J., Goonawardena, A.V., Song, D., Chan, R.H.M., Berger, T.W., and Deadwyler, S.A.  Memory encoding in hippocampus is negatively influenced by cannabinoid CB1 receptors.  Behavioural Pharmacology, 2011, 22(4): 335-346.</a></p>
+    <h2 class="top-margin">2010</h2>
+    <p><a href="https://ieeexplore.ieee.org/document/5686918">Lu, U., Song, D., and Berger, T.W.  Nonlinear dynamic modeling of synaptically driven single hippocampal neuron intracellular activity.  IEEE Transactions on Biomedical Engineering, 2010, 58, 1303-1313.</a></p>
+    <p><a href="https://ieeexplore.ieee.org/document/5424199">Berger, T.W., Song, D., Chan, R.H.W., and Marmarelis, V.Z.  The neurobiological basis of cognition: Identification by multi-input, multi-output nonlinear dynamic modeling.  Proceedings of the IEEE, 2010, 98, 356-374.</a></p>
+    <h2 class="top-margin">2009</h2>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S089360800900094X">Song, D., Chan, R.H.M., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Nonlinear modeling of neural population dynamics for hippocampal prostheses.  Neural Networks, 2009, 22, 1340-1351.</a></p>
+    <p><a href="https://link.springer.com/article/10.1007%2Fs10827-008-0097-3">Song, D., Marmarelis, V.Z., and Berger, T.W.  Parametric and non-parametric modeling of short-term synaptic plasticity. Part I: Computational study.  Journal of Computational Neuroscience, 2009, 26, 1-19.</a></p>
+    <p><a href="https://link.springer.com/article/10.1007%2Fs10827-008-0098-2">Song, D., Wang, Z., Marmarelis, V.Z., and Berger, T.W.  Parametric and non-parametric modeling of short-term synaptic plasticity. Part II: Experimental study.  Journal of Computational Neuroscience, 2009, 26, 21-37.</a></p>
+    <h2 class="top-margin">2007</h2>
+    <p><a href="https://ieeexplore.ieee.org/document/4203029">Song, D., Chan, R.H.M., Marmarelis, V.Z., Hampson, R.E., Deadwyler, S.A., and Berger, T.W.  Nonlinear dynamic modeling of spike train transformations for hippocampal-cortical prostheses.  IEEE Transactions on Biomedical Engineering, 2007, 54, 1053-1066.</a></p>
+    <h2 class="top-margin">2006</h2>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0165027005003080">Gholmieh, G., Soussou, W., Han, M., Ahuja, A., Hsiao, M.-C., Song, D., Tanguay, Jr., A.R., and Berger, T.W. Custom-designed, high-density conformal planar multielectrode arrays for brain slice electrophysiology.  Journal of Neuroscience Methods, 2006, 152, 116-129.</a></p>
+    <h2 class="top-margin">2005</h2>
+    <p><a href="https://ieeexplore.ieee.org/document/1511498">Berger, T.W., Ahuja, A., Courellis, S.H., Deadwyler, S.A., Erinjippurath, G., Gerhardt, G.A., Gholmieh, G, Granacki, J.J., Hampson, R., Hsiao, M-C., LaCoss, J., Marmarelis, V.Z., Nasiatka, P., Srinivasan, V., Song, S., Tanguay, Jr., A.R., and Wills, J.  Restoring lost cognitive function: Hippocampal-cortical neural prostheses.  IEEE Engineering in Medicine and Biology Magazine, 2005, 24, 30-44.</a></p>
+    <h2 class="top-margin">2002</h2>
+    <p><a href="https://onlinelibrary.wiley.com/doi/10.1002/hipo.10105">Song, D., Wang, Z., and Berger, T.W.  Contribution of T-type VDCCs to TEA-induced long-term synaptic modification in hippocampal CA1 and dentate gyrus.  Hippocampus, 2002, 12, 689-697.</a></p>
+    <p><a href="https://onlinelibrary.wiley.com/doi/10.1002/hipo.10104">Wang, Z., Song, D., and Berger, T.W.  Contribution of NMDA receptor-channels to the expression of LTP in the hippocampal dentate gyrus.  Hippocampus, 2002, 12, 680-688.</a></p>
+    <h2 class="top-margin">2001</h2>
+    <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1074742701940328">Song, D., Xie, X., Wang, Z., and Berger, T.W.  Differential effect of TEA on long-term synaptic modification in hippocampal CA1 and dentate gyrus in vitro.  Neurobiology of Learning and Memory, 2001, 76, 375-387.</a></p>
+  </section>
+  
+  <!--Footer-->
+  <div id="footer" class="bar">
+    <section>
+      <div id="footer-left"> <a class="logo">
+        <p class="usc">USC</p>
+        <p class="lab">Neural Modeling and Interface Lab</p>
+        </a> <a href="https://maps.google.com/maps?z=16&#038;q=hedco%2Bneurosciences%2Bbuilding%2C%2Blos%2Bangeles%2C%2Bca%2B90089" target="_blank" rel="noopener noreferrer">Hedco Neurosciences Building, <br/>
+        Los Angeles, CA 90089</a> </div>
+      <div id="footer-right"> <a href="https://viterbischool.usc.edu/" ><img src="assets/usc/viterbi.jpg"></a> </div>
+    </section>
+  </div>
 </div>
 </body>
 </html>
-
