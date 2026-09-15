@@ -820,17 +820,23 @@ a:visited {
   /* Hamburger button.
      IMPORTANT: #menu-toggle should be a sibling of #links
      inside #nav/section. */
-  #menu-toggle {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 5px;
-    width: 45px;
-    height: 45px;
-    color: #FFC72C;
-    z-index: 100;
-    cursor: pointer;
-  }
+    #menu-toggle {
+        display: block;
+        position: absolute;
+
+        right: 20px;
+
+        /* vertically center in menu bar */
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 45px;
+        height: 45px;
+
+        color: #FFC72C;
+        z-index: 30;
+        cursor: pointer;
+    }
 
   #menu-toggle .icon {
     width: 45px;
