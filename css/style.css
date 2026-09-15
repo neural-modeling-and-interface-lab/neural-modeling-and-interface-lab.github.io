@@ -576,16 +576,19 @@ a:visited {
   .dropdown-content {
     top: 0;
   }
-  #links a {
-    padding: 5px;
-    font-size: 20px;
+  /* All top-level menu items */
+  #links > a, #links > .dropdown > a {
+    font-size: 22px;
+    line-height: 1.3;
+    padding: 4px 0;
+    margin: 0;
   }
-  #links a {
-    margin: 0px;
-  }
-  #links a.link {
-    margin: 0px;
-    font-size: 25px;
+  /* Second-level dropdown items */
+  #links .dropdown-content a {
+    font-size: 18px;
+    line-height: 1.25;
+    padding: 3px 10px 3px 20px;
+    margin: 0;
   }
   #research .feature-text, .feature-left {
     margin: 0px auto 0px auto;
