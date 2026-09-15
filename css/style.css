@@ -532,13 +532,22 @@ a:visited {
     justify-content: center;
   }
   #menu-toggle {
-    /* transform: translateY(50%); */
-    /* width: 100%;
-        display: block;
-        background: rgba(0, 0, 0, 0.3); */
-    /* margin:25px 0px 0px 0px; */
-    width: 100%;
     display: block;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 45px;
+    height: 45px;
+    color: #FFC72C;
+    z-index: 30;
+    cursor: pointer;
+  }
+  #menu-toggle .icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .dropicon {
     display: none
@@ -548,7 +557,7 @@ a:visited {
     z-index: 5;
   }
   #links {
-      position: absolute;
+    position: absolute;
     top: 55px;
     left: 0;
     right: 0;
@@ -559,7 +568,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 20; 
+    z-index: 20;
   }
   #links.open {
     transform: translateY(0px);
