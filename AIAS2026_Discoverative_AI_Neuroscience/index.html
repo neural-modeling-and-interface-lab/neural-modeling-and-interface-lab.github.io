@@ -11,691 +11,1621 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 /* ============================================================
    TOKENS
    ============================================================ */
-:root{
-  --ink:#0A0D24;
-  --ink-2:#111538;
-  --ink-3:#0c1d3f;
-  --violet:#473c8c;
-  --violet-2:#2c2668;
-  --coral:#FF7A59;
-  --coral-2:#ff9272;
-  --cyan:#58C6E8;
-  --cyan-2:#82d6f0;
-
-  --paper:#F3F4FA;
-  --paper-tint:#ebedf7;
-  --card:#ffffff;
-
-  --t-on-light:#1b1e38;
-  --t-on-light-soft:#565b7e;
-  --t-on-dark:#eef0fb;
-  --t-on-dark-soft:#9aa0c8;
-
-  --line-d:rgba(255,255,255,.13);
-  --line-l:rgba(20,22,55,.12);
-
-  --maxw:1140px;
-  --r:16px;
-  --r-sm:10px;
-
-  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
-  --font-sans:'Space Grotesk',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  --font-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+:root {
+--ink:#0A0D24;
+--ink-2:#111538;
+--ink-3:#0c1d3f;
+--violet:#473c8c;
+--violet-2:#2c2668;
+--coral:#FF7A59;
+--coral-2:#ff9272;
+--cyan:#58C6E8;
+--cyan-2:#82d6f0;
+--paper:#F3F4FA;
+--paper-tint:#ebedf7;
+--card:#ffffff;
+--t-on-light:#1b1e38;
+--t-on-light-soft:#565b7e;
+--t-on-dark:#eef0fb;
+--t-on-dark-soft:#9aa0c8;
+--line-d:rgba(255,255,255,.13);
+--line-l:rgba(20,22,55,.12);
+--maxw:1140px;
+--r:16px;
+--r-sm:10px;
+--font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+--font-sans:'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+--font-mono:'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
 }
-
 /* ============================================================
    BASE
    ============================================================ */
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:78px}
-body{
-  font-family:var(--font-sans);
-  background:var(--paper);
-  color:var(--t-on-light);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  overflow-x:hidden;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-::selection{background:var(--coral);color:#1b1124}
-
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.section{padding:104px 0}
-.section--tight{padding:76px 0}
-
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px
+}
+body {
+    font-family: var(--font-sans);
+    background: var(--paper);
+    color: var(--t-on-light);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+a {
+    color: inherit;
+    text-decoration: none
+}
+img {
+    max-width: 100%;
+    display: block
+}
+::selection {
+    background: var(--coral);
+    color: #1b1124
+}
+.wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px
+}
+.section {
+    padding: 104px 0
+}
+.section--tight {
+    padding: 76px 0
+}
 /* eyebrow / mono label */
-.eyebrow{
-  font-family:var(--font-mono);
-  font-size:.72rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  font-weight:500;
-  display:inline-flex;
-  align-items:center;
-  gap:.6em;
-  color:var(--coral);
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: .6em;
+    color: var(--coral);
 }
-.eyebrow::before{
-  content:"";
-  width:26px;height:1px;
-  background:var(--coral);
-  display:inline-block;
+.eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 1px;
+    background: var(--coral);
+    display: inline-block;
 }
-.on-dark .eyebrow{color:var(--cyan)}
-.on-dark .eyebrow::before{background:var(--cyan)}
-
-.sec-title{
-  font-family:var(--font-display);
-  font-weight:600;
-  font-size:clamp(2rem,4.4vw,3.1rem);
-  line-height:1.05;
-  letter-spacing:-.015em;
-  margin:.5rem 0 0;
+.on-dark .eyebrow {
+    color: var(--cyan)
 }
-.sec-intro{
-  max-width:62ch;
-  margin-top:1.1rem;
-  font-size:1.06rem;
-  color:var(--t-on-light-soft);
+.on-dark .eyebrow::before {
+    background: var(--cyan)
 }
-.on-dark{background:var(--ink);color:var(--t-on-dark)}
-.on-dark .sec-intro{color:var(--t-on-dark-soft)}
-
+.sec-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 4.4vw, 3.1rem);
+    line-height: 1.05;
+    letter-spacing: -.015em;
+    margin: .5rem 0 0;
+}
+.sec-intro {
+    max-width: 62ch;
+    margin-top: 1.1rem;
+    font-size: 1.06rem;
+    color: var(--t-on-light-soft);
+}
+.on-dark {
+    background: var(--ink);
+    color: var(--t-on-dark)
+}
+.on-dark .sec-intro {
+    color: var(--t-on-dark-soft)
+}
 /* ============================================================
    NAV
    ============================================================ */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:60;
-  background:rgba(10,13,36,.72);
-  backdrop-filter:saturate(160%) blur(14px);
-  -webkit-backdrop-filter:saturate(160%) blur(14px);
-  border-bottom:1px solid transparent;
-  transition:background .3s ease,border-color .3s ease;
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    background: rgba(10,13,36,.72);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: background .3s ease, border-color .3s ease;
 }
-.nav.scrolled{
-  background:rgba(8,11,30,.92);
-  border-bottom:1px solid var(--line-d);
+.nav.scrolled {
+    background: rgba(8,11,30,.92);
+    border-bottom: 1px solid var(--line-d);
 }
-.nav-inner{
-  max-width:var(--maxw);margin:0 auto;
-  padding:0 28px;height:64px;
-  display:flex;align-items:center;justify-content:space-between;
+.nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.brand{
-  display:flex;align-items:baseline;gap:.55rem;
-  color:var(--t-on-dark);
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: .55rem;
+    color: var(--t-on-dark);
 }
-.brand b{
-  font-family:var(--font-display);
-  font-weight:600;font-size:1.12rem;letter-spacing:-.01em;
+.brand b {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.12rem;
+    letter-spacing: -.01em;
 }
-.brand span{
-  font-family:var(--font-mono);
-  font-size:.66rem;letter-spacing:.18em;
-  color:var(--cyan);
-  border:1px solid rgba(88,198,232,.4);
-  border-radius:5px;padding:.18em .5em;
+.brand span {
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .18em;
+    color: var(--cyan);
+    border: 1px solid rgba(88,198,232,.4);
+    border-radius: 5px;
+    padding: .18em .5em;
 }
-.nav-links{display:flex;align-items:center;gap:1.55rem}
-.nav-links a{
-  font-size:.86rem;color:var(--t-on-dark-soft);
-  font-weight:500;transition:color .2s;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.55rem
 }
-.nav-links a:hover{color:var(--t-on-dark)}
-.nav-cta{
-  font-family:var(--font-sans);
-  font-weight:600;font-size:.84rem;
-  background:var(--coral);color:#1b1124 !important;
-  padding:.5em 1.05em;border-radius:8px;
-  transition:transform .15s ease,box-shadow .2s ease,background .2s;
+.nav-links a {
+    font-size: .86rem;
+    color: var(--t-on-dark-soft);
+    font-weight: 500;
+    transition: color .2s;
 }
-.nav-cta:hover{background:var(--coral-2);transform:translateY(-1px);box-shadow:0 8px 22px -8px rgba(255,122,89,.7)}
-.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;width:42px;height:42px}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--t-on-dark);margin:4px auto;transition:.25s}
-.nav-toggle.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.nav-toggle.open span:nth-child(2){opacity:0}
-.nav-toggle.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-
+.nav-links a:hover {
+    color: var(--t-on-dark)
+}
+.nav-cta {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: .84rem;
+    background: var(--coral);
+    color: #1b1124 !important;
+    padding: .5em 1.05em;
+    border-radius: 8px;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s;
+}
+.nav-cta:hover {
+    background: var(--coral-2);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px -8px rgba(255,122,89,.7)
+}
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+    width: 42px;
+    height: 42px
+}
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--t-on-dark);
+    margin: 4px auto;
+    transition: .25s
+}
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg)
+}
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0
+}
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg)
+}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{
-  position:relative;
-  background:
-    radial-gradient(1100px 620px at 78% 8%,rgba(71,60,140,.55),transparent 60%),
-    radial-gradient(820px 520px at 12% 92%,rgba(12,29,63,.7),transparent 62%),
-    var(--ink);
-  color:var(--t-on-dark);
-  padding:104px 0 0;
-  overflow:hidden;
+.hero {
+    position: relative;
+    background: radial-gradient(1100px 620px at 78% 8%, rgba(71,60,140,.55), transparent 60%), radial-gradient(820px 520px at 12% 92%, rgba(12,29,63,.7), transparent 62%), var(--ink);
+    color: var(--t-on-dark);
+    padding: 104px 0 0;
+    overflow: hidden;
 }
 /* masthead — co-branding logos (workshop + host) */
-.masthead{
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
-  padding-bottom:26px;margin-bottom:42px;border-bottom:1px solid var(--line-d);
+.masthead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 26px;
+    margin-bottom: 42px;
+    border-bottom: 1px solid var(--line-d);
 }
-.mh-slot{
-  display:inline-flex;align-items:center;justify-content:flex-start;gap:.55rem;
-  height:280px;min-width:300px;padding:0;
-  border:0;background:transparent;
+.mh-slot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .55rem;
+    height: 280px;
+    min-width: 300px;
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
-.mh-slot .mh-ph{
-  font-family:var(--font-mono);font-size:.74rem;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--t-on-dark-soft);display:inline-flex;align-items:center;
+.mh-slot .mh-ph {
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--t-on-dark-soft);
+    display: inline-flex;
+    align-items: center;
 }
-.mh-slot .mh-ph svg{margin-right:.5em;opacity:.7}
-.mh-img{height:50px;width:auto}            /* used when a real <img> logo is dropped in */
-.mh-img--workshop{display:block;height:234px;max-width:min(320px,58vw);object-fit:contain;object-position:left center}
-.mh-img--aias{height:56px;border-radius:2px}
-.mh-host{display:flex;align-items:center;gap:.95rem}
-.mh-host-label{
-  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--t-on-dark-soft);white-space:nowrap;
+.mh-slot .mh-ph svg {
+    margin-right: .5em;
+    opacity: .7
 }
-.mh-host-link{display:inline-flex;align-items:center;transition:transform .15s ease,filter .2s ease}
-.mh-host-link:hover{transform:translateY(-1px);filter:brightness(1.08)}
-.mh-aias{
-  display:inline-flex;align-items:baseline;gap:.45rem;
-  padding:.45rem .95rem;border:1px solid var(--line-d);border-radius:10px;
-  background:rgba(255,255,255,.02);
+.mh-img {
+    height: 50px;
+    width: auto
+}            /* used when a real <img> logo is dropped in */
+.mh-img--workshop {
+    display: block;
+    height: 234px;
+    max-width: min(320px, 58vw);
+    object-fit: contain;
+    object-position: left center
 }
-.mh-aias-mark{font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1;color:#fff;letter-spacing:-.01em}
-.mh-aias-mark .plus{color:var(--coral)}
-.mh-aias-yr{font-family:var(--font-mono);font-size:.82rem;color:var(--cyan)}
-
-.hero-grid{
-  display:grid;grid-template-columns:1.08fr .92fr;
-  gap:48px;align-items:center;
+.mh-img--aias {
+    height: 56px;
+    border-radius: 2px
 }
-.hero-meta{
-  font-family:var(--font-mono);
-  font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:1.4rem;
+.mh-host {
+    display: flex;
+    align-items: center;
+    gap: .95rem
 }
-.hero h1{
-  font-family:var(--font-display);
-  font-weight:600;
-  font-size:clamp(2.7rem,6vw,4.5rem);
-  line-height:1.02;letter-spacing:-.022em;
-  margin-bottom:1.3rem;
+.mh-host-label {
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--t-on-dark-soft);
+    white-space: nowrap;
 }
-.hero h1 em{font-style:italic;font-weight:500;color:var(--coral)}
-.hero-thesis{
-  font-size:1.22rem;line-height:1.5;
-  color:#d6d9f0;max-width:36ch;margin-bottom:1.7rem;
-  font-weight:400;
+.mh-host-link {
+    display: inline-flex;
+    align-items: center;
+    transition: transform .15s ease, filter .2s ease
 }
-.hero-thesis b{color:#fff;font-weight:600}
-.hero-when{
-  display:flex;flex-wrap:wrap;gap:.55rem 1.4rem;
-  font-family:var(--font-mono);font-size:.82rem;
-  color:var(--t-on-dark-soft);margin-bottom:2.2rem;
+.mh-host-link:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08)
 }
-.hero-when span{display:inline-flex;align-items:center;gap:.5em}
-.hero-when .dot{width:5px;height:5px;border-radius:50%;background:var(--coral)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.85rem}
-.btn{
-  display:inline-flex;align-items:center;gap:.55em;
-  font-weight:600;font-size:.95rem;font-family:var(--font-sans);
-  padding:.85em 1.5em;border-radius:10px;cursor:pointer;
-  transition:transform .15s ease,box-shadow .2s ease,background .2s,border-color .2s,color .2s;
-  border:1px solid transparent;
+.mh-aias {
+    display: inline-flex;
+    align-items: baseline;
+    gap: .45rem;
+    padding: .45rem .95rem;
+    border: 1px solid var(--line-d);
+    border-radius: 10px;
+    background: rgba(255,255,255,.02);
 }
-.btn-primary{background:var(--coral);color:#1b1124;box-shadow:0 10px 30px -12px rgba(255,122,89,.75)}
-.btn-primary:hover{background:var(--coral-2);transform:translateY(-2px);box-shadow:0 16px 38px -12px rgba(255,122,89,.85)}
-.btn-ghost{border-color:rgba(255,255,255,.28);color:var(--t-on-dark)}
-.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
-.btn svg{width:16px;height:16px}
-
+.mh-aias-mark {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.55rem;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: -.01em
+}
+.mh-aias-mark .plus {
+    color: var(--coral)
+}
+.mh-aias-yr {
+    font-family: var(--font-mono);
+    font-size: .82rem;
+    color: var(--cyan)
+}
+.hero-grid {
+    display: grid;
+grid-template-columns:1.08fr .92fr;
+    gap: 48px;
+    align-items: center;
+}
+.hero-meta {
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1.4rem;
+}
+.hero h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -.022em;
+    margin-bottom: 1.3rem;
+}
+.hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--coral)
+}
+.hero-thesis {
+    font-size: 1.22rem;
+    line-height: 1.5;
+    color: #d6d9f0;
+    max-width: 36ch;
+    margin-bottom: 1.7rem;
+    font-weight: 400;
+}
+.hero-thesis b {
+    color: #fff;
+    font-weight: 600
+}
+.hero-when {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem 1.4rem;
+    font-family: var(--font-mono);
+    font-size: .82rem;
+    color: var(--t-on-dark-soft);
+    margin-bottom: 2.2rem;
+}
+.hero-when span {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em
+}
+.hero-when .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--coral)
+}
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .85rem
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .55em;
+    font-weight: 600;
+    font-size: .95rem;
+    font-family: var(--font-sans);
+    padding: .85em 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s, border-color .2s, color .2s;
+    border: 1px solid transparent;
+}
+.btn-primary {
+    background: var(--coral);
+    color: #1b1124;
+    box-shadow: 0 10px 30px -12px rgba(255,122,89,.75)
+}
+.btn-primary:hover {
+    background: var(--coral-2);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 38px -12px rgba(255,122,89,.85)
+}
+.btn-ghost {
+    border-color: rgba(255,255,255,.28);
+    color: var(--t-on-dark)
+}
+.btn-ghost:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px)
+}
+.btn svg {
+    width: 16px;
+    height: 16px
+}
 /* discovery loop signature */
-.loop-wrap{display:flex;justify-content:center;align-items:center;position:relative}
-.loop-svg{width:min(420px,86%);height:auto;overflow:visible}
-.loop-svg text{font-family:var(--font-mono);fill:var(--t-on-dark-soft);font-size:11.5px;letter-spacing:.12em}
-.loop-svg .core{font-family:var(--font-display);fill:#cfd3ef;font-size:13px;letter-spacing:.02em;font-style:italic}
-.ring-base{fill:none;stroke:rgba(255,255,255,.13);stroke-width:1.4}
-.ring-comet{fill:none;stroke:url(#cometgrad);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:46 770;}
-.node{fill:var(--ink-2);stroke:var(--cyan);stroke-width:1.6}
-.node-core{fill:var(--coral)}
-.arrow{fill:var(--cyan)}
-@media (prefers-reduced-motion:no-preference){
-  .ring-comet{animation:travel 5.5s linear infinite}
-  .pulse-core{animation:breathe 3.2s ease-in-out infinite}
+.loop-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
 }
-@keyframes travel{to{stroke-dashoffset:-816}}
-@keyframes breathe{0%,100%{opacity:.5;r:5}50%{opacity:1;r:7}}
+.loop-svg {
+    width: min(420px, 86%);
+    height: auto;
+    overflow: visible
+}
+.loop-svg text {
+    font-family: var(--font-mono);
+    fill: var(--t-on-dark-soft);
+    font-size: 11.5px;
+    letter-spacing: .12em
+}
+.loop-svg .core {
+    font-family: var(--font-display);
+    fill: #cfd3ef;
+    font-size: 13px;
+    letter-spacing: .02em;
+    font-style: italic
+}
+.ring-base {
+    fill: none;
+    stroke: rgba(255,255,255,.13);
+    stroke-width: 1.4
+}
+.ring-comet {
+    fill: none;
+    stroke: url(#cometgrad);
+    stroke-width: 3.2;
+    stroke-linecap: round;
+    stroke-dasharray: 46 770;
+}
+.node {
+    fill: var(--ink-2);
+    stroke: var(--cyan);
+    stroke-width: 1.6
+}
+.node-core {
+    fill: var(--coral)
+}
+.arrow {
+    fill: var(--cyan)
+}
 
+@media (prefers-reduced-motion:no-preference) {
+.ring-comet {
+    animation: travel 5.5s linear infinite
+}
+.pulse-core {
+    animation: breathe 3.2s ease-in-out infinite
+}
+}
+@keyframes travel {
+to {
+stroke-dashoffset:-816
+}
+}
+@keyframes breathe {
+0%, 100% {
+opacity:.5;
+r:5
+}
+50% {
+opacity:1;
+r:7
+}
+}
 /* institutions strip */
-.insts{
-  position:relative;z-index:2;
-  border-top:1px solid var(--line-d);
-  margin-top:96px;padding:30px 0 38px;
+.insts {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid var(--line-d);
+    margin-top: 96px;
+    padding: 30px 0 38px;
 }
-.insts-inner{display:flex;flex-wrap:wrap;align-items:center;gap:18px 40px}
-.insts-label{
-  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--t-on-dark-soft);
+.insts-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px 40px
 }
-.inst{
-  display:inline-flex;align-items:center;gap:.6rem;
-  color:#c7cbe8;font-weight:600;font-size:1.02rem;letter-spacing:.01em;
+.insts-label {
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--t-on-dark-soft);
 }
-.inst .host{
-  font-family:var(--font-display);font-style:italic;
-  font-size:1.18rem;color:#fff;
+.inst {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    color: #c7cbe8;
+    font-weight: 600;
+    font-size: 1.02rem;
+    letter-spacing: .01em;
 }
-.inst--host{color:#fff}
-.inst-sep{width:1px;height:20px;background:var(--line-d)}
-.inst-logo-slot{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:150px;height:72px;padding:0;
-  border:0;background:transparent;
+.inst .host {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.18rem;
+    color: #fff;
 }
-.inst-logo{
-  width:auto;height:auto;max-width:100%;max-height:64px;object-fit:contain;
-  filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));
-  opacity:.94;
+.inst--host {
+    color: #fff
 }
-.inst-logo--usc{max-width:142px;max-height:54px}
-.inst-logo--stanford{max-width:62px;max-height:62px}
-.inst-logo--uconn{max-width:64px;max-height:64px}
-
+.inst-sep {
+    width: 1px;
+    height: 20px;
+    background: var(--line-d)
+}
+.inst-logo-slot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 72px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+.inst-logo {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,.35));
+    opacity: .94;
+}
+.inst-logo--usc {
+    max-width: 142px;
+    max-height: 54px
+}
+.inst-logo--stanford {
+    max-width: 62px;
+    max-height: 62px
+}
+.inst-logo--uconn {
+    max-width: 64px;
+    max-height: 64px
+}
 /* ============================================================
    ABOUT
    ============================================================ */
-.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
-.about-body p{margin-bottom:1.15rem;font-size:1.08rem;color:#33374f}
-.about-body p:last-child{margin-bottom:0}
-.about-body .lead{
-  font-family:var(--font-display);font-size:1.5rem;line-height:1.35;
-  font-weight:500;color:var(--t-on-light);margin-bottom:1.5rem;letter-spacing:-.01em;
+.about-grid {
+    display: grid;
+grid-template-columns:.85fr 1.15fr;
+    gap: 56px;
+    align-items: start
 }
-.about-body .q{
-  border-left:2px solid var(--coral);padding-left:1.1rem;
-  font-style:italic;color:var(--t-on-light);font-size:1.14rem;
+.about-body p {
+    margin-bottom: 1.15rem;
+    font-size: 1.08rem;
+    color: #33374f
 }
-.differ{
-  margin-top:2rem;background:var(--card);border:1px solid var(--line-l);
-  border-radius:var(--r);padding:1.5rem 1.6rem;
+.about-body p:last-child {
+    margin-bottom: 0
 }
-.differ h4{
-  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--coral);margin-bottom:.7rem;font-weight:500;
+.about-body .lead {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1.35;
+    font-weight: 500;
+    color: var(--t-on-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: -.01em;
 }
-.differ p{font-size:.98rem;color:var(--t-on-light-soft)}
-
+.about-body .q {
+    border-left: 2px solid var(--coral);
+    padding-left: 1.1rem;
+    font-style: italic;
+    color: var(--t-on-light);
+    font-size: 1.14rem;
+}
+.differ {
+    margin-top: 2rem;
+    background: var(--card);
+    border: 1px solid var(--line-l);
+    border-radius: var(--r);
+    padding: 1.5rem 1.6rem;
+}
+.differ h4 {
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: .7rem;
+    font-weight: 500;
+}
+.differ p {
+    font-size: .98rem;
+    color: var(--t-on-light-soft)
+}
 /* ============================================================
    TOPICS
    ============================================================ */
-.topic-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px;
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 54px;
 }
-.topic{
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
-  border:1px solid var(--line-d);border-radius:var(--r);
-  padding:24px 22px 26px;position:relative;overflow:hidden;
-  transition:transform .25s ease,border-color .25s ease,background .25s;
+.topic {
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    border: 1px solid var(--line-d);
+    border-radius: var(--r);
+    padding: 24px 22px 26px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .25s ease, border-color .25s ease, background .25s;
 }
-.topic:hover{transform:translateY(-4px);border-color:rgba(88,198,232,.5);background:linear-gradient(180deg,rgba(88,198,232,.08),rgba(255,255,255,.02))}
-.topic .glyph{margin-bottom:18px}
-.topic h3{
-  font-family:var(--font-display);font-weight:600;font-size:1.16rem;
-  line-height:1.2;margin-bottom:.5rem;letter-spacing:-.01em;color:#fff;
+.topic:hover {
+    transform: translateY(-4px);
+    border-color: rgba(88,198,232,.5);
+    background: linear-gradient(180deg, rgba(88,198,232,.08), rgba(255,255,255,.02))
 }
-.topic p{font-size:.9rem;color:var(--t-on-dark-soft);line-height:1.5}
-.topic .num{
-  position:absolute;top:16px;right:18px;
-  font-family:var(--font-mono);font-size:.7rem;color:rgba(255,255,255,.28);
+.topic .glyph {
+    margin-bottom: 18px
 }
-
+.topic h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.16rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    letter-spacing: -.01em;
+    color: #fff;
+}
+.topic p {
+    font-size: .9rem;
+    color: var(--t-on-dark-soft);
+    line-height: 1.5
+}
+.topic .num {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    color: rgba(255,255,255,.28);
+}
 /* ============================================================
    INVITED EXPERTS
    ============================================================ */
-.expert-roles{
-  display:grid;gap:14px;margin-top:38px;max-width:960px;
+.expert-roles {
+    display: grid;
+    gap: 14px;
+    margin-top: 38px;
+    max-width: 960px;
 }
-.expert-role{
-  display:grid;grid-template-columns:minmax(180px,.7fr) 2fr;gap:24px;
-  align-items:start;padding:18px 22px;border-left:3px solid var(--coral);
-  border-radius:0 12px 12px 0;background:rgba(255,122,89,.055);
+.expert-role {
+    display: grid;
+grid-template-columns:minmax(180px, .7fr) 2fr;
+    gap: 24px;
+    align-items: start;
+    padding: 18px 22px;
+    border-left: 3px solid var(--coral);
+    border-radius: 0 12px 12px 0;
+    background: rgba(255,122,89,.055);
 }
-.expert-role--panel{
-  border-left-color:var(--violet);background:rgba(84,72,160,.055);
+.expert-role--panel {
+    border-left-color: var(--violet);
+    background: rgba(84,72,160,.055);
 }
-.expert-role h3{
-  font-family:var(--font-display);font-size:1.08rem;font-weight:600;
+.expert-role h3 {
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 600;
 }
-.expert-role p{
-  margin-top:.25rem;font-size:.82rem;color:var(--t-on-light-soft);
+.expert-role p {
+    margin-top: .25rem;
+    font-size: .82rem;
+    color: var(--t-on-light-soft);
 }
-.expert-role ul{
-  display:flex;flex-wrap:wrap;gap:.45rem .65rem;list-style:none;
+.expert-role ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem .65rem;
+    list-style: none;
 }
-.expert-role li{
-  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.035em;
-  color:var(--ink-3);background:var(--card);border:1px solid var(--line-l);
-  border-radius:999px;padding:.38rem .68rem;
+.expert-role li {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .035em;
+    color: var(--ink-3);
+    background: var(--card);
+    border: 1px solid var(--line-l);
+    border-radius: 999px;
+    padding: .38rem .68rem;
 }
-.spk-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px;
+.spk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 54px;
 }
-.spk{
-  background:var(--card);border:1px solid var(--line-l);border-radius:var(--r);
-  padding:26px;transition:transform .2s ease,box-shadow .25s ease;
-  scroll-margin-top:90px;
+.spk {
+    background: var(--card);
+    border: 1px solid var(--line-l);
+    border-radius: var(--r);
+    padding: 26px;
+    transition: transform .2s ease, box-shadow .25s ease;
+    scroll-margin-top: 90px;
 }
-.spk:hover{transform:translateY(-3px);box-shadow:0 22px 50px -28px rgba(27,30,56,.4)}
-.spk-photo{
-  width:78px;height:78px;border-radius:50%;margin-bottom:18px;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-display);font-weight:600;font-size:1.6rem;color:#fff;
-  background:linear-gradient(135deg,var(--violet),var(--coral));
-  letter-spacing:.02em;
-  object-fit:cover;
-  /* replace with: <img class="spk-photo" src="assets/speakers/lu-chen.jpg" alt="..."> */
+.spk:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 50px -28px rgba(27,30,56,.4)
 }
-.spk-photo.alt{background:linear-gradient(135deg,var(--ink-3),var(--cyan))}
-.spk-photo.tbc{background:linear-gradient(135deg,#3a3f63,#6b7196);font-size:1.1rem;font-family:var(--font-mono)}
-.spk h3{font-family:var(--font-display);font-weight:600;font-size:1.28rem;letter-spacing:-.01em}
-.spk .aff{font-size:.92rem;color:var(--coral);font-weight:500;margin-top:.15rem}
-.spk .talk{
-  font-size:.92rem;color:var(--t-on-light-soft);margin-top:.95rem;
-  padding-top:.95rem;border-top:1px solid var(--line-l);font-style:italic;
+.spk-photo {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--violet), var(--coral));
+    letter-spacing: .02em;
+    object-fit: cover;/* replace with: <img class="spk-photo" src="assets/speakers/lu-chen.jpg" alt="..."> */
 }
-.spk .spk-bio{
-  font-size:.92rem;color:var(--t-on-light-soft);margin-top:.95rem;
-  padding-top:.95rem;border-top:1px solid var(--line-l);
+.spk-photo.alt {
+    background: linear-gradient(135deg, var(--ink-3), var(--cyan))
 }
-.spk .tag{
-  display:inline-block;font-family:var(--font-mono);font-size:.64rem;
-  letter-spacing:.12em;text-transform:uppercase;
-  border:1px solid;border-radius:5px;padding:.28em .58em;
+.spk-photo.tbc {
+    background: linear-gradient(135deg, #3a3f63, #6b7196);
+    font-size: 1.1rem;
+    font-family: var(--font-mono)
 }
-.spk-tags{
-  display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.75rem;
+.spk h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.28rem;
+    letter-spacing: -.01em
 }
-.spk .tag--speaker{
-  color:#245f91;border-color:rgba(36,95,145,.48);background:rgba(36,95,145,.1);
+.spk .aff {
+    font-size: .92rem;
+    color: var(--coral);
+    font-weight: 500;
+    margin-top: .15rem
 }
-.spk .tag--panelist{
-  color:#5b4396;border-color:rgba(91,67,150,.48);background:rgba(91,67,150,.1);
+.spk .talk {
+    font-size: .92rem;
+    color: var(--t-on-light-soft);
+    margin-top: .95rem;
+    padding-top: .95rem;
+    border-top: 1px solid var(--line-l);
+    font-style: italic;
 }
-.spk--soon{
-  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  background:repeating-linear-gradient(135deg,var(--paper-tint),var(--paper-tint) 12px,#e6e8f4 12px,#e6e8f4 24px);
-  border-style:dashed;
+.spk .spk-bio {
+    font-size: .92rem;
+    color: var(--t-on-light-soft);
+    margin-top: .95rem;
+    padding-top: .95rem;
+    border-top: 1px solid var(--line-l);
 }
-.spk--soon h3{color:var(--t-on-light-soft)}
-.spk--soon p{font-size:.9rem;color:var(--t-on-light-soft);margin-top:.4rem}
-
+.spk .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: .64rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: .28em .58em;
+}
+.spk-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin-top: .75rem;
+}
+.spk .tag--speaker {
+    color: #245f91;
+    border-color: rgba(36,95,145,.48);
+    background: rgba(36,95,145,.1);
+}
+.spk .tag--panelist {
+    color: #5b4396;
+    border-color: rgba(91,67,150,.48);
+    background: rgba(91,67,150,.1);
+}
+.spk--soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: repeating-linear-gradient(135deg, var(--paper-tint), var(--paper-tint) 12px, #e6e8f4 12px, #e6e8f4 24px);
+    border-style: dashed;
+}
+.spk--soon h3 {
+    color: var(--t-on-light-soft)
+}
+.spk--soon p {
+    font-size: .9rem;
+    color: var(--t-on-light-soft);
+    margin-top: .4rem
+}
 /* ============================================================
    SCHEDULE
    ============================================================ */
-.sched-note{
-  display:inline-flex;align-items:center;gap:.6em;margin-top:1.2rem;
-  font-family:var(--font-mono);font-size:.76rem;letter-spacing:.04em;
-  color:var(--cyan);background:rgba(88,198,232,.08);
-  border:1px solid rgba(88,198,232,.28);border-radius:8px;padding:.55em .9em;
+.sched-note {
+    display: inline-flex;
+    align-items: center;
+    gap: .6em;
+    margin-top: 1.2rem;
+    font-family: var(--font-mono);
+    font-size: .76rem;
+    letter-spacing: .04em;
+    color: var(--cyan);
+    background: rgba(88,198,232,.08);
+    border: 1px solid rgba(88,198,232,.28);
+    border-radius: 8px;
+    padding: .55em .9em;
 }
-.sched{margin-top:48px;border-top:1px solid var(--line-d)}
-.slot{
-  display:grid;grid-template-columns:130px 1fr auto;gap:24px;align-items:baseline;
-  padding:20px 4px;border-bottom:1px solid var(--line-d);
-  transition:background .2s;
+.sched {
+    margin-top: 48px;
+    border-top: 1px solid var(--line-d)
 }
-.slot:hover{background:rgba(255,255,255,.03)}
-.slot.schedule-link{cursor:pointer}
-.slot.schedule-link:hover .time,.slot.schedule-link:hover .what{color:var(--coral)}
-.slot.schedule-link:focus-visible{
-  outline:2px solid var(--cyan);outline-offset:6px;border-radius:6px;
+.slot {
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 20px 4px;
+    border-bottom: 1px solid var(--line-d);
+    transition: background .2s;
 }
-.slot .time{font-family:var(--font-mono);font-size:.92rem;color:var(--cyan);font-weight:500}
-.slot .what{font-size:1.05rem;color:#fff;font-weight:500}
-.slot .what small{display:block;font-weight:400;font-size:.86rem;color:var(--t-on-dark-soft);margin-top:.2rem;font-family:var(--font-sans)}
-.slot .kind{
-  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--t-on-dark-soft);white-space:nowrap;
+.slot:hover {
+    background: rgba(255,255,255,.03)
 }
-.slot--break .what{color:var(--t-on-dark-soft);font-weight:400;font-style:italic}
-.slot--key{border-left:2px solid var(--coral);padding-left:18px;margin-left:-20px}
-.slot--key .kind{color:var(--coral)}
-
+.slot.schedule-link {
+    cursor: pointer
+}
+.slot.schedule-link:hover .time, .slot.schedule-link:hover .what {
+    color: var(--coral)
+}
+.slot.schedule-link:focus-visible {
+outline:2px solid var(--cyan);
+outline-offset:6px;
+border-radius:6px;
+}
+.slot .time {
+    font-family: var(--font-mono);
+    font-size: .92rem;
+    color: var(--cyan);
+    font-weight: 500
+}
+.slot .what {
+    font-size: 1.05rem;
+    color: #fff;
+    font-weight: 500
+}
+.slot .what small {
+    display: block;
+    font-weight: 400;
+    font-size: .86rem;
+    color: var(--t-on-dark-soft);
+    margin-top: .2rem;
+    font-family: var(--font-sans)
+}
+.slot .kind {
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--t-on-dark-soft);
+    white-space: nowrap;
+}
+.slot--break .what {
+    color: var(--t-on-dark-soft);
+    font-weight: 400;
+    font-style: italic
+}
+.slot--key {
+    border-left: 2px solid var(--coral);
+    padding-left: 18px;
+    margin-left: -20px
+}
+.slot--key .kind {
+    color: var(--coral)
+}
 /* ============================================================
    PARTICIPATION + WORKSHOP DETAILS
    ============================================================ */
-.cfp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;margin-top:14px}
-.cfp-body .lead{font-family:var(--font-display);font-size:1.4rem;line-height:1.35;font-weight:500;margin-bottom:1.3rem;letter-spacing:-.01em}
-.cfp-list{list-style:none;margin:1.4rem 0}
-.cfp-list li{position:relative;padding-left:1.7rem;margin-bottom:1rem;font-size:1rem;color:#33374f}
-.cfp-list li::before{
-  content:"";position:absolute;left:0;top:.5em;
-  width:9px;height:9px;border-radius:50%;
-  background:var(--coral);box-shadow:0 0 0 4px rgba(255,122,89,.16);
+.cfp-grid {
+    display: grid;
+grid-template-columns:1.1fr .9fr;
+    gap: 56px;
+    align-items: start;
+    margin-top: 14px
 }
-.cfp-list li b{color:var(--t-on-light)}
-.cfp-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem;align-items:center}
-.btn-dark{background:var(--ink);color:#fff;box-shadow:0 10px 30px -14px rgba(10,13,36,.7)}
-.btn-dark:hover{background:var(--ink-2);transform:translateY(-2px)}
-.btn-disabled{
-  background:var(--paper-tint);color:var(--t-on-light-soft);cursor:not-allowed;
-  border:1px dashed var(--line-l);box-shadow:none;
+.cfp-body .lead {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    line-height: 1.35;
+    font-weight: 500;
+    margin-bottom: 1.3rem;
+    letter-spacing: -.01em
 }
-.btn-disabled:hover{transform:none}
-.cfp-hint{font-family:var(--font-mono);font-size:.72rem;color:var(--t-on-light-soft)}
-
-.dates{
-  background:var(--ink);color:var(--t-on-dark);border-radius:var(--r);
-  padding:30px 30px 14px;position:relative;overflow:hidden;
+.cfp-list {
+    list-style: none;
+    margin: 1.4rem 0
 }
-.dates::after{
-  content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;
-  background:radial-gradient(circle,rgba(71,60,140,.6),transparent 68%);
+.cfp-list li {
+    position: relative;
+    padding-left: 1.7rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #33374f
 }
-.dates h3{
-  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--cyan);margin-bottom:1.3rem;position:relative;
+.cfp-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .5em;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--coral);
+    box-shadow: 0 0 0 4px rgba(255,122,89,.16);
 }
-.drow{
-  display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
-  padding:14px 0;border-bottom:1px solid var(--line-d);position:relative;
+.cfp-list li b {
+    color: var(--t-on-light)
 }
-.drow:last-child{border-bottom:0}
-.drow .lbl{font-size:.96rem;color:#e7e9fb}
-.drow .val{font-family:var(--font-mono);font-size:.84rem;color:var(--t-on-dark-soft);white-space:nowrap;text-align:right}
-.drow .val.tbd{color:var(--coral)}
-.drow .val.fixed{color:var(--cyan)}
-
+.cfp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-top: 1.8rem;
+    align-items: center
+}
+.btn-dark {
+    background: var(--ink);
+    color: #fff;
+    box-shadow: 0 10px 30px -14px rgba(10,13,36,.7)
+}
+.btn-dark:hover {
+    background: var(--ink-2);
+    transform: translateY(-2px)
+}
+.btn-disabled {
+    background: var(--paper-tint);
+    color: var(--t-on-light-soft);
+    cursor: not-allowed;
+    border: 1px dashed var(--line-l);
+    box-shadow: none;
+}
+.btn-disabled:hover {
+    transform: none
+}
+.cfp-hint {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    color: var(--t-on-light-soft)
+}
+.dates {
+    background: var(--ink);
+    color: var(--t-on-dark);
+    border-radius: var(--r);
+    padding: 30px 30px 14px;
+    position: relative;
+    overflow: hidden;
+}
+.dates::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(71,60,140,.6), transparent 68%);
+}
+.dates h3 {
+    font-family: var(--font-mono);
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1.3rem;
+    position: relative;
+}
+.drow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line-d);
+    position: relative;
+}
+.drow:last-child {
+    border-bottom: 0
+}
+.drow .lbl {
+    font-size: .96rem;
+    color: #e7e9fb
+}
+.drow .val {
+    font-family: var(--font-mono);
+    font-size: .84rem;
+    color: var(--t-on-dark-soft);
+    white-space: nowrap;
+    text-align: right
+}
+.drow .val.tbd {
+    color: var(--coral)
+}
+.drow .val.fixed {
+    color: var(--cyan)
+}
 /* ============================================================
    PANEL  (dark accent band)
    ============================================================ */
-.panel{
-  background:
-    radial-gradient(700px 360px at 85% 20%,rgba(255,122,89,.16),transparent 60%),
-    linear-gradient(120deg,var(--violet-2),var(--ink-3));
-  color:var(--t-on-dark);
+.panel {
+    background: radial-gradient(700px 360px at 85% 20%, rgba(255,122,89,.16), transparent 60%), linear-gradient(120deg, var(--violet-2), var(--ink-3));
+    color: var(--t-on-dark);
 }
-.panel-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.panel h2{font-family:var(--font-display);font-weight:600;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.06;letter-spacing:-.015em;margin:.5rem 0 1.1rem}
-.panel p{color:#d7daf2;font-size:1.08rem;max-width:48ch}
-.panel-mod{margin-top:1.7rem;display:flex;flex-wrap:wrap;gap:1rem}
-.mod-card{
-  background:rgba(255,255,255,.06);border:1px solid var(--line-d);
-  border-radius:12px;padding:.9rem 1.1rem;
+.panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center
 }
-.mod-card .role{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
-.mod-card .name{font-family:var(--font-display);font-weight:600;font-size:1.1rem;margin-top:.2rem}
-.mod-card .mc-org{font-size:.82rem;color:var(--t-on-dark-soft)}
-.panel-jump{display:block;color:#fff;transition:color .2s}
-.panel-jump:hover{color:var(--cyan)}
-.panel-jump span{font-family:var(--font-mono);font-size:.8em;margin-left:.2em}
-.panel-aside{
-  border:1px solid var(--line-d);border-radius:var(--r);padding:26px;
-  background:rgba(10,13,36,.4);
+.panel h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.06;
+    letter-spacing: -.015em;
+    margin: .5rem 0 1.1rem
 }
-.panel-aside h4{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);margin-bottom:1rem}
-.panel-aside ul{list-style:none}
-.panel-aside li{padding:.6rem 0;border-bottom:1px solid var(--line-d);font-size:.98rem;color:#e1e3f7;display:flex;gap:.7rem;align-items:baseline}
-.panel-aside li:last-child{border-bottom:0}
-.panel-aside li::before{content:"→";color:var(--cyan);font-family:var(--font-mono)}
-
+.panel p {
+    color: #d7daf2;
+    font-size: 1.08rem;
+    max-width: 48ch
+}
+.panel-mod {
+    margin-top: 1.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem
+}
+.mod-card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid var(--line-d);
+    border-radius: 12px;
+    padding: .9rem 1.1rem;
+}
+.mod-card .role {
+    font-family: var(--font-mono);
+    font-size: .62rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--cyan)
+}
+.mod-card .name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: .2rem
+}
+.mod-card .mc-org {
+    font-size: .82rem;
+    color: var(--t-on-dark-soft)
+}
+.panel-jump {
+    display: block;
+    color: #fff;
+    transition: color .2s
+}
+.panel-jump:hover {
+    color: var(--cyan)
+}
+.panel-jump span {
+    font-family: var(--font-mono);
+    font-size: .8em;
+    margin-left: .2em
+}
+.panel-aside {
+    border: 1px solid var(--line-d);
+    border-radius: var(--r);
+    padding: 26px;
+    background: rgba(10,13,36,.4);
+}
+.panel-aside h4 {
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 1rem
+}
+.panel-aside ul {
+    list-style: none
+}
+.panel-aside li {
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--line-d);
+    font-size: .98rem;
+    color: #e1e3f7;
+    display: flex;
+    gap: .7rem;
+    align-items: baseline
+}
+.panel-aside li:last-child {
+    border-bottom: 0
+}
+.panel-aside li::before {
+    content: "→";
+    color: var(--cyan);
+    font-family: var(--font-mono)
+}
 /* ============================================================
    ORGANIZERS
    ============================================================ */
-.org-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:54px}
-.org{background:var(--card);border:1px solid var(--line-l);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
-.org-top{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.org-photo{
-  width:64px;height:64px;border-radius:14px;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-display);font-weight:600;font-size:1.35rem;color:#fff;
-  background:linear-gradient(135deg,var(--violet),var(--cyan));
-  object-fit:cover;
-  /* replace with: <img class="org-photo" src="assets/organizers/dong-song.jpg" alt="..."> */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 54px
 }
-.org-photo.c2{background:linear-gradient(135deg,var(--coral),var(--violet))}
-.org-photo.c3{background:linear-gradient(135deg,var(--cyan),var(--violet-2))}
-.org-name{font-family:var(--font-display);font-weight:600;font-size:1.22rem;letter-spacing:-.01em}
-.org-aff{font-size:.86rem;color:var(--coral);font-weight:500;margin-top:.1rem}
-.org-lead{
-  display:inline-block;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--cyan);border:1px solid rgba(88,198,232,.45);
-  border-radius:5px;padding:.15em .45em;margin-top:.4rem;
+.org {
+    background: var(--card);
+    border: 1px solid var(--line-l);
+    border-radius: var(--r);
+    padding: 30px;
+    display: flex;
+    flex-direction: column
 }
-.org-bio{font-size:.9rem;color:var(--t-on-light-soft);line-height:1.6;flex:1}
-.org-links{margin-top:1.1rem;display:flex;gap:1rem;font-family:var(--font-mono);font-size:.74rem}
-.org-links a{color:var(--t-on-light);border-bottom:1px solid var(--coral);padding-bottom:1px;transition:color .2s}
-.org-links a:hover{color:var(--coral)}
-
+.org-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px
+}
+.org-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--violet), var(--cyan));
+    object-fit: cover;/* replace with: <img class="org-photo" src="assets/organizers/dong-song.jpg" alt="..."> */
+}
+.org-photo.c2 {
+    background: linear-gradient(135deg, var(--coral), var(--violet))
+}
+.org-photo.c3 {
+    background: linear-gradient(135deg, var(--cyan), var(--violet-2))
+}
+.org-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.22rem;
+    letter-spacing: -.01em
+}
+.org-aff {
+    font-size: .86rem;
+    color: var(--coral);
+    font-weight: 500;
+    margin-top: .1rem
+}
+.org-lead {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: .6rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    border: 1px solid rgba(88,198,232,.45);
+    border-radius: 5px;
+    padding: .15em .45em;
+    margin-top: .4rem;
+}
+.org-bio {
+    font-size: .9rem;
+    color: var(--t-on-light-soft);
+    line-height: 1.6;
+    flex: 1
+}
+.org-links {
+    margin-top: 1.1rem;
+    display: flex;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    font-size: .74rem
+}
+.org-links a {
+    color: var(--t-on-light);
+    border-bottom: 1px solid var(--coral);
+    padding-bottom: 1px;
+    transition: color .2s
+}
+.org-links a:hover {
+    color: var(--coral)
+}
 /* ============================================================
    PROGRAM COMMITTEE
    ============================================================ */
-.pc-wrap{background:var(--paper-tint);border-radius:var(--r);padding:44px;margin-top:48px;border:1px solid var(--line-l)}
-.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
-.pc{
-  background:var(--card);border:1px solid var(--line-l);border-radius:10px;
-  padding:14px 16px;transition:border-color .2s,transform .15s;
+.pc-wrap {
+    background: var(--paper-tint);
+    border-radius: var(--r);
+    padding: 44px;
+    margin-top: 48px;
+    border: 1px solid var(--line-l)
 }
-.pc:hover{border-color:var(--coral);transform:translateY(-2px)}
-.pc .nm{font-weight:600;font-size:.95rem}
-.pc .or{font-size:.8rem;color:var(--t-on-light-soft);font-family:var(--font-mono);margin-top:.1rem}
-
+.pc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 8px
+}
+.pc {
+    background: var(--card);
+    border: 1px solid var(--line-l);
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: border-color .2s, transform .15s;
+}
+.pc:hover {
+    border-color: var(--coral);
+    transform: translateY(-2px)
+}
+.pc .nm {
+    font-weight: 600;
+    font-size: .95rem
+}
+.pc .or {
+    font-size: .8rem;
+    color: var(--t-on-light-soft);
+    font-family: var(--font-mono);
+    margin-top: .1rem
+}
 /* ============================================================
    REGISTRATION (CTA bookend)
    ============================================================ */
-.reg{
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(820px 480px at 18% 20%,rgba(71,60,140,.6),transparent 60%),
-    radial-gradient(680px 420px at 86% 88%,rgba(255,122,89,.22),transparent 62%),
-    var(--ink);
-  color:var(--t-on-dark);text-align:center;
+.reg {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(820px 480px at 18% 20%, rgba(71,60,140,.6), transparent 60%), radial-gradient(680px 420px at 86% 88%, rgba(255,122,89,.22), transparent 62%), var(--ink);
+    color: var(--t-on-dark);
+    text-align: center;
 }
-.reg .loop-mini{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:320px;opacity:.16;pointer-events:none}
-.reg-inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
-.reg h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2.1rem,4.6vw,3.2rem);line-height:1.04;letter-spacing:-.018em;margin:.7rem 0 1.1rem}
-.reg p{color:#d7daf2;font-size:1.12rem;margin-bottom:.6rem}
-.reg .portal{font-family:var(--font-mono);font-size:.86rem;color:var(--cyan);margin-bottom:2rem;word-break:break-all}
-.reg .btn-primary{font-size:1.05rem;padding:1em 1.9em}
-.reg-fine{
-  margin-top:1.7rem;font-size:.86rem;color:var(--t-on-dark-soft);
-  max-width:52ch;margin-inline:auto;
+.reg .loop-mini {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+    opacity: .16;
+    pointer-events: none
 }
-
+.reg-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto
+}
+.reg h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2.1rem, 4.6vw, 3.2rem);
+    line-height: 1.04;
+    letter-spacing: -.018em;
+    margin: .7rem 0 1.1rem
+}
+.reg p {
+    color: #d7daf2;
+    font-size: 1.12rem;
+    margin-bottom: .6rem
+}
+.reg .portal {
+    font-family: var(--font-mono);
+    font-size: .86rem;
+    color: var(--cyan);
+    margin-bottom: 2rem;
+    word-break: break-all
+}
+.reg .btn-primary {
+    font-size: 1.05rem;
+    padding: 1em 1.9em
+}
+.reg-fine {
+    margin-top: 1.7rem;
+    font-size: .86rem;
+    color: var(--t-on-dark-soft);
+    max-width: 52ch;
+    margin-inline: auto;
+}
 /* ============================================================
    VENUE
    ============================================================ */
-.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.venue-card{background:var(--card);border:1px solid var(--line-l);border-radius:var(--r);overflow:hidden}
-.venue-map{
-  height:230px;
-  background:
-    linear-gradient(135deg,var(--ink),var(--violet-2));
-  display:flex;align-items:center;justify-content:center;position:relative;
+.venue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center
 }
-.venue-map .pin{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;flex-direction:column;align-items:center;gap:.6rem}
-.venue-map .pin svg{width:34px;height:34px}
-.venue-meta{padding:24px 26px}
-.venue-meta .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line-l);font-size:.95rem}
-.venue-meta .row:last-child{border-bottom:0}
-.venue-meta .row .k{color:var(--t-on-light-soft)}
-.venue-meta .row .v{font-weight:500;font-family:var(--font-mono);font-size:.85rem}
-
+.venue-card {
+    background: var(--card);
+    border: 1px solid var(--line-l);
+    border-radius: var(--r);
+    overflow: hidden
+}
+.venue-map {
+    height: 230px;
+    background: linear-gradient(135deg, var(--ink), var(--violet-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.venue-map .pin {
+    font-family: var(--font-mono);
+    font-size: .74rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem
+}
+.venue-map .pin svg {
+    width: 34px;
+    height: 34px
+}
+.venue-meta {
+    padding: 24px 26px
+}
+.venue-meta .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line-l);
+    font-size: .95rem
+}
+.venue-meta .row:last-child {
+    border-bottom: 0
+}
+.venue-meta .row .k {
+    color: var(--t-on-light-soft)
+}
+.venue-meta .row .v {
+    font-weight: 500;
+    font-family: var(--font-mono);
+    font-size: .85rem
+}
 /* ============================================================
    FOOTER
    ============================================================ */
-.foot{background:#070A1E;color:var(--t-on-dark);padding:64px 0 34px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-d)}
-.foot h4{font-family:var(--font-display);font-weight:600;font-size:1.3rem;margin-bottom:.5rem}
-.foot .ftag{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:1rem}
-.foot p{color:var(--t-on-dark-soft);font-size:.95rem;max-width:38ch}
-.foot-col h5{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--t-on-dark-soft);margin-bottom:1rem}
-.foot-col a,.foot-col span{display:block;color:#cfd3ee;font-size:.93rem;margin-bottom:.6rem;transition:color .2s}
-.foot-col a:hover{color:var(--coral)}
-.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:26px;font-size:.82rem;color:var(--t-on-dark-soft)}
-.foot-bottom .insts2{display:flex;flex-wrap:wrap;gap:1.2rem;font-family:var(--font-mono);font-size:.74rem}
-
+.foot {
+    background: #070A1E;
+    color: var(--t-on-dark);
+    padding: 64px 0 34px
+}
+.foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line-d)
+}
+.foot h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: .5rem
+}
+.foot .ftag {
+    font-family: var(--font-mono);
+    font-size: .7rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1rem
+}
+.foot p {
+    color: var(--t-on-dark-soft);
+    font-size: .95rem;
+    max-width: 38ch
+}
+.foot-col h5 {
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--t-on-dark-soft);
+    margin-bottom: 1rem
+}
+.foot-col a, .foot-col span {
+    display: block;
+    color: #cfd3ee;
+    font-size: .93rem;
+    margin-bottom: .6rem;
+    transition: color .2s
+}
+.foot-col a:hover {
+    color: var(--coral)
+}
+.foot-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 26px;
+    font-size: .82rem;
+    color: var(--t-on-dark-soft)
+}
+.foot-bottom .insts2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    font-family: var(--font-mono);
+    font-size: .74rem
+}
 /* ============================================================
    REVEAL
    ============================================================ */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .7s cubic-bezier(.2, .7, .3, 1), transform .7s cubic-bezier(.2, .7, .3, 1)
+}
+.reveal.in {
+    opacity: 1;
+    transform: none
+}
+
+@media (prefers-reduced-motion:reduce) {
+.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none
+}
+html {
+    scroll-behavior: auto
+}
 }
 
 /* focus */
-a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+a:focus-visible, .btn:focus-visible, button:focus-visible {
+outline:2px solid var(--cyan);
+outline-offset:3px;
+border-radius:4px
+}
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width:1000px){
-  .topic-grid{grid-template-columns:repeat(2,1fr)}
-  .spk-grid,.org-grid,.pc-grid{grid-template-columns:repeat(2,1fr)}
+@media (max-width:1000px) {
+.topic-grid {
+    grid-template-columns: repeat(2, 1fr)
 }
-@media (max-width:860px){
-  .nav-links{
-    position:fixed;top:64px;left:0;right:0;
-    flex-direction:column;align-items:stretch;gap:0;
-    background:rgba(8,11,30,.98);backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line-d);
-    padding:8px 0 16px;
-    transform:translateY(-130%);transition:transform .3s ease;
-    max-height:calc(100vh - 64px);overflow:auto;
-  }
-  .nav-links.open{transform:none}
-  .nav-links a{padding:.9rem 28px;font-size:.98rem;border-bottom:1px solid var(--line-d)}
-  .nav-links .nav-cta{margin:14px 28px 0;text-align:center;justify-content:center}
-  .nav-toggle{display:block}
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .loop-wrap{order:-1}
-  .loop-svg{width:min(330px,80%)}
-  .about-grid,.cfp-grid,.panel-grid,.venue-grid{grid-template-columns:1fr;gap:34px}
-  .foot-grid{grid-template-columns:1fr 1fr}
+.spk-grid, .org-grid, .pc-grid {
+    grid-template-columns: repeat(2, 1fr)
 }
-@media (max-width:560px){
-  .section{padding:72px 0}
-  .wrap{padding:0 20px}
-  .topic-grid,.spk-grid,.org-grid,.pc-grid{grid-template-columns:1fr}
-  .expert-role{grid-template-columns:1fr;gap:12px;padding:18px}
-  .hero{padding:92px 0 0}
-  .masthead{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:32px}
-  .mh-slot{width:100%;min-width:0;height:200px}
-  .mh-img--workshop{height:171px;max-width:100%}
-  .slot{grid-template-columns:84px 1fr;gap:14px}
-  .slot .kind{display:none}
-  .slot--key{margin-left:-14px;padding-left:12px}
-  .foot-grid,.foot-bottom{grid-template-columns:1fr}
-  .pc-wrap{padding:26px}
-  .insts-inner{gap:14px 24px}
-  .inst-sep{display:none}
+}
+
+@media (max-width:860px) {
+.nav-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(8,11,30,.98);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-d);
+    padding: 8px 0 16px;
+    transform: translateY(-130%);
+    transition: transform .3s ease;
+    max-height: calc(100vh - 64px);
+    overflow: auto;
+}
+.nav-links.open {
+    transform: none
+}
+.nav-links a {
+    padding: .9rem 28px;
+    font-size: .98rem;
+    border-bottom: 1px solid var(--line-d)
+}
+.nav-links .nav-cta {
+    margin: 14px 28px 0;
+    text-align: center;
+    justify-content: center
+}
+.nav-toggle {
+    display: block
+}
+.hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px
+}
+.loop-wrap {
+    order: -1
+}
+.loop-svg {
+    width: min(330px, 80%)
+}
+.about-grid, .cfp-grid, .panel-grid, .venue-grid {
+    grid-template-columns: 1fr;
+    gap: 34px
+}
+.foot-grid {
+    grid-template-columns: 1fr 1fr
+}
+}
+
+@media (max-width:560px) {
+.section {
+    padding: 72px 0
+}
+.wrap {
+    padding: 0 20px
+}
+.topic-grid, .spk-grid, .org-grid, .pc-grid {
+    grid-template-columns: 1fr
+}
+.expert-role {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px
+}
+.hero {
+    padding: 92px 0 0
+}
+.masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px
+}
+.mh-slot {
+    width: 100%;
+    min-width: 0;
+    height: 200px
+}
+.mh-img--workshop {
+    height: 171px;
+    max-width: 100%
+}
+.slot {
+    grid-template-columns: 84px 1fr;
+    gap: 14px
+}
+.slot .kind {
+    display: none
+}
+.slot--key {
+    margin-left: -14px;
+    padding-left: 12px
+}
+.foot-grid, .foot-bottom {
+    grid-template-columns: 1fr
+}
+.pc-wrap {
+    padding: 26px
+}
+.insts-inner {
+    gap: 14px 24px
+}
+.inst-sep {
+    display: none
+}
 }
 </style>
 </head>
@@ -703,63 +1633,35 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 
 <!-- ====================== NAV ====================== -->
 <nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#top">
-      <b>Discoverative&nbsp;AI</b><span>W02</span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#topics">Topics</a>
-      <a href="#speakers">Experts</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#participate">Participate</a>
-      <a href="#organizers">Organizers</a>
-      <a href="#committee">Committee</a>
-      <a class="nav-cta" href="https://www.aiasplus.org" target="_blank" rel="noopener">Register</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="nav-inner"> <a class="brand" href="#top"> <b>Discoverative&nbsp;AI</b><span>W02</span> </a>
+    <div class="nav-links" id="navLinks"> <a href="#about">About</a> <a href="#topics">Topics</a> <a href="#speakers">Experts</a> <a href="#schedule">Schedule</a> <a href="#participate">Participate</a> <a href="#organizers">Organizers</a> <a href="#committee">Committee</a> <a class="nav-cta" href="https://www.aiasplus.org" target="_blank" rel="noopener">Register</a> </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button>
   </div>
 </nav>
 
 <!-- ====================== HERO ====================== -->
 <header class="hero" id="top">
-  <div class="wrap">
-
+  <div class="wrap"> 
+    
     <!-- ===== MASTHEAD: workshop logo (left) + AIAS+ logo (right) ===== -->
     <div class="masthead">
-      <div class="mh-slot">
-        <img class="mh-img mh-img--workshop" src="assets/logos/workshop-logo-option-c-white.png" alt="Discoverative AI for Neuroscience">
-      </div>
-
-      <div class="mh-host">
-        <span class="mh-host-label">Hosted&nbsp;at</span>
-        <a class="mh-host-link" href="https://www.aiasplus.org/vision-for-discoverative-intelligence" target="_blank" rel="noopener" aria-label="AIAS+ Chen Institute Symposium for AI Advancing Science and Society">
-          <img class="mh-img mh-img--aias" src="assets/logos/aiasplus-discoverative-intelligence.png" alt="AIAS+ Chen Institute Symposium for AI Advancing Science and Society">
-        </a>
-      </div>
+      <div class="mh-slot"> <img class="mh-img mh-img--workshop" src="assets/logos/workshop-logo-option-c-white.png" alt="Discoverative AI for Neuroscience"> </div>
+      <div class="mh-host"> <span class="mh-host-label">Hosted&nbsp;at</span> <a class="mh-host-link" href="https://www.aiasplus.org/vision-for-discoverative-intelligence" target="_blank" rel="noopener" aria-label="AIAS+ Chen Institute Symposium for AI Advancing Science and Society"> <img class="mh-img mh-img--aias" src="assets/logos/aiasplus-discoverative-intelligence.png" alt="AIAS+ Chen Institute Symposium for AI Advancing Science and Society"> </a> </div>
     </div>
-
     <div class="hero-grid">
       <div class="hero-text">
         <div class="hero-meta">AIAS+ 2026 Symposium · Workshop W02 · San Francisco</div>
-        <h1>Discoverative AI<br>for <em>Neuroscience</em></h1>
+        <h1>Discoverative AI<br>
+          for <em>Neuroscience</em></h1>
         <p class="hero-thesis">Toward AI systems that <b>form hypotheses, design experiments, and refine their own understanding</b> of neural systems.</p>
-        <div class="hero-when">
-          <span><i class="dot"></i>Friday, November 6, 2026</span>
-          <span><i class="dot"></i>San Francisco, CA</span>
-          <span><i class="dot"></i>Two workshop sessions</span>
-        </div>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://www.aiasplus.org" target="_blank" rel="noopener">
-            Register via AIAS+
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="#participate">Participation details</a>
-        </div>
+        <div class="hero-when"> <span><i class="dot"></i>Friday, November 6, 2026</span> <span><i class="dot"></i>San Francisco, CA</span> <span><i class="dot"></i>Two workshop sessions</span> </div>
+        <div class="hero-cta"> <a class="btn btn-primary" href="https://www.aiasplus.org" target="_blank" rel="noopener"> Register via AIAS+
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+          </a> <a class="btn btn-ghost" href="#participate">Participation details</a> </div>
       </div>
-
+      
       <!-- DISCOVERY LOOP — signature element -->
       <div class="loop-wrap" aria-hidden="true">
         <svg class="loop-svg" viewBox="0 0 360 360" role="img">
@@ -773,18 +1675,17 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
               <stop offset="100%" stop-color="#58C6E8"/>
             </linearGradient>
           </defs>
-
           <circle cx="180" cy="180" r="92" fill="url(#coreglow)"/>
           <!-- base ring + traveling comet (r=130, circumference≈816) -->
           <circle class="ring-base" cx="180" cy="180" r="130"/>
           <circle class="ring-comet" cx="180" cy="180" r="130"/>
-
+          
           <!-- direction arrows (tangent, clockwise) at the diagonals -->
           <path class="arrow" d="M272 88 l3 11 -11 -2 z"/>
           <path class="arrow" d="M272 272 l-2 11 -9 -7 z" transform="rotate(0)"/>
           <path class="arrow" d="M88 272 l-3 -11 11 2 z"/>
           <path class="arrow" d="M88 88 l2 -11 9 7 z"/>
-
+          
           <!-- nodes: top, right, bottom, left -->
           <g>
             <circle class="node" cx="180" cy="50" r="9"/>
@@ -806,27 +1707,15 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
             <circle class="node-core pulse-core" cx="50" cy="180" r="5" style="animation-delay:2.4s"/>
             <text x="50" y="160" text-anchor="middle">REFINE</text>
           </g>
-
           <text class="core" x="180" y="178" text-anchor="middle">the discovery</text>
           <text class="core" x="180" y="196" text-anchor="middle">loop</text>
         </svg>
       </div>
     </div>
-
+    
     <!-- INSTITUTIONS STRIP -->
     <div class="insts">
-      <div class="insts-inner">
-        <span class="insts-label">Organized&nbsp;by</span>
-        <span class="inst-logo-slot">
-          <img class="inst-logo inst-logo--usc" src="assets/logos/logo-usc-standard.svg" alt="USC">
-        </span>
-        <span class="inst-logo-slot">
-          <img class="inst-logo inst-logo--stanford" src="assets/logos/stanford-block-s-transparent.png" alt="Stanford">
-        </span>
-        <span class="inst-logo-slot">
-          <img class="inst-logo inst-logo--uconn" src="assets/logos/uconn-seal.png" alt="University of Connecticut">
-        </span>
-      </div>
+      <div class="insts-inner"> <span class="insts-label">Organized&nbsp;by</span> <span class="inst-logo-slot"> <img class="inst-logo inst-logo--usc" src="assets/logos/logo-usc-standard.svg" alt="USC"> </span> <span class="inst-logo-slot"> <img class="inst-logo inst-logo--stanford" src="assets/logos/stanford-block-s-transparent.png" alt="Stanford"> </span> <span class="inst-logo-slot"> <img class="inst-logo inst-logo--uconn" src="assets/logos/uconn-seal.png" alt="University of Connecticut"> </span> </div>
     </div>
   </div>
 </header>
@@ -835,8 +1724,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <section class="section" id="about">
   <div class="wrap">
     <div class="about-grid">
-      <div class="reveal">
-        <span class="eyebrow">About the workshop</span>
+      <div class="reveal"> <span class="eyebrow">About the workshop</span>
         <h2 class="sec-title">A new phase in the dialogue between AI and the brain.</h2>
       </div>
       <div class="about-body reveal">
@@ -844,7 +1732,6 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
         <p>This workshop explores a phase in which AI moves beyond data analysis and modeling to become an <b>active participant in scientific discovery</b>. We take inspiration from the history of neuroscience — how transformative ideas about the brain were conceived, tested, and refined — and build toward a more ambitious question:</p>
         <p class="q">Can AI systems learn to generate and pursue scientific insight at superhuman scale?</p>
         <p>We envision discoverative AI systems that do not merely process data, but continuously formulate hypotheses, design experiments, generate data, and iteratively refine their understanding of neural systems — shifting from stochastic, human-expert-limited hypothesis generation to expansive, automated exploration of the brain's complexity.</p>
-
         <div class="differ">
           <h4>How this differs from brain-inspired AI</h4>
           <p>Where NeuroAI efforts (e.g. at CSHL and NIH) build next-generation AI inspired by the brain, this workshop emphasizes the reverse direction: leveraging modern AI to advance neuroscience itself — systems that generate hypotheses, design experiments, and participate in iterative scientific discovery.</p>
@@ -857,49 +1744,80 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <!-- ====================== TOPICS ====================== -->
 <section class="section on-dark" id="topics">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Themes &amp; topics</span>
+    <div class="reveal"> <span class="eyebrow">Themes &amp; topics</span>
       <h2 class="sec-title">What we'll explore</h2>
       <p class="sec-intro">The workshop explores methods and questions that move neuroscience from prediction and pattern-recognition toward mechanistic understanding.</p>
     </div>
     <div class="topic-grid">
       <article class="topic reveal"><span class="num">01</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><circle cx="6" cy="9" r="2.4"/><circle cx="6" cy="21" r="2.4"/><circle cx="22" cy="15" r="2.4"/><path d="M8.2 10.2 19.8 14M8.2 19.8 19.8 16"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <circle cx="6" cy="9" r="2.4"/>
+          <circle cx="6" cy="21" r="2.4"/>
+          <circle cx="22" cy="15" r="2.4"/>
+          <path d="M8.2 10.2 19.8 14M8.2 19.8 19.8 16"/>
+        </svg>
         <h3>Neural &amp; behavioral data</h3>
         <p>AI methods for modeling and interpreting complex, high-dimensional neural and behavioral recordings.</p>
       </article>
       <article class="topic reveal"><span class="num">02</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><path d="M15 4v6M15 26v-4"/><circle cx="15" cy="15" r="5"/><path d="M22 8l-3 3M8 22l3-3"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <path d="M15 4v6M15 26v-4"/>
+          <circle cx="15" cy="15" r="5"/>
+          <path d="M22 8l-3 3M8 22l3-3"/>
+        </svg>
         <h3>Hypothesis generation</h3>
         <p>Scientific reasoning and automated hypothesis generation about how neural systems work.</p>
       </article>
       <article class="topic reveal"><span class="num">03</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><path d="M5 15a10 10 0 1 1 3 7.1"/><path d="M5 22v-4h4"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <path d="M5 15a10 10 0 1 1 3 7.1"/>
+          <path d="M5 22v-4h4"/>
+        </svg>
         <h3>Closed-loop experiments</h3>
         <p>AI-driven experimental design, active learning, and closed-loop neuroscience.</p>
       </article>
       <article class="topic reveal"><span class="num">04</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><circle cx="8" cy="8" r="2.4"/><circle cx="22" cy="22" r="2.4"/><path d="M10 9.5 20 20.5"/><path d="M22 8v3M20.5 9.5h3"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <circle cx="8" cy="8" r="2.4"/>
+          <circle cx="22" cy="22" r="2.4"/>
+          <path d="M10 9.5 20 20.5"/>
+          <path d="M22 8v3M20.5 9.5h3"/>
+        </svg>
         <h3>Causal &amp; mechanistic</h3>
         <p>Causal inference and mechanistic models that move past correlation toward how the brain computes.</p>
       </article>
       <article class="topic reveal"><span class="num">05</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><rect x="5" y="5" width="9" height="9" rx="1.5"/><rect x="16" y="5" width="9" height="9" rx="1.5"/><rect x="10.5" y="16" width="9" height="9" rx="1.5"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <rect x="5" y="5" width="9" height="9" rx="1.5"/>
+          <rect x="16" y="5" width="9" height="9" rx="1.5"/>
+          <rect x="10.5" y="16" width="9" height="9" rx="1.5"/>
+        </svg>
         <h3>Foundation models</h3>
         <p>Multimodal and foundation models trained across diverse brain and behavior datasets.</p>
       </article>
       <article class="topic reveal"><span class="num">06</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><path d="M15 5c-4 0-6 3-6 6 0 1-2 2-2 4s2 3 2 4c0 3 2 6 6 6"/><path d="M15 5c4 0 6 3 6 6 0 1 2 2 2 4s-2 3-2 4c0 3-2 6-6 6"/><path d="M15 5v20"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <path d="M15 5c-4 0-6 3-6 6 0 1-2 2-2 4s2 3 2 4c0 3 2 6 6 6"/>
+          <path d="M15 5c4 0 6 3 6 6 0 1 2 2 2 4s-2 3-2 4c0 3-2 6-6 6"/>
+          <path d="M15 5v20"/>
+        </svg>
         <h3>Brain-inspired memory</h3>
         <p>Brain-inspired and memory-centric AI architectures.</p>
       </article>
       <article class="topic reveal"><span class="num">07</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><circle cx="15" cy="10" r="4"/><path d="M8 25c0-4 3-7 7-7s7 3 7 7"/><path d="M15 4v2M24 12h2M4 12h2"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <circle cx="15" cy="10" r="4"/>
+          <path d="M8 25c0-4 3-7 7-7s7 3 7 7"/>
+          <path d="M15 4v2M24 12h2M4 12h2"/>
+        </svg>
         <h3>Scientific agents</h3>
         <p>Agents that plan, reason, and act within iterative discovery workflows.</p>
       </article>
       <article class="topic reveal"><span class="num">08</span>
-        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6"><path d="M5 22 11 14l4 4 5-8 5 7"/><path d="M5 25h20"/></svg>
+        <svg class="glyph" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#58C6E8" stroke-width="1.6">
+          <path d="M5 22 11 14l4 4 5-8 5 7"/>
+          <path d="M5 25h20"/>
+        </svg>
         <h3>Benchmarks &amp; eval</h3>
         <p>Datasets, simulation environments, and evaluation frameworks for discoverative systems.</p>
       </article>
@@ -910,8 +1828,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <!-- ====================== INVITED EXPERTS ====================== -->
 <section class="section" id="speakers">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Invited experts</span>
+    <div class="reveal"> <span class="eyebrow">Invited experts</span>
       <h2 class="sec-title">Meet the researchers shaping the conversation</h2>
       <p class="sec-intro">Our invited experts bring perspectives spanning neuroscience, artificial intelligence, research strategy, and scientific innovation.</p>
     </div>
@@ -944,57 +1861,49 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
       </div>
     </div>
     <div class="spk-grid">
-      <article class="spk reveal" id="expert-dong-song">
-        <img class="spk-photo alt" src="assets/speakers/dong-song.png" alt="Dong Song">
+      <article class="spk reveal" id="expert-dong-song"> <img class="spk-photo alt" src="assets/speakers/dong-song.png" alt="Dong Song">
         <h3>Dong Song</h3>
         <div class="aff">University of Southern California</div>
         <div class="spk-tags"><span class="tag tag--panelist">Moderator</span><span class="tag tag--speaker">Speaker</span></div>
         <p class="spk-bio">Dong Song is an associate professor of neurological surgery and biomedical engineering at USC and director of the Neural Modeling and Interface Laboratory. His research combines computational neuroscience, nonlinear dynamical modeling, and neural-interface technologies to understand learning and memory in the hippocampus. A major focus of his work is developing biologically interpretable brain models and biomimetic neural prostheses that can restore or enhance cognitive functions impaired by neurological disease or injury.</p>
       </article>
-      <article class="spk reveal" id="expert-shaul-druckmann">
-        <img class="spk-photo" src="assets/speakers/shaul_druckmann.avif" alt="Shaul Druckmann">
+      <article class="spk reveal" id="expert-shaul-druckmann"> <img class="spk-photo" src="assets/speakers/shaul_druckmann.avif" alt="Shaul Druckmann">
         <h3>Shaul Druckmann</h3>
         <div class="aff">Stanford University</div>
         <div class="spk-tags"><span class="tag tag--speaker">Speaker</span><span class="tag tag--panelist">Panelist</span></div>
         <p class="spk-bio">Shaul Druckmann is an associate professor of neurobiology and psychiatry and behavioral sciences at Stanford University. His laboratory combines neural-population recordings, mathematical theory, and circuit analysis to understand how brain networks represent information and perform computations. His research on distributed and resilient memory systems offers biological principles for developing more robust and interpretable AI.</p>
       </article>
-      <article class="spk reveal" id="expert-joseph-monaco">
-        <img class="spk-photo alt" src="assets/speakers/Joseph_monaco.jpeg" alt="Joseph Monaco">
+      <article class="spk reveal" id="expert-joseph-monaco"> <img class="spk-photo alt" src="assets/speakers/Joseph_monaco.jpeg" alt="Joseph Monaco">
         <h3>Joseph Monaco</h3>
         <div class="aff">NIH / NINDS</div>
         <div class="spk-tags"><span class="tag tag--speaker">Speaker</span><span class="tag tag--panelist">Panelist</span></div>
         <p class="spk-bio">Joseph Monaco is a scientific program manager in the Office of the BRAIN Director at NIH/NINDS, where he helps shape and advance NeuroAI research. He has played an active role in organizing NIH BRAIN NeuroAI workshops, building connections between the neuroscience and AI communities, and identifying opportunities for transformative research at their intersection. A computational neuroscientist by training, his work explores how neural dynamics underlying memory, navigation, and embodied behavior can inspire more adaptive, flexible, and biologically grounded AI systems.</p>
       </article>
-      <article class="spk reveal" id="expert-yan-liu">
-        <img class="spk-photo" src="assets/speakers/yan-liu.jpg" alt="Yan Liu">
+      <article class="spk reveal" id="expert-yan-liu"> <img class="spk-photo" src="assets/speakers/yan-liu.jpg" alt="Yan Liu">
         <h3>Yan Liu</h3>
         <div class="aff">University of Southern California</div>
         <div class="spk-tags"><span class="tag tag--speaker">Speaker</span><span class="tag tag--panelist">Panelist</span></div>
         <p class="spk-bio">Yan Liu is the Fletcher Jones Foundation Chair in Computer Science and a professor of computer science, electrical and computer engineering, and biomedical sciences at USC. Her research focuses on machine learning and artificial intelligence, particularly time-series modeling, explainable AI, and efficient optimization, with applications in healthcare, sustainability, and social systems. She also directs USC’s Center for Machine Learning and co-chairs the Institute of Ethics and Trust in Computing.</p>
       </article>
-      <article class="spk reveal" id="expert-wei-wang">
-        <img class="spk-photo" src="assets/speakers/WEi_wang.jpg" alt="Wei Wang">
+      <article class="spk reveal" id="expert-wei-wang"> <img class="spk-photo" src="assets/speakers/WEi_wang.jpg" alt="Wei Wang">
         <h3>Wei Wang</h3>
         <div class="aff">University of California, Los Angeles</div>
         <div class="spk-tags"><span class="tag tag--speaker">Speaker</span></div>
         <p class="spk-bio">Wei Wang is the Leonard Kleinrock Chair Professor of Computer Science and Computational Medicine at UCLA and director of the Scalable Analytics Institute. Her research develops machine-learning and data-mining methods for large, complex biomedical datasets, including work in causal discovery and computer-assisted experiment planning. Her work demonstrates how AI can move beyond recognizing patterns to help scientists generate hypotheses and design more informative experiments.</p>
       </article>
-      <article class="spk reveal">
-        <img class="spk-photo alt" src="assets/speakers/chuck%20ng.jpeg" alt="Charles “Chuck” Ng">
+      <article class="spk reveal"> <img class="spk-photo alt" src="assets/speakers/chuck%20ng.jpeg" alt="Charles “Chuck” Ng">
         <h3>Charles “Chuck” Ng</h3>
         <div class="aff">Foundation for Science &amp; AI Research</div>
         <div class="spk-tags"><span class="tag tag--panelist">Panelist</span></div>
         <p class="spk-bio">Charles “Chuck” Ng is an entrepreneur and technology investor who co-founded Eureka Therapeutics and has invested in or advised companies including Databricks, Ironclad, Mammoth Biosciences, Meta, and Alibaba. As co-founder of the Foundation for Science &amp; AI Research, he focuses on building collaborations among leading scientists, AI researchers, institutions, and industry. He brings a practical perspective on how AI-driven scientific ideas can attract support, cross institutional boundaries, and become real-world innovations.</p>
       </article>
-      <article class="spk reveal">
-        <img class="spk-photo" src="assets/speakers/lu-chen.jpg" alt="Lu Chen">
+      <article class="spk reveal"> <img class="spk-photo" src="assets/speakers/lu-chen.jpg" alt="Lu Chen">
         <h3>Lu Chen</h3>
         <div class="aff">Stanford University</div>
         <div class="spk-tags"><span class="tag tag--panelist">Panelist</span></div>
         <p class="spk-bio">Lu Chen is a professor of neurosurgery and of psychiatry and behavioral sciences at Stanford University and a member of the Wu Tsai Neurosciences Institute. Her research investigates the cellular and molecular mechanisms governing synaptic function and plasticity in the developing and mature brain. A major focus of her work is homeostatic synaptic plasticity, including how local protein synthesis and retinoic-acid signaling regulate synaptic strength and contribute to neurodevelopmental disorders such as Fragile X syndrome.</p>
       </article>
-      <article class="spk reveal">
-        <img class="spk-photo" src="assets/speakers/dongjin-song.png" alt="Dongjin Song">
+      <article class="spk reveal"> <img class="spk-photo" src="assets/speakers/dongjin-song.png" alt="Dongjin Song">
         <h3>Dongjin Song</h3>
         <div class="aff">University of Connecticut</div>
         <div class="spk-tags"><span class="tag tag--panelist">Moderator</span></div>
@@ -1008,8 +1917,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <section class="section section--tight panel" id="panel">
   <div class="wrap">
     <div class="panel-grid">
-      <div class="reveal">
-        <span class="eyebrow">Interactive panel</span>
+      <div class="reveal"> <span class="eyebrow">Interactive panel</span>
         <h2>Where does discoverative AI go next?</h2>
         <p>Moderated by Dongjin Song and Dong Song, this audience-facing conversation invites attendees to ask questions, interact directly with panelists, and explore open challenges, future directions, and opportunities for collaboration.</p>
         <div class="panel-mod">
@@ -1046,24 +1954,60 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <!-- ====================== SCHEDULE ====================== -->
 <section class="section on-dark" id="schedule">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Program</span>
+    <div class="reveal"> <span class="eyebrow">Program</span>
       <h2 class="sec-title">Tentative workshop schedule</h2>
       <p class="sec-intro">Invited presentations, audience Q&amp;A, and a closing panel bringing together AI and neuroscience communities.</p>
       <div class="sched-note">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        Tentative program: Friday, November 6, 2026 (Day 2). Session times are confirmed; speaker order and the final program may change. Room assignment to be announced.
-      </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 2"/>
+        </svg>
+        Tentative program: Friday, November 6, 2026 (Day 2). Session times are confirmed; speaker order and the final program may change. Room assignment to be announced. </div>
     </div>
     <div class="sched reveal">
-      <div class="slot"><div class="time">10:10 AM</div><div class="what">Welcome and workshop framing<small>Dong Song and Dongjin Song</small></div><div class="kind">Organizers</div></div>
-      <a class="slot slot--key schedule-link" href="#expert-dong-song" aria-label="View Dong Song's expert profile"><div class="time">10:15 AM</div><div class="what">Invited Speaker - Dong Song<small>30-minute talk + 5-minute Q&amp;A</small></div><div class="kind">Invited talk</div></a>
-      <a class="slot slot--key schedule-link" href="#expert-shaul-druckmann" aria-label="View Shaul Druckmann's expert profile"><div class="time">10:50 AM</div><div class="what">Invited Speaker - Shaul Druckmann<small>30-minute talk + 5-minute Q&amp;A</small></div><div class="kind">Invited talk</div></a>
-      <a class="slot slot--key schedule-link" href="#expert-joseph-monaco" aria-label="View Joseph Monaco's expert profile"><div class="time">11:25 AM</div><div class="what">Invited Speaker - Joseph Monaco<small>30-minute talk + 5-minute Q&amp;A</small></div><div class="kind">Invited talk</div></a>
-      <div class="slot slot--break"><div class="time">12:00 PM</div><div class="what">Transition to lunch</div><div class="kind">Break</div></div>
-      <a class="slot slot--key schedule-link" href="#expert-wei-wang" aria-label="View Wei Wang's expert profile"><div class="time">2:00 PM</div><div class="what">Invited Speaker - Wei Wang<small>30-minute talk + 5-minute Q&amp;A</small></div><div class="kind">Invited talk</div></a>
-      <div class="slot"><div class="time">2:35 PM</div><div class="what">Interactive panel discussion<small>Audience Q&amp;A with Charles Ng, Joseph Monaco, Lu Chen, Shaul Druckmann, and Wei Wang</small></div><div class="kind">Panel</div></div>
-      <div class="slot"><div class="time">3:20 PM</div><div class="what">Closing remarks and next steps</div><div class="kind">Organizers</div></div>
+      <div class="slot">
+        <div class="time">10:10 AM</div>
+        <div class="what">Welcome and workshop framing<small>Lu Chen and Dongjin Song</small></div>
+        <div class="kind">Organizers</div>
+      </div>
+      <a class="slot slot--key schedule-link" href="#expert-dong-song" aria-label="View Dong Song's expert profile">
+      <div class="time">10:15 AM</div>
+      <div class="what">Dong Song<small>30-minute talk + 5-minute Q&amp;A</small></div>
+      <div class="kind">Title: TBD</div>
+      </a> <a class="slot slot--key schedule-link" href="#expert-shaul-druckmann" aria-label="View Shaul Druckmann's expert profile">
+      <div class="time">10:50 AM</div>
+      <div class="what">Shaul Druckmann<small>30-minute talk + 5-minute Q&amp;A</small></div>
+      <div class="kind">Title: TBD</div>
+      </a> <a class="slot slot--key schedule-link" href="#expert-joseph-monaco" aria-label="View Joseph Monaco's expert profile">
+      <div class="time">11:25 AM</div>
+      <div class="what">Joseph Monaco<small>30-minute talk + 5-minute Q&amp;A</small></div>
+      <div class="kind">Title: TBD</div>
+      </a>
+      <div class="slot slot--break">
+        <div class="time">12:00 PM</div>
+        <div class="what">Transition to lunch</div>
+        <div class="kind">Break</div>
+      </div>
+      <a class="slot slot--key schedule-link" href="#expert-yang-liu" aria-label="View Yan Liu's expert profile">
+      <div class="time">1:25 PM</div>
+      <div class="what">Yan Liu<small>30-minute talk + 5-minute Q&amp;A</small></div>
+      <div class="kind">Title: TBD</div>
+		</a> 
+		<a class="slot slot--key schedule-link" href="#expert-wei-wang" aria-label="View Wei Wang's expert profile">
+      <div class="time">2:00 PM</div>
+      <div class="what">Wei Wang<small>30-minute talk + 5-minute Q&amp;A</small></div>
+      <div class="kind">Title: TBD</div>
+      </a>
+      <div class="slot">
+        <div class="time">2:35 PM</div>
+        <div class="what">Interactive panel discussion<small>Audience Q&amp;A with Charles Ng, Joseph Monaco, Lu Chen, Shaul Druckmann, and Wei Wang</small></div>
+        <div class="kind">Panel Discussion</div>
+      </div>
+      <div class="slot">
+        <div class="time">3:20 PM</div>
+        <div class="what">Closing remarks and next steps</div>
+        <div class="kind">Organizers</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1071,8 +2015,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <!-- ====================== PARTICIPATION + WORKSHOP DETAILS ====================== -->
 <section class="section" id="participate">
   <div class="wrap">
-    <div class="reveal" style="margin-bottom:14px">
-      <span class="eyebrow">Participation</span>
+    <div class="reveal" style="margin-bottom:14px"> <span class="eyebrow">Participation</span>
       <h2 class="sec-title">Join the conversation</h2>
     </div>
     <div class="cfp-grid">
@@ -1083,11 +2026,8 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
           <li><b>Program.</b> Invited talks, audience Q&amp;A, and a closing panel.</li>
           <li><b>Registration.</b> Register through the official AIAS+ 2026 portal. There is no separate workshop registration or paper submission process.</li>
         </ul>
-        <div class="cfp-actions">
-          <a class="btn btn-dark" href="https://www.aiasplus.org" target="_blank" rel="noopener">Register at aiasplus.org</a>
-        </div>
+        <div class="cfp-actions"> <a class="btn btn-dark" href="https://www.aiasplus.org" target="_blank" rel="noopener">Register at aiasplus.org</a> </div>
       </div>
-
       <aside class="dates reveal">
         <h3>Workshop details</h3>
         <div class="drow"><span class="lbl">Date</span><span class="val fixed">Friday, Nov 6, 2026</span></div>
@@ -1104,56 +2044,37 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <!-- ====================== ORGANIZERS ====================== -->
 <section class="section" id="organizers">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Organizing team</span>
+    <div class="reveal"> <span class="eyebrow">Organizing team</span>
       <h2 class="sec-title">Organizers</h2>
     </div>
     <div class="org-grid">
-       
       <article class="org reveal">
-        <div class="org-top">
-          <img class="org-photo" src="assets/organizers/dong-song.png" alt="Dong Song">
+        <div class="org-top"> <img class="org-photo" src="assets/organizers/dong-song.png" alt="Dong Song">
           <div>
             <div class="org-name">Dong Song</div>
             <div class="org-aff">University of Southern California</div>
-            <span class="org-lead">Contact</span>
-          </div>
+            <span class="org-lead">Contact</span> </div>
         </div>
-        <div class="org-links">
-          <a href="mailto:dsong@usc.edu">dsong@usc.edu</a>
-          <a href="https://slab.usc.edu/" target="_blank" rel="noopener">USC Neural Modeling and Interface Lab</a>
-        </div>
+        <div class="org-links"> <a href="mailto:dsong@usc.edu">dsong@usc.edu</a> <a href="https://slab.usc.edu/" target="_blank" rel="noopener">USC Neural Modeling and Interface Lab</a> </div>
       </article>
-
       <article class="org reveal">
-        <div class="org-top">
-          <img class="org-photo c2" src="assets/organizers/dongjin-song.png" alt="Dongjin Song">
+        <div class="org-top"> <img class="org-photo c2" src="assets/organizers/dongjin-song.png" alt="Dongjin Song">
           <div>
             <div class="org-name">Dongjin Song</div>
             <div class="org-aff">University of Connecticut</div>
-             <span class="org-lead">Contact</span>
-          </div>
+            <span class="org-lead">Contact</span> </div>
         </div>
-                 <div class="org-links">
-          <a href="mailto:dongjin.song@uconn.edu">dongjin.song@uconn.edu</a>
-          <a href="https://songdj.github.io/" target="_blank" rel="noopener">Dongjin Song Lab</a>
-        </div>
+        <div class="org-links"> <a href="mailto:dongjin.song@uconn.edu">dongjin.song@uconn.edu</a> <a href="https://songdj.github.io/" target="_blank" rel="noopener">Dongjin Song Lab</a> </div>
       </article>
-
       <article class="org reveal">
-        <div class="org-top">
-          <img class="org-photo c3" src="assets/organizers/lu-chen.jpg" alt="Lu Chen">
+        <div class="org-top"> <img class="org-photo c3" src="assets/organizers/lu-chen.jpg" alt="Lu Chen">
           <div>
             <div class="org-name">Lu Chen</div>
             <div class="org-aff">Stanford University</div>
-             <span class="org-lead">Contact</span>
-          </div>
+            <span class="org-lead">Contact</span> </div>
         </div>
-                 <div class="org-links">
-          <a href="mailto:luchen1@Stanford.edu">luchen1@Stanford.edu</a>
-          <a href="https://med.stanford.edu/lu-chen-lab.html" target="_blank" rel="noopener">Lu Chen Lab</a>
-        </div>
-        </article>
+        <div class="org-links"> <a href="mailto:luchen1@Stanford.edu">luchen1@Stanford.edu</a> <a href="https://med.stanford.edu/lu-chen-lab.html" target="_blank" rel="noopener">Lu Chen Lab</a> </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1162,18 +2083,20 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
 <section class="section reg" id="register">
   <svg class="loop-mini" viewBox="0 0 360 360" aria-hidden="true">
     <circle cx="180" cy="180" r="130" fill="none" stroke="#fff" stroke-width="1.4"/>
-    <circle cx="180" cy="50" r="8" fill="#FF7A59"/><circle cx="310" cy="180" r="8" fill="#58C6E8"/>
-    <circle cx="180" cy="310" r="8" fill="#FF7A59"/><circle cx="50" cy="180" r="8" fill="#58C6E8"/>
+    <circle cx="180" cy="50" r="8" fill="#FF7A59"/>
+    <circle cx="310" cy="180" r="8" fill="#58C6E8"/>
+    <circle cx="180" cy="310" r="8" fill="#FF7A59"/>
+    <circle cx="50" cy="180" r="8" fill="#58C6E8"/>
   </svg>
   <div class="wrap">
-    <div class="reg-inner reveal">
-      <span class="eyebrow" style="justify-content:center">Registration</span>
+    <div class="reg-inner reveal"> <span class="eyebrow" style="justify-content:center">Registration</span>
       <h2>Join us in San Francisco</h2>
       <p>All participants register through the official AIAS+ 2026 portal.</p>
       <div class="portal">https://www.aiasplus.org</div>
-      <a class="btn btn-primary" href="https://www.aiasplus.org" target="_blank" rel="noopener">
-        Register at aiasplus.org
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <a class="btn btn-primary" href="https://www.aiasplus.org" target="_blank" rel="noopener"> Register at aiasplus.org
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </svg>
       </a>
       <p class="reg-fine">Workshop registration is handled entirely through the AIAS+ 2026 Symposium — there is no separate registration system for this workshop.</p>
     </div>
@@ -1191,29 +2114,16 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--
       </div>
       <div class="foot-col">
         <h5>Explore</h5>
-        <a href="#about">About</a>
-        <a href="#topics">Themes &amp; topics</a>
-        <a href="#speakers">Invited experts</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#participate">Participation</a>
-      </div>
+        <a href="#about">About</a> <a href="#topics">Themes &amp; topics</a> <a href="#speakers">Invited experts</a> <a href="#schedule">Schedule</a> <a href="#participate">Participation</a> </div>
       <div class="foot-col">
         <h5>Contact &amp; register</h5>
-        <a href="https://www.aiasplus.org" target="_blank" rel="noopener">Register · aiasplus.org</a>
-        <a href="mailto:dsong@usc.edu">dsong@usc.edu</a>
-        <a href="https://slab.usc.edu/" target="_blank" rel="noopener">slab.usc.edu</a>
-        <span>Dong Song · Workshop contact</span>
-      </div>
+        <a href="https://www.aiasplus.org" target="_blank" rel="noopener">Register · aiasplus.org</a> <a href="mailto:dsong@usc.edu">dsong@usc.edu</a> <a href="https://slab.usc.edu/" target="_blank" rel="noopener">slab.usc.edu</a> <span>Dong Song · Workshop contact</span> </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Discoverative AI for Neuroscience Workshop.</span>
-      <div class="insts2">
-        <span>AIAS+ 2026</span><span>USC</span><span>Stanford</span><span>UConn</span>
-      </div>
+    <div class="foot-bottom"> <span>© 2026 Discoverative AI for Neuroscience Workshop.</span>
+      <div class="insts2"> <span>AIAS+ 2026</span><span>USC</span><span>Stanford</span><span>UConn</span> </div>
     </div>
   </div>
 </footer>
-
 <script>
 // nav scroll state
 const nav=document.getElementById('nav');
