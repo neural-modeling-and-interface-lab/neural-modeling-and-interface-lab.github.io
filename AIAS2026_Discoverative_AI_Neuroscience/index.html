@@ -1607,9 +1607,15 @@ border-radius:4px
     grid-template-columns: 84px 1fr;
     gap: 14px
 }
-.slot .kind {
-    display: none
-}
+    .slot .kind {
+        display: block;
+        grid-column: 2;
+        white-space: normal;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: var(--coral);
+        margin-top: 4px;
+    }
 .slot--key {
     margin-left: -14px;
     padding-left: 12px
@@ -1955,7 +1961,7 @@ border-radius:4px
 <section class="section on-dark" id="schedule">
   <div class="wrap">
     <div class="reveal"> <span class="eyebrow">Program</span>
-      <h2 class="sec-title">Tentative workshop schedule</h2>
+      <h2 class="sec-title">Workshop schedule</h2>
       <p class="sec-intro">Invited presentations, audience Q&amp;A, and a closing panel bringing together AI and neuroscience communities.</p>
       <div class="sched-note">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1988,7 +1994,7 @@ border-radius:4px
         <div class="what">Transition to lunch</div>
         <div class="kind">Break</div>
       </div>
-      <a class="slot slot--key schedule-link" href="#expert-yang-liu" aria-label="View Yan Liu's expert profile">
+      <a class="slot slot--key schedule-link" href="#expert-yan-liu" aria-label="View Yan Liu's expert profile">
       <div class="time">2:00 PM</div>
       <div class="what">Yan Liu<small>30-minute talk + 5-minute Q&amp;A</small></div>
       <div class="kind">Physics-informed AI Foundation Models for Science Discovery</div>
